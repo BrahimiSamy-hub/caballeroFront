@@ -70,7 +70,6 @@ const Product = ({ images = [], name, price, _id, volume }) => {
       <footer className='center margin'>
         <Link className='linkV' to={`/products/${_id}`}>
           <h5>
-            {console.log(volume)}
             {name} {volume}
             <small>ml</small>
           </h5>

@@ -21,13 +21,16 @@ const cart_reducer = (state, action) => {
       })
       return { state, cart: tempCart }
     } else {
+      {
+        console.log(product)
+      }
       const newItem = {
         id,
         name: product.name,
         volume: product.sexe,
         amount,
         image: product.images[0],
-        price: product.price,
+        price: product.prices,
       }
       return { ...state, cart: [...state.cart, newItem] }
     }
