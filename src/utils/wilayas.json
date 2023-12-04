@@ -1,0 +1,5910 @@
+[
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "ADRAR"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "TAMEST"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "REGGANE"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "IN ZGHMIR"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "TSABIT"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "ZAOUIET KOUNTA"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "AOULEF"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "TIMEKTEN"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "TAMANTIT"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "FENOUGHIL"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "SALI"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "AKABLI"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "OULED AHMED TIMMI"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "BOUDA"
+  },
+  {
+    "wilaya": "01 - ADRAR",
+    "commune": "SEBAA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "CHLEF"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "TENES"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "BENAIRIA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "EL KARIMIA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "TADJENA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "TAOUGRITE"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "BENI HOUA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "SOBHA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "HARCHOUN"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OULED FARES"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "SIDI AKKACHA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "BOUKADIR"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "BENI RACHED"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "TALASSA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "HERENFA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OUED GOUSSINE"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "DAHRA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OULED ABBES"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "SENDJAS"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "ZEBOUDJA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OUED SLY"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "ABOU EL HASSAN"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "EL MARSA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "CHETTIA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "SIDI ABDERAHMANE"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "MOUSSADEK"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "EL HADJADJ"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "LABIOD MEDJADJA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OUED FODDA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OULED BENABDELKADER"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "BOUZEGHAIA"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "AIN MERANE"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "OUM DROU"
+  },
+  {
+    "wilaya": "02 - CHLEF",
+    "commune": "BREIRA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "LAGHOUAT"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "KSAR EL HIRANE"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "BENACER BENCHOHRA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "SIDI MAKHLOUF"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "HASSI DELAA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "HASSI RMEL"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "AIN MADHI"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "TADJEMOUT"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "KHENEG"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "GUELTAT SIDI SAAD"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "AIN SIDI ALI"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "BEIDHA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "BRIDA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "EL GHICHA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "HADJ MECHRI"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "SEBGAG"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "TAOUIALA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "TADJROUNA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "AFLOU"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "EL ASSAFIA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "OUED MORRA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "EL HAOUAITA"
+  },
+  {
+    "wilaya": "03 - LAGHOUAT",
+    "commune": "SIDI BOUZID"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "04 - "
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN BEIDA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN M'LILA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "BEHIR CHERGUI"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "EL AMIRIA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "SIGUS"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "EL BELALA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN BABOUCHE"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "BERRICHE"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "OULED HAMLA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "DHALA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN KERCHA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "HANCHIR TOUMGHANI"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "EL DJAZIA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN DISS"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "FKIRINA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "SOUK NAAMANE"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "ZORG"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "EL FEDJOUDJ BOUGHRARA SAOU"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "OULED ZOUAI"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "BIR CHOUHADA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "KSAR SBAHI"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "OUED NINI"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "MESKIANA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN FAKROUN"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "RAHIA"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "AIN ZITOUN"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "OULED GACEM"
+  },
+  {
+    "wilaya": "04 - OUM EL BOUAGHI",
+    "commune": "EL HARMILIA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BATNA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "GHASSIRA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "MEROUANA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "SERIANA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "MENAA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "EL MADHER"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TAZOULT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "N'GAOUS"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "GUIGBA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "INOUGHISSEN"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OUYOUN EL ASSAFIR"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "DJERMA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BITAM"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "AZIL ABD EL KADER"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "ARRIS"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "KIMMEL"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TILATOU"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "AIN DJASSER"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OULED SELLAM"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TIGHERGHAR"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "AIN YAGOUT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "FESDIS"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "SEFIANE"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "RAHBAT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TIGHANIMINE"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "LEMSANE"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "KSAR BELLEZMA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "SEGGANA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "ICHMOUL"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "FOUM TOUB"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OUED EL MA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TALKHAMT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BOUZINA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "CHEMORA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OUED CHAABA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TAXLENT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "GOSBAT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OULED AOUF"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BOUMAGUEUR"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BARIKA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "DJEZZAR"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "T'KOUTT"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "AIN TOUTA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "HIDOUSSA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TENIET EL ABED"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OUED TAGA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OULED FADEL"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "TIMGAD"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "RAS EL AIOUN"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "CHIR"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OULED SI SLIMANE"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "ZANAT EL BEIDA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "AMDOUKAL"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "OULED AMMAR"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "EL HASSI"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "LAZROU"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BOUMIA"
+  },
+  {
+    "wilaya": "05 - BATNA",
+    "commune": "BOULHILAT"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BEJAIA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AMIZOUR"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "FERRAOUN"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TAOURIRT IGHIL"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "CHELATA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TAMOKRA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TIMZRIT"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "SOUK EL THENINE"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "M'CISNA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "THINABDHER"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TICHI"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "SEMAOUN"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "KENDIRA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TIFRA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "IGHRAM"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AMALOU"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "IGHIL ALI"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "IFELAIN ILMATHEN"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TOUDJA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "DARGUINA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "SIDI AYAD"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AOKAS"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BENI DJELLIL"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "ADEKAR"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AKBOU"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "SEDDOUK"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TAZMALT"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AIT RIZINE"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "CHEMINI"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "SOUK OUFELLA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TASKRIOUT"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TIBANE"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TALA HAMZA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BARBACHA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BENI KSILA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "OUZELLAGUEN"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BOUHAMZA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BENI MELIKECHE"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "SIDI AICH"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "EL KSEUR"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "MELBOU"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AKFADOU"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "LEFLAYE"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "KHERRATA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "DRAA KAID"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TAMRIDJET"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "AIT SMAIL"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BOUKHELIFA"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "TIZI N'BERBER"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BENI MAOUCH"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "OUED GHIR"
+  },
+  {
+    "wilaya": "06 - BEJAIA",
+    "commune": "BOUDJELLIL"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "BISKRA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "OUMACHE"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "BRANIS"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "CHETMA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "SIDI OKBA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "M'CHOUNECHE"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "EL HAOUCH"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "AIN NAGA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "ZERIBET EL OUED"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "EL FEIDH"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "EL KANTARA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "AIN ZAATOUT"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "EL OUTAYA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "DJEMORAH"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "TOLGA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "LIOUA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "LICHANA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "OURLAL"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "M'LILI"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "FOUGHALA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "BORDJ BEN AZZOUZ"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "MEZIRAA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "BOUCHAGROUN"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "MEKHADMA"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "EL GHROUS"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "EL HADJEB"
+  },
+  {
+    "wilaya": "07 - BISKRA",
+    "commune": "KHENGUET SIDI NADJI"
+  },
+  {
+    "wilaya": "08 - BECHAR",
+    "commune": "BECHAR"
+  },
+  {
+    "wilaya": "08 - BECHAR",
+    "commune": "KENADSA"
+  },
+  {
+    "wilaya": "08 - BECHAR",
+    "commune": "TAGHIT"
+  },
+  {
+    "wilaya": "08 - BECHAR",
+    "commune": "ABADLA"
+  },
+  {
+    "wilaya": "08 - BECHAR",
+    "commune": "BENI OUNIF"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BLIDA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "CHEBLI"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BOUINAN"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "OUED EL ALLEUG"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "OULED YAICH"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "EL AFFROUN"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "CHIFFA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "HAMMAM MELOUANE"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BEN KHELLIL"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "SOUMAA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "MOUZAIA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "MEFTAH"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "OULED SELAMA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BOUFARIK"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "LARBAA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "OUED DJER"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BENI TAMOU"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BOUARFA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BENI MERED"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "BOUGARA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "GUERROUAOU"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "AIN ROMANA"
+  },
+  {
+    "wilaya": "09 - BLIDA",
+    "commune": "DJEBABRA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "BOUIRA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "EL ASNAM"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "GUERROUMA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "SOUK EL KHEMIS"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "KADIRIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "HANIF"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "DIRAH"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AIT LAAZIZ"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "TAGHZOUT"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "RAOURAOUA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "MEZDOUR"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "HAIZER"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "LAKHDARIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "MAALA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "EL HACHIMIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AOMAR"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "CHORFA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "BORDJ OUKHRISS"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "EL ADJIBA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "EL HAKIMIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "EL KHEBOUZIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AHL EL KSAR"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "BOUDERBALA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AIN EL HADJAR"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "DJEBAHIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AGHBALOU"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "TAGUEDIT"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AIN TURK"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "SAHARIDJ"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "DECHMIA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "RIDANE"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "BECHLOUL"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "BOUKRAM"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AIN BESSAM"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "BIR GHBALOU"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "M'CHEDALLAH"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "SOUR EL GHOZLANE"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "MAAMORA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "OULED RACHED"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AIN LALOUI"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "HADJERA ZERGA"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "AIT MANSOUR"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "EL MOKRANI"
+  },
+  {
+    "wilaya": "10 - BOUIRA",
+    "commune": "OUED EL BERDI"
+  },
+  {
+    "wilaya": "11 - TAMENRASSET",
+    "commune": "TAMENRASSET"
+  },
+  {
+    "wilaya": "11 - TAMENRASSET",
+    "commune": "ABALESSA"
+  },
+  {
+    "wilaya": "11 - TAMENRASSET",
+    "commune": "IDLES"
+  },
+  {
+    "wilaya": "11 - TAMENRASSET",
+    "commune": "TAZROUK"
+  },
+  {
+    "wilaya": "11 - TAMENRASSET",
+    "commune": "AIN AMGUEL"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "TEBESSA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BIR EL ATER"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "CHERIA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "STAH GUENTIS"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL AOUINET"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "LAHOUIDJBET"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "SAF SAF EL OUESRA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "HAMMAMET"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "NEGRINE"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BIR EL MOKADEM"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL KOUIF"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "MORSOTT"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL OGLA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BIR DHEHEB"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL OGLA EL MALHA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BEKKARIA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BOUKHADRA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "OUENZA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL MA EL BIODH"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "OUM ALI"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "THLIDJENE"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "AIN ZERGA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL MERIDJ"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BOULHAF DYR"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "BEDJENE"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "EL MEZERAA"
+  },
+  {
+    "wilaya": "12 - TEBESSA",
+    "commune": "FERKANE"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "TLEMCEN"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENI MESTER"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN TALLOUT"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "REMCHI"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "EL FEHOUL"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SABRA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "GHAZAOUET"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SOUANI"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "DJEBALA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "EL GOR"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "OUED LAKHDAR"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN FEZZA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "OULED MIMOUN"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AMIEUR"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN YOUCEF"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "ZENATA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENI SNOUS"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BAB EL ASSA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "DAR YAGHMOURACENE"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "FELLAOUCENE"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AZAILS"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SEBBAA CHIOUKH"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "TERNI BENI HEDIEL"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENSEKRANE"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN NEHALA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "HENNAYA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "MAGHNIA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "HAMMAM BOUGHRARA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SOUAHLIA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "MSIRDA FOUAGA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN FETAH"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "EL ARICHA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SIDI ABDELLI"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SEBDOU"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENI OUARSOUS"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SIDI MEDJAHED"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENI BOUSSAID"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "MARSA BEN M'HIDI"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "NEDROMA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "SIDI DJILLALI"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "ELBOUIHI"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "HONAINE"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "TIANET"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "OULED RIYAH"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BOUHLOU"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENI KHELLAD"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN GHORABA"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "CHETOUANE"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "MANSOURAH"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "BENI SEMIEL"
+  },
+  {
+    "wilaya": "13 - TLEMCEN",
+    "commune": "AIN KEBIRA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "TIARET"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MEDROUSSA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "AIN BOUCHEKIF"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SIDI ALI MELLAL"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "AIN ZARIT"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "AIN DEHEB"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SIDI BAKHTI"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MEDRISSA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "ZMALET EL EMIR ABDELKADER"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MADNA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MELLAKOU"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "DAHMOUNI"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "RAHOUIA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MAHDIA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SOUGUEUR"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SI ABDELGHANI"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "AIN EL HADID"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "DJEBILET ROSFA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "NAIMA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MEGHILA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "GUERTOUFA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SIDI HOSNI"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "DJILLALI BEN AMAR"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SEBAINE"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "TOUSNINA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "FRENDA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "AIN KERMES"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "KSAR CHELLALA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "RECHAIGA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "NADORAH"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "OUED LILLI"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "MECHRAA SAFA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "HAMADIA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "CHEHAIMA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "TAKHEMARET"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SIDI ABDERAHMANE"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "SERGHINE"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "BOUGARA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "FAIDJA"
+  },
+  {
+    "wilaya": "14 - TIARET",
+    "commune": "TIDDA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIZI OUZOU"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIN EL HAMMAM"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AKBIL"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "FREHA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "SOUAMAA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "MECHTRASS"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IRDJEN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIMIZART"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "MAKOUDA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "DRAA EL MIZAN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIZI GHENIF"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BOUNOUH"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT CHAFFAA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "FRIKAT"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BENI AISSI"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BENI ZMENZER"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IFERHOUNENE"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AZAZGA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "ILOULA OUMALOU"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "YAKOURENE"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "LARBA NATH IRATEN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIZI RACHED"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "ZEKRI"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "OUAGUENOUN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIN ZAOUIA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "M'KIRA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT YAHIA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT MAHMOUD"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "MAATKA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "ABI YOUCEF"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BENI DOUALA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "ILLILTEN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BOUZGUEN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT AGGOUACHA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "OUADHIA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AZZEFOUN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIGZIRT"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "DJEBEL AISSA MIMOUN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BOGHNI"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IFIGHA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT OUMALOU"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIRMITINE"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AKERROU"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "YATAFENE"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BENI ZIKI"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "DRAA BEN KHEDDA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "OUACIF"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IDJEUR"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "MEKLA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TIZI N'THLATA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BENI YENNI"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AGHRIB"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IFLISSEN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "BOUDJIMA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT YAHIA MOUSSA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "SOUK EL THENINE"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT KHELILI"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "SIDI NAAMANE"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IBOUDRAREN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AGHNI GOUGHRAN"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "MIZRANA"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "IMSOUHAL"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "TADMAIT"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT BOUADOU"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "ASSI YOUCEF"
+  },
+  {
+    "wilaya": "15 - TIZI OUZOU",
+    "commune": "AIT TOUDERT"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "ALGER CENTRE"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "SIDI M'HAMED"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL MADANIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "MOHAMED BELOUIZDAD"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BAB EL OUED"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BOLOGHINE IBNOU ZIRI"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "CASBAH"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "OUED KORICHE"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BIR MOURAD RAIS"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL BIAR"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BOUZAREAH"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BIRKHADEM"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL HARRACH"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BARAKI"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "OUED SMAR"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BOUROUBA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "HUSSEIN DEY"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "KOUBA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BACHEDJERAH"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "DAR EL BEIDA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BAB EZZOUAR"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BEN AKNOUN"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "DELY IBRAHIM"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BAINS ROMAINS"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "RAIS HAMIDOU"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "DJASR KASENTINA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL MOURADIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "HYDRA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "MOHAMMADIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BORDJ EL KIFFAN"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL MAGHARIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BENI MESSOUS"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "LES EUCALYPTUS"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BIRTOUTA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "TESSALA EL MERDJA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "OULED CHEBEL"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "SIDI MOUSSA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "AÏN TAYA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BORDJ EL BAHRI"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL MARSA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "H'RAOUA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "ROUIBA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "REGHAÏA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "AÏN BENIAN"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "STAOUELI"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "ZERALDA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "MAHELMA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "RAHMANIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "SOUIDANIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "CHERAGA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "OULED FAYET"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "EL ACHOUR"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "DRARIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "DOUERA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "BABA HASSEN"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "KHRAICIA"
+  },
+  {
+    "wilaya": "16 - ALGER",
+    "commune": "SAOULA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "DJELFA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "MOUADJEBAR"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "EL GUEDID"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "HASSI BAHBAH"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "AIN MAABED"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "SED RAHAL"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "FAIDH EL BOTMA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "BIRINE"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "BOUIRA LAHDAB"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "ZACCAR"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "EL KHEMIS"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "SIDI BAIZID"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "M'LILIHA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "EL IDRISSIA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "DOUIS"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "HASSI EL EUCH"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "MESSAAD"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "GUETTARA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "SIDI LADJEL"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "HAD SAHARY"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "GUERNINI"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "SELMANA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "AIN CHOUHADA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "OUM LAADHAM"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "DAR CHIOUKH"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "CHAREF"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "BENI YAGOUB"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "ZAAFRANE"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "DELDOUL"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "AIN EL IBEL"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "AIN OUSSERA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "BENHAR"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "HASSI FEDOUL"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "AMOURAH"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "AIN FEKA"
+  },
+  {
+    "wilaya": "17 - DJELFA",
+    "commune": "TADMIT"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "JIJEL"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "ERRAGUENE"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "EL AOUANA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "ZIAMMA MANSOURIAH"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "TAHER"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "EMIR ABDELKADER"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "CHEKFA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "CHAHNA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "EL MILIA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "SIDI MAAROUF"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "SETTARA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "EL ANCER"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "SIDI ABDELAZIZ"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "KAOUS"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "GHEBALA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "BOURAOUI BELHADEF"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "DJIMLA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "SELMA BENZIADA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "BOUSSIF OULED ASKEUR"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "EL KENNAR NOUCHFI"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "OULED YAHIA KHADROUCH"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "BOUDRIA BENI YADJIS"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "KEMIR OUED ADJOUL"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "TEXENA"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "DJEMA BENI HABIBI"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "BORDJ TAHER"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "OULED RABAH"
+  },
+  {
+    "wilaya": "18 - JIJEL",
+    "commune": "OUADJANA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "SETIF"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN EL KEBIRA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BENI AZIZ"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "OULED SI AHMED"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BOUTALEB"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN ROUA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "DRAA KEBILA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BIR EL ARCH"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BENI CHEBANA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "OULED TEBBEN"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "HAMMA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "MAAOUIA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN LEGRAJ"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN ABESSA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "DEHAMCHA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BABOR"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "GUIDJEL"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN LAHDJAR"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BOUSSELAM"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "EL EULMA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "DJEMILA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BENI OUARTILANE"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "ROSFA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "OULED ADDOUANE"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BELAA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN ARNAT"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AMOUCHA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN OULMANE"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BEIDHA BORDJ"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BOUANDAS"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BAZER SAKRA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "HAMMAM ESOUKHNA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "MEZLOUG"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BIR HADDADA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "SERDJ EL GHOUL"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "EL OURICIA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "TIZI N'BECHAR"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "SALAH BEY"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN AZAL"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "GUENZET"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "TALAIFACENE"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BOUGAA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BENI FOUDA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "TACHOUDA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BENI MOUHLI"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "OULED SABOR"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "GUELLAL"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "AIN SEBT"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "HAMMAM GUERGOUR"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "KSAR EL ABTAL"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "BENI HOCINE"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "MAOUAKLANE"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "GUELTA ZERKA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "TAYA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "EL OULDJA"
+  },
+  {
+    "wilaya": "19 - SETIF",
+    "commune": "TELLA"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "SAIDA"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "DOUI THABET"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "AIN EL HADJAR"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "OULED KHALED"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "MOULAY LARBI"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "YOUB"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "HOUNET"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "SIDI AMAR"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "SIDI BOUBEKEUR"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "EL HASSASNA"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "MAAMORA"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "SIDI AHMED"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "AIN SEKHOUNA"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "OULED BRAHIM"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "TIRCINE"
+  },
+  {
+    "wilaya": "20 - SAIDA",
+    "commune": "AIN SOLTANE"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "SKIKDA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "EL HADAIK"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "AZZABA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "DJENDEL SAADI MOHAMED"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "AIN CHERCHAR"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BEKKOUCHE LAKHDAR"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BENAZOUZ"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "ES SEBT"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "COLLO"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BENI ZID"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "KERKERA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "OULED ATTIA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "OUED ZEHOUR"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "ZITOUNA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "EL HARROUCH"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "ZERDAZAS"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "OULED HEBABA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "SIDI MEZGHICHE"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "EMDJEZ EDCHICH"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BENI OULBANE"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "AIN BOUZIANE"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "RAMDANE DJAMEL"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BENI BACHIR"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "SALAH BOUCHAOUR"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "TAMALOUS"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "AIN KECHRA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "OUM TOUB"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BEIN EL OUIDEN"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "FIL FILA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "CHERAIA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "KANOUA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "EL GHEDIR"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "BOUCHTATA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "OULDJA BOULBALLOUT"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "KHENEG MAYOUM"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "HAMADI KROUMA"
+  },
+  {
+    "wilaya": "21 - SKIKDA",
+    "commune": "EL MARSA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI BEL ABBES"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "TESSALA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI BRAHIM"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "MOSTEFA BEN BRAHIM"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "TELAGH"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "MEZAOUROU"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "BOUKHANAFIS"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI ALI BOUSSIDI"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "BADREDINE EL MOKRANI"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "MARHOUM"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "AMARNAS"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "TILMOUNI"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI LAHCENE"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "AIN THRID"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "MAKEDRA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "TENIRA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "MOULAY SLISSEN"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "EL HACAIBA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "HASSI ZEHANA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "TABIA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "MERINE"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "RAS EL MA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "AIN TINDAMINE"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "AIN KADA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "M'CID"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI KHALED"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "AIN EL BERD"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SFISSEF"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "AIN ADDEN"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "DHAYA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "ZEROUALA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "LAMTAR"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI CHAIB"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI DAHOU DE ZAIRS"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "OUED SEBAA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SEHALA THAOURA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI YACOUB"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI HAMADOUCHE"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "BELARBI"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "OUED SEFIOUN"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "TEGHALIMET"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "BEN BADIS"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "SIDI ALI BENYOUB"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "CHETOUANE BELAILA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "BIR EL HAMMAM"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "REDJEM DEMOUCHE"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "BENACHIBA CHELIA"
+  },
+  {
+    "wilaya": "22 - SIDI BEL ABBES",
+    "commune": "HASSI DAHOU"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "ANNABA"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "BERRAHEL"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "EL HADJAR"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "EULMA"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "EL BOUNI"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "OUED EL ANEB"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "CHEURFA"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "SERAIDI"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "AIN BERDA"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "CHETAIBI"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "SIDI AMAR"
+  },
+  {
+    "wilaya": "23 - ANNABA",
+    "commune": "TREAT"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "GUELMA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "NECHMAYA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BOUATI MAHMOUD"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "OUED ZENATI"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "TAMLOUKA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "OUED FRAGHA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "AIN SANDEL"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "RAS EL AGBA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "DAHOUARA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BELKHIR"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BEN DJARAH"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BOU HAMDANE"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "AIN MAKHLOUF"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "AIN BEN BEIDA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "LEKHZARA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BENI MEZLINE"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BOU HACHANA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "GUELAAT BOU SBAA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "HAMMAM DEBAGH"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "EL FEDJOUDJ"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BORDJ SABAT"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "HAMMAM N'BAIL"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "AIN LARBI"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "MEDJEZ AMAR"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BOUCHEGOUF"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "HELIOPOLIS"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "HOUARI BOUMEDIENNE"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "ROKNIA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "SALAOUA ANNOUNA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "MEDJEZ SFA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "BOUMAHRA AHMED"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "AIN REGGADA"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "OUED CHEHAM"
+  },
+  {
+    "wilaya": "24 - GUELMA",
+    "commune": "DJEBALA KHEMISSI"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "CONSTANTINE"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "HAMMA BOUZIANE"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "BEN BADIS"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "ZIGHOUD YOUCEF"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "DIDOUCHE MOURAD"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "EL KHROUB"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "AIN ABID"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "BENI HAMIDEN"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "OULED RAHMOUNE"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "AIN SMARA"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "MESSAOUD BOUDJERIOU"
+  },
+  {
+    "wilaya": "25 - CONSTANTINE",
+    "commune": "IBN ZIAD"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "MEDEA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OUZERA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OULED MAAREF"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "AIN BOUCIF"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "AISSAOUIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OULED DEIDE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "EL OMARIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "DERRAG"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "EL GUELBELKEBIR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BOUAICHE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "MEZERENA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OULED BRAHIM"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "TIZI MAHDI"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SIDI ZIANE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "TAMESGUIDA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "EL HAMDANIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "KEF LAKHDAR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "CHELALET EL ADHAOURA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BOUSKENE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "REBAIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BOUCHRAHIL"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OULED HELLAL"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "TAFRAOUT"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BOGHAR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SIDI NAAMANE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SIDI ZAHAR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OUED HARBIL"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BENCHICAO"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SIDI DAMED"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "AZIZ"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SOUAGUI"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "ZOUBIRIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "KSAR EL BOUKHARI"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "EL AZIZIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "DJOUAB"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "CHAHBOUNIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "MEGHRAOUA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "CHENIGUEL"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "AIN OU KSIR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OUM EL DJALIL"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OUAMRI"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SI MAHDJOUB"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "TLATET EDDOUAIR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BENI SLIMANE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BERROUAGHIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SEGHOUANE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "MFATHA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "MIHOUB"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BOUGHEZOUL"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "TABLAT"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "DEUX BASSINS"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "DRAA ESSAMAR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SIDI ERRABIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BIR BEN LAABED"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "EL OUINET"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "OULED ANTAR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "BOUAICHOUNE"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "HANNACHA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SEDRAIA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "MEDJEBAR"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "KHAMS DJOUAMAA"
+  },
+  {
+    "wilaya": "26 - MEDEA",
+    "commune": "SANEG"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "MOSTAGANEM"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SAYADA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "FORNAKA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "STIDIA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "AIN NOUISSY"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "HASSI MAAMECHE"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "AIN TADLES"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SOUR"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "OUED EL KHEIR"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SIDI BELLATER"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "KHEIREDINE"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SIDI ALI"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "ABDELMALEK RAMDANE"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "HADJADJ"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "NEKMARIA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SIDI LAKHDAR"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "ACHAACHA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "KHADRA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "BOUGUIRAT"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SIRAT"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "AIN SIDI CHERIF"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "MESRA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "MANSOURAH"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SOUAFLIA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "OULED BOUGHALEM"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "OULED MAALLAH"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "MEZGHRANE"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "TAZGAIT"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "SAFSAF"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "TOUAHRIA"
+  },
+  {
+    "wilaya": "27 - MOSTAGANEM",
+    "commune": "EL HASSIANE"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MSILA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MAADID"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "HAMMAM DHALAA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OULED DERRADJ"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "TARMOUNT"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "M'TARFA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "KHOUBANA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "M'CIF"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "CHELLAL"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OULED MADHI"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MAGRA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BERHOUM"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "AIN KHADRA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OULED ADDI GUEBALA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BELAIBA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "SIDI AISSA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "AIN EL HADJEL"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OUANOUGHA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BOU SAADA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OULED SIDI BRAHIM"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "SIDI AMEUR"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "TAMSA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BEN SROUR"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OULED SLIMANE"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "EL HOUAMED"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "EL HAMEL"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "OULED MANSOUR"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MAARIF"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "DEHAHNA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BOUTI SAYAH"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "KHETTOUTI SED ELDJIR"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MAHAMED BOUDIAF"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BENZOUH"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MENAA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "SOUAMAA"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "AIN EL MELH"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "MEDJEDEL"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "SLIM"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "AIN ERRICH"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "BENI ILMANE"
+  },
+  {
+    "wilaya": "28 - MSILA",
+    "commune": "DJEBEL MESSAAD"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "MASCARA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "BOU HANIFIA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "TIZI"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "HACINE"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "MAOUSSA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "TEGHENIF"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL HACHEM"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SIDI KADA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "ZELAMTA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "OUED EL ABTAL"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "GHRISS"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "FROHA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "MATEMORE"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "MAKDHA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SIDI BOUSSAID"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL BORDJ"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "AIN FEKAN"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "BENIAN"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "KHALOUIA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL MENAOUER"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "OUED TARIA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "AOUF"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "AIN FARES"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SIG"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "OGGAZ"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "ALAIMIA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL GAADA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "ZAHANA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "MOHAMMADIA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SIDI ABDELMOUMENE"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL GHOMRI"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SEDJERARA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "MOCTADOUZ"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "BOU HENNI"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "GUETTENA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL MAMOUNIA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "EL KEURT"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "CHORFA"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "RAS AIN AMIROUCHE"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "NESMOT"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SIDI ABDELDJEBAR"
+  },
+  {
+    "wilaya": "29 - MASCARA",
+    "commune": "SEHAILIA"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "OUARGLA"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "AIN BEIDA"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "N'GOUSSA"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "HASSI MESSAOUD"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "ROUISSAT"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "SIDI KHOUILED"
+  },
+  {
+    "wilaya": "30 - OUARGLA",
+    "commune": "HASSI BEN ABDALLAH"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "ORAN"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "GDYEL"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "BIR EL DJIR"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "HASSI BOUNIF"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "ES SENIA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "ARZEW"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "BETHIOUA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "MARSAT EL HADJADJ"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "AIN TURK"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "EL ANCAR"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "OUED TLELAT"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "TAFRAOUI"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "SIDI CHAMI"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "BOUFATIS"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "MERS EL KEBIR"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "BOUSFER"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "EL KARMA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "EL BRAYA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "HASSI BEN OKBA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "BEN FREHA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "HASSI MEFSOUKH"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "SIDI BEN YABKA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "MESSERGHIN"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "BOUTLELIS"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "AIN KERMA"
+  },
+  {
+    "wilaya": "31 - ORAN",
+    "commune": "AIN BIYA"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "EL BAYADH"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "ROGASSA"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "STITTEN"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "BREZINA"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "GHASSOUL"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "BOUALEM"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "EL ABIODH SIDI CHEIKH"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "AIN EL ORAK"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "ARBAOUAT"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "BOUGTOUB"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "EL KHEITHER"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "KEF EL AHMAR"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "BOUSSEMGHOUN"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "CHELLALA"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "KRAKDA"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "EL BNOUD"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "CHEGUIG"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "SIDI AMEUR"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "EL MEHARA"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "TOUSMOULINE"
+  },
+  {
+    "wilaya": "32 - EL BAYADH",
+    "commune": "SIDI TIFOUR"
+  },
+  {
+    "wilaya": "33 - ILLIZI",
+    "commune": "ILLIZI"
+  },
+  {
+    "wilaya": "33 - ILLIZI",
+    "commune": "DEBDEB"
+  },
+  {
+    "wilaya": "33 - ILLIZI",
+    "commune": "BORDJ OMAR DRISS"
+  },
+  {
+    "wilaya": "33 - ILLIZI",
+    "commune": "IN AMENAS"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "BORDJ BOU ARRERIDJ"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "RAS EL OUED"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "BORDJ ZEMOURA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "MANSOURA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "EL M'HIR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "BEN DAOUD"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "EL ACHIR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "AIN TAGHROUT"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "BORDJ GHDIR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "SIDI EMBAREK"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "EL HAMADIA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "BELIMOUR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "MEDJANA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "TENIET EN NASR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "DJAAFRA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "EL MAIN"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "OULED BRAHEM"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "OULED DAHMANE"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "HASNAOUA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "KHELIL"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "TAGLAIT"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "KSOUR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "OULED SIDI BRAHIM"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "TAFREG"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "COLLA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "TIXTER"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "EL ACH"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "EL ANASEUR"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "TESMART"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "AIN TESRA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "BIR KASDALI"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "GHILASSA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "RABTA"
+  },
+  {
+    "wilaya": "34 - BORDJ BOU ARRERIDJ",
+    "commune": "HARAZA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BOUMERDES"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BOUDOUAOU"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "AFIR"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BORDJ MENAIEL"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BAGHLIA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "SIDI DAOUD"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "NACIRIA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "DJINET"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "ISSER"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "ZEMMOURI"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "SI MUSTAPHA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "TIDJELABINE"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "CHABET EL AMEUR"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "THENIA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "TIMEZRIT"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "CORSO"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "OULED MOUSSA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "LARBATACHE"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BOUZEGZA KEDDARA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "TAOURGA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "OULED AISSA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BEN CHOUD"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "DELLYS"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "AMMAL"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BENI AMRANE"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "SOUK EL HAD"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "BOUDOUAOU EL BAHRI"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "OULED HEDADJ"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "LEGHATA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "HAMMEDI"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "KHEMIS EL KHECHNA"
+  },
+  {
+    "wilaya": "35 - BOUMERDES",
+    "commune": "EL KHARROUBA"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "EL TARF"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "BOUHADJAR"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "BEN M'HIDI"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "BOUGOUS"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "EL KALA"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "AIN EL ASSEL"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "EL AIOUN"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "BOUTELDJA"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "SOUAREKH"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "BERRIHANE"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "LAC DES OISEAUX"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "CHEFIA"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "DREAN"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "CHIHANI"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "CHEBAITA MOKHTAR"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "BESBES"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "ASFOUR"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "ECHATT"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "ZERIZER"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "ZITOUNA"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "AIN KERMA"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "OUED ZITOUN"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "HAMMAM BENI SALAH"
+  },
+  {
+    "wilaya": "36 - EL TARF",
+    "commune": "RAML SOUK"
+  },
+  {
+    "wilaya": "37 - TINDOUF",
+    "commune": "TINDOUF"
+  },
+  {
+    "wilaya": "37 - TINDOUF",
+    "commune": "OUM EL ASSEL"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "TISSEMSILT"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "BORDJ BOU NAAMA"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "THENIET EL HAD"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "LAZHARIA"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "BENI CHAIB"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "LARDJEM"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "MELAAB"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "SIDI LANTRI"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "BORDJ EL EMIR ABDELKADER"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "LAYOUNE"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "KHEMISTI"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "OULED BESSEM"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "AMMARI"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "YOUSSOUFIA"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "SIDI BOUTOUCHENT"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "LARBAA"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "MAASSEM"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "TAMALAHT"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "SIDI SLIMANE"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "BOUCAID"
+  },
+  {
+    "wilaya": "38 - TISSEMSILT",
+    "commune": "BENI LAHCENE"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL OUED"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL ROBBAH"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "OUED EL ALENDA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "32 - EL BAYADHA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL NAKHLA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "GUEMAR"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "KOUININE"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL REGUIBA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL HAMRAIA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "TAGHZOUT"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL DEBILA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "HASSANI ABDELKRIM"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "HASSI KHELIFA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "TALEB LARBI"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "DOUAR EL MA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "SIDI AOUN"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL TRIFAOUI"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL MAGRANE"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "BEN GUECHA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "OUERMAS"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "EL OGLA"
+  },
+  {
+    "wilaya": "39 - EL OUED",
+    "commune": "MIH OUENSA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "KHENCHELA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "M'TOUSSA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "KAIS"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "BAGHAI"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "EL HAMMA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "AIN TOUILA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "TAOUZIANAT"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "BOUHMAMA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "REMILA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "CHECHAR"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "BABAR"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "TAMZA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "ENSIGHA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "OULED RECHACHE"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "EL MAHMAL"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "M'SARA"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "YABOUS"
+  },
+  {
+    "wilaya": "40 - KHENCHELA",
+    "commune": "KHIRANE"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "SOUK AHRAS"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "SEDRATA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "HANANCHA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "MECHROHA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "OULED DRISS"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "TIFFECH"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "ZAAROURIA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "TAOURA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "DREA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "HADDADA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "KHEDARA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "MERAHNA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "BIR BOUHOUCHE"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "M'DAOUROUCHE"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "OUM EL ADHAIM"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "AIN ZANA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "SIDI FREDJ"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "RAGOUBA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "KHEMISSA"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "OUED KEBERIT"
+  },
+  {
+    "wilaya": "41 - SOUK AHRAS",
+    "commune": "TERRAGUELT"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "TIPAZA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "MENACEUR"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "LARHAT"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "DOUAOUDA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "BOURKIKA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "KHEMISTI"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "AGHBAL"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "HADJOUT"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "SIDI AMAR"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "GOURAYA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "NADOR"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "CHAIBA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "AIN TAGOURAIT"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "CHERCHELL"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "DAMOUS"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "MEURAD"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "FOUKA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "BOU ISMAIL"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "AHMER EL AIN"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "BOU HAROUN"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "SIDI GHILES"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "MESSELMOUN"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "SIDI RACHED"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "KOLEA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "ATTATBA"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "BENI MILLEUK"
+  },
+  {
+    "wilaya": "42 - TIPAZA",
+    "commune": "HADJERAT ENNOUS"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "MILA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "FERDJIOUA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "CHELGHOUM LAID"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "OUED ATHMENIA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "AIN MELLOUK"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "TELERGHMA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "OUED SEGUEN"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "TADJENANET"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "BENYAHIA ABDERRAHMANE"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "OUED ENDJA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "AHMED RACHEDI"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "OULED KHALOUF"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "TIBERGUENT"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "BOUHATEM"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "ROUACHED"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "TESSALA LEMATAI"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "GRAREM GOUGA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "SIDI MEROUANE"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "TASSADANE HADDADA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "DERRAHI BOUSSELAH"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "MINAR ZARZA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "AMIRA ARRAS"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "TERRAI BAINEM"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "HAMALA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "AIN TINE"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "EL MECHIRA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "SIDI KHELIFA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "ZEGHAIA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "ELAYADI BARBES"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "AIN BEIDA HARRICHE"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "YAHIA BENIGUECHA"
+  },
+  {
+    "wilaya": "43 - MILA",
+    "commune": "CHIGARA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "AIN DEFLA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "MILIANA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BOUMEDFAA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "KHEMIS MILIANA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "HAMMAM RIGHA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "ARIB"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "DJELIDA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "EL AMRA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BOURACHED"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "EL ATTAF"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "EL ABADIA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "DJENDEL"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "OUED CHEURFA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "AIN LECHIAKH"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "OUED DJEMAA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "ROUINA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "ZEDDINE"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "EL HASSANIA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BIR OULD KHELIFA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "AIN SOLTANE"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "TARIK IBN ZIAD"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BORDJ EL EMIR KHALED"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "AIN TORKI"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "SIDI LAKHDAR"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BEN ALLEL"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "AIN BENIAN"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "HOCEINIA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BARBOUCHE"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "DJEMAA OULED CHIKH"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "LEMKHATRIA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BATHIA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "TACHETA ZOUGAGHA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "AIN BOUYAHIA"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "EL MAIN"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "TIBERKANINE"
+  },
+  {
+    "wilaya": "44 - AIN DEFLA",
+    "commune": "BELAAS"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "NAAMA"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "MECHERIA"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "AIN SEFRA"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "TIOUT"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "SFISSIFA"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "MOGHRAR"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "ASSELA"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "DJENIANE BOURZEG"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "AIN BEN KHELIL"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "MAKMAN BEN AMER"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "KASDIR"
+  },
+  {
+    "wilaya": "45 - NAAMA",
+    "commune": "EL BIOD"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "AIN TEMOUCHENT"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "CHAABET EL HAM"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "AIN KIHAL"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "HAMMAM BOUHADJAR"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "BOU ZEDJAR"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "OUED BERKECHE"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "AGHLAL"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "TERGA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "AIN EL ARBAA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "TAMZOURA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "CHENTOUF"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "SIDI BEN ADDA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "AOUBELLIL"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "EL MALAH"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "SIDI BOUMEDIENE"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "OUED SABAH"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "OULED BOUDJEMAA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "AIN TOLBA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "EL AMRIA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "HASSI EL GHELLA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "HASSASNA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "OULED KIHAL"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "BENI SAF"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "SIDI SAFI"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "OULHACA EL GHERABA"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "SIDI OURIACH"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "EL EMIR ABDELKADER"
+  },
+  {
+    "wilaya": "46 - AIN TEMOUCHENT",
+    "commune": "EL MESSAID"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "GHARDAIA"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "DHAYET BENDHAHOUA"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "BERRIANE"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "METLILI"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "EL GUERRARA"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "EL ATTEUF"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "ZELFANA"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "SEBSEB"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "BOUNOURA"
+  },
+  {
+    "wilaya": "47 - GHARDAIA",
+    "commune": "MANSOURA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "RELIZANE"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "OUED RHIOU"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "BELAASSEL BOUZEGZA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "SIDI SAADA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "OULED AICHE"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "SIDI LAZREG"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "EL HAMADNA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "SIDI M'HAMED BEN ALI"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "MEDIOUNA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "SIDI KHETTAB"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "AMMI MOUSSA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "ZEMMOURA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "BENI DERGOUN"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "DJIDIOUIA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "EL GUETTAR"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "HAMRI"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "EL MATMAR"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "SIDI M'HAMED BEN AOUDA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "AIN TAREK"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "OUED ESSALEM"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "OUARIZANE"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "MAZOUNA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "KALAA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "AIN RAHMA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "YELLEL"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "OUED EL DJEMAA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "RAMKA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "MENDES"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "LAHLEF"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "BENI ZENTIS"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "SOUK EL HAAD"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "HAD ECHKALLA"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "BENDAOUD"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "MERDJA SIDI ABED"
+  },
+  {
+    "wilaya": "48 - RELIZANE",
+    "commune": "OULED SIDI MIHOUB"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "CHAROUINE"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "TINERKOUK"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "KSAR KADDOUR"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "TIMIMOUN"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "OULED SAID"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "DELDOUL"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "METARFA"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "AOUGROUT"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "TALMINE"
+  },
+  {
+    "wilaya": "49 - TIMIMOUN",
+    "commune": "OULED AISSA"
+  },
+  {
+    "wilaya": "50 - BORDJ BADJI MOKHTAR",
+    "commune": "BORDJ BADJI MOKHTAR"
+  },
+  {
+    "wilaya": "50 - BORDJ BADJI MOKHTAR",
+    "commune": "TIMIAOUINE"
+  },
+  {
+    "wilaya": "51 - OULED DJELLAL",
+    "commune": "OULED DJELLAL"
+  },
+  {
+    "wilaya": "51 - OULED DJELLAL",
+    "commune": "RAS EL MIAAD"
+  },
+  {
+    "wilaya": "51 - OULED DJELLAL",
+    "commune": "BESBES"
+  },
+  {
+    "wilaya": "51 - OULED DJELLAL",
+    "commune": "SIDI KHALED"
+  },
+  {
+    "wilaya": "51 - OULED DJELLAL",
+    "commune": "DOUCEN"
+  },
+  {
+    "wilaya": "51 - OULED DJELLAL",
+    "commune": "ECH CHAIBA"
+  },
+  {
+    "wilaya": "52 - BENI ABBES",
+    "commune": "BENI ABBES"
+  },
+  {
+    "wilaya": "52 - BENI ABBES",
+    "commune": "IGLI"
+  },
+  {
+    "wilaya": "52 - BENI ABBES",
+    "commune": "TABALBALA"
+  },
+  {
+    "wilaya": "52 - BENI ABBES",
+    "commune": "EL OUATA"
+  },
+  {
+    "wilaya": "52 - BENI ABBES",
+    "commune": "KERZAZ"
+  },
+  {
+    "wilaya": "53 - AIN SALAH",
+    "commune": "AIN GHAR"
+  },
+  {
+    "wilaya": "53 - AIN SALAH",
+    "commune": "AIN SALAH"
+  },
+  {
+    "wilaya": "53 - AIN SALAH",
+    "commune": "FOGGARET EZZOUA"
+  },
+  {
+    "wilaya": "54 - AIN GUEZZAM",
+    "commune": "AIN GUEZZAM"
+  },
+  {
+    "wilaya": "54 - AIN GUEZZAM",
+    "commune": "TINZAOUATINE"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "BALIDAT AMEUR"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "TEBESBEST"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "NEZLA"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "ZAOUIA EL ABIDIA"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "SIDI SLIMANE"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "TOUGGOURT"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "EL HADJIRA"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "TAIBET"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "TAMACINE"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "BENACEUR"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "M'NAGUER"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "MEGARINE"
+  },
+  {
+    "wilaya": "55 - TOUGGOURT",
+    "commune": "EL ALLIA"
+  },
+  {
+    "wilaya": "56 - DJANET",
+    "commune": "DJANET"
+  },
+  {
+    "wilaya": "56 - DJANET",
+    "commune": "BORDJ EL HAOUASSE"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "STILL"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "EL MRARA"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "SIDI KHELLIL"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "TENDLA"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "EL M'GHAIR"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "DJAMAA"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "OUM TOUYOUR"
+  },
+  {
+    "wilaya": "57 - EL M'GHAIR",
+    "commune": "SIDI AMRANE"
+  },
+  {
+    "wilaya": "58 - EL MENIAA",
+    "commune": "EL MENIAA"
+  },
+  {
+    "wilaya": "58 - EL MENIAA",
+    "commune": "HASSI FEHAL"
+  },
+  {
+    "wilaya": "58 - EL MENIAA",
+    "commune": "HASSI GARA"
+  }
+]
