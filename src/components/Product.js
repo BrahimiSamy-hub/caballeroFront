@@ -1,50 +1,26 @@
-// import React, { useState } from 'react'
-// import styled from 'styled-components'
-// // import { formatPrice } from "../utils/helpers"
-// // import { FaSearch } from "react-icons/fa"
-// import { Link } from 'react-router-dom'
-
-// const Product = ({ images = [], name, price, id, volume }) => {
-//   const [isHovered, setIsHovered] = useState(false)
-//   return (
-//     <Wrapper>
-//       <div
-//         style={{ width: 250 + 'px' }}
-//         className='container center'
-//         onMouseEnter={() => setIsHovered(true)}
-//         onMouseLeave={() => setIsHovered(false)}
-//       >
-//         <Link to={`/products/${id}`} className=''>
-//           <img
-//             src={isHovered && images[0] ? images[0] : images[1]}
-//             alt={name}
-//           />
-
-//           {/* <FaSearch /> */}
-//         </Link>
-//       </div>
-//       <footer
-//         // style={{ width: 250 + "px" }}
-//         className=' center margin'
-//       >
-//         <Link to={`/products/${id}`}>
-//           <h5>
-//             {name} Vol {volume}
-//           </h5>
-//         </Link>
-
-//         <p>{price} DZD</p>
-//       </footer>
-//     </Wrapper>
-//   )
-// }
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const Product = ({ images = [], name, price, _id, volume }) => {
+const Product = ({
+  image1,
+  image2,
+  name,
+  createdAt,
+  prices = [],
+  _id,
+  sexe,
+  category,
+  season,
+  descriptions = [],
+}) => {
   const [isHovered, setIsHovered] = useState(false)
-
+  const isNewProduct = () => {
+    const today = new Date()
+    const created = new Date(createdAt)
+    const oneMonthAgo = new Date(today.setMonth(today.getMonth() - 1))
+    return created > oneMonthAgo
+  }
   return (
     <Wrapper>
       <div
@@ -53,15 +29,20 @@ const Product = ({ images = [], name, price, _id, volume }) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <Link to={`/products/${_id}`}>
+          {isNewProduct() && (
+            <span className='blinking-text new-badge  '>NEW</span>
+          )}
           <div className='image-container'>
             <img
-              src={images[0]}
+              src={image1.url}
               alt={name}
+              crossOrigin='anonymous'
               className={!isHovered ? 'active' : ''}
             />
             <img
-              src={images[1]}
+              src={image2.url}
               alt={name}
+              crossOrigin='anonymous'
               className={isHovered ? 'active' : ''}
             />
           </div>
@@ -69,12 +50,12 @@ const Product = ({ images = [], name, price, _id, volume }) => {
       </div>
       <footer className='center margin'>
         <Link className='linkV' to={`/products/${_id}`}>
-          <h5>
-            {name} {volume}
-            <small>ml</small>
-          </h5>
+          <h5>{name}</h5>
         </Link>
-        <p className='price'>{price} DZD</p>
+        <p className='price'>
+          {prices[0].type} {prices[0].price}
+          <small>DZD</small>
+        </p>
       </footer>
     </Wrapper>
   )
@@ -83,6 +64,30 @@ const Product = ({ images = [], name, price, _id, volume }) => {
 const Wrapper = styled.article`
   .price {
     font-size: 1.15rem;
+  }
+  @keyframes blink {
+    0% {
+      color: red;
+    }
+    50% {
+      color: transparent;
+    }
+    100% {
+      color: red;
+    }
+  }
+
+  .blinking-text {
+    animation: blink 1.7s linear infinite;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    z-index: 10;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
   .linkV:visited {
     color: var(--clr-primary-9);
@@ -126,24 +131,23 @@ const Wrapper = styled.article`
   }
   .container {
     position: relative;
-    // Remove the background color if it's not needed, or make sure it matches the image's background
-    border-radius: var(--radius); // Apply border-radius to the container
-    overflow: hidden; // This ensures nothing spills outside the border-radius
+    border-radius: var(--radius);
+    overflow: hidden;
   }
 
   .image-container {
     position: relative;
     width: 250px;
     height: 380px;
-    border-radius: var(--radius); // Match the border-radius here if necessary
+    border-radius: var(--radius);
   }
 
   img {
     position: absolute;
-    width: 100%; // Fill the container width
-    height: 100%; // Fill the container height
-    object-fit: cover; // Cover the container fully
-    border-radius: var(--radius); // Apply border-radius to images if needed
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius);
     transition: opacity 1s ease;
     opacity: 0;
   }

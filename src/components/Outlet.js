@@ -127,6 +127,47 @@ export default function DataGridDemo() {
       },
     },
     {
+      field: 'image1',
+      headerName: 'Main Image',
+      width: 100,
+      renderCell: (params) => {
+        return params.row.image1 && params.row.image1.url ? (
+          <div>
+            <div>
+              <a href={params.row.image1.url}>Main </a>
+            </div>
+          </div>
+        ) : (
+          <div>No Image</div>
+        )
+      },
+    },
+
+    {
+      field: 'image2',
+      headerName: 'Secondary Image',
+      width: 100,
+      renderCell: (params) => {
+        return params.row.image2 && params.row.image2.url ? (
+          <div>
+            <div>
+              <a href={params.row.image2.url}>Secondary </a>
+            </div>
+          </div>
+        ) : (
+          <div>No Image</div>
+        )
+      },
+    },
+
+    {
+      field: 'isFeatured',
+      headerName: 'isFeatured',
+      width: 80,
+      type: 'boolean',
+    },
+
+    {
       field: 'inStock',
       headerName: 'In Stock',
       width: 80,
@@ -281,12 +322,12 @@ export default function DataGridDemo() {
       await axios.delete(`http://localhost:3000/products/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
-      // setData(data.filter((item) => item._id !== id))
+      setData(data.filter((item) => item._id !== id))
     } catch (error) {
       console.error('Error deleting item:', error)
     }
   }
-  const handlePriceVolumeChange = (index, field, event) => {
+  const handlePriceVolumeChange = (index, event, field) => {
     const updatedPrices = [...newProductPrices]
     updatedPrices[index] = {
       ...updatedPrices[index],
@@ -319,15 +360,6 @@ export default function DataGridDemo() {
     setNewProductPrices(updatedPrices)
   }
 
-  const handlePriceVolumeChangeNew = (index, field, event) => {
-    const updatedPrices = [...newProductPrices]
-    updatedPrices[index] = {
-      ...updatedPrices[index],
-      [field]: event.target.value,
-    }
-    setNewProductPrices(updatedPrices)
-  }
-
   const handleGenderChange = (event) => {
     setNewProductGender(event.target.value)
   }
@@ -347,6 +379,7 @@ export default function DataGridDemo() {
   const handleDescriptionFRChange = (event) => {
     setNewProductDescriptionFR(event.target.value)
   }
+
   const handleNewProductNameChange = (event) =>
     setNewProductName(event.target.value)
   const handleNewProductCategoryChange = (event) => {
@@ -379,10 +412,12 @@ export default function DataGridDemo() {
       )
       console.log('Product added:', response.data)
       handleClose()
+      setData((prevData) => [...prevData, response.data])
     } catch (error) {
       console.error('Error adding product:', error)
     }
   }
+
   return (
     <div>
       <Button variant='contained' onClick={handleOpen}>
@@ -606,7 +641,7 @@ export default function DataGridDemo() {
                         fullWidth
                         margin='normal'
                         onChange={(e) =>
-                          handlePriceVolumeChange(index, 'type', e)
+                          handlePriceVolumeChange(index, e, 'type')
                         }
                       />
                     </Grid>
@@ -619,7 +654,7 @@ export default function DataGridDemo() {
                         fullWidth
                         margin='normal'
                         onChange={(e) =>
-                          handlePriceVolumeChange(index, 'price', e)
+                          handlePriceVolumeChange(index, e, 'price')
                         }
                       />
                     </Grid>
@@ -751,38 +786,7 @@ export default function DataGridDemo() {
                     },
                   }}
                 />
-                {/* <BaseTextareaAutosize
-                  minRows={1}
-                  placeholder='Description-AR'
-                  style={{
-                    width: '100%',
-                    padding: '18.5px 14px',
-                    borderColor: 'rgba(0, 0, 0, 0.23)',
-                    marginTop: '16px',
-                    marginBottom: '8px',
-                    borderRadius: '4px',
-                    '&:focus': {
-                      borderColor: 'primary.main',
-                      outline: 'none',
-                    },
-                  }}
-                /> */}
-                {/* <BaseTextareaAutosize
-                  minRows={1}
-                  placeholder='Description-FR'
-                  style={{
-                    width: '100%',
-                    padding: '18.5px 14px',
-                    borderColor: 'rgba(0, 0, 0, 0.23)',
-                    marginTop: '16px',
-                    marginBottom: '8px',
-                    borderRadius: '4px',
-                    '&:focus': {
-                      borderColor: 'primary.main',
-                      outline: 'none',
-                    },
-                  }}
-                /> */}
+
                 <Button type='submit' sx={{ mt: 2 }} variant='contained'>
                   Submit
                 </Button>

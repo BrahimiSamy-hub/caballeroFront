@@ -20,20 +20,38 @@ const cart_reducer = (state, action) => {
         }
       })
       return { state, cart: tempCart }
-    } else {
-      {
-        console.log(product)
-      }
-      const newItem = {
-        id,
-        name: product.name,
-        volume: product.sexe,
-        amount,
-        image: product.images[0],
-        price: product.prices,
-      }
-      return { ...state, cart: [...state.cart, newItem] }
     }
+    // } else {
+    // const newItem = {
+    //   id,
+    //   name: product.name,
+    //   volume: product.sexe,
+    //   seasons: product.season,
+    //   amount,
+    //   image: product.images,
+    //   price: product.price,
+    // }
+    // const newItem = {
+    //     id: product._id,
+    //     name: product.name,
+    //     category: product.category.name,
+    //     season: product.season,
+    //     sex: product.sexe,
+    //     inStock: product.inStock,
+    //     isFeatured: product.isFeatured,
+    //     createdAt: product.createdAt,
+    //     updatedAt: product.updatedAt,
+    //     descriptions: (product.descriptions = []),
+    //     amount,
+    //     image2: product.image2,
+    //     price:
+    //       product.prices && product.prices.length > 0
+    //         ? product.prices[0].price
+    //         : null,
+    //   }
+
+    //   return { ...state, cart: [...state.cart, newItem] }
+    // }
   }
   if (action.type === REMOVE_CART_ITEM) {
     const tempCart = state.cart.filter((item) => item.id !== action.payload)

@@ -46,7 +46,7 @@ const Filters = () => {
           </div>
           {/* end search input */}
           <div className='form-control'>
-            <h5 className='blinking-text'>Category</h5>
+            <h5>Category</h5>
             <div>
               {uniqueCategories.map((categoryName, index) => {
                 return (
@@ -123,21 +123,6 @@ const Filters = () => {
 }
 
 const Wrapper = styled.section`
-  @keyframes blink {
-    0% {
-      color: red;
-    }
-    50% {
-      color: transparent;
-    }
-    100% {
-      color: red;
-    }
-  }
-
-  .blinking-text {
-    animation: blink 1s linear infinite;
-  }
   .form-control {
     margin-bottom: 1.25rem;
     h5 {

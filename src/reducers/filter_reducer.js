@@ -7,7 +7,7 @@ import {
   UPDATE_FILTERS,
   FILTER_PRODUCTS,
   CLEAR_FILTERS,
-} from "../actions"
+} from '../actions'
 
 const filter_reducer = (state, action) => {
   if (action.type === LOAD_PRODUCTS) {
@@ -29,18 +29,18 @@ const filter_reducer = (state, action) => {
   if (action.type === SORT_PRODUCTS) {
     const { sort, filtered_products } = state
     let tempProducts = [...filtered_products]
-    if (sort === "price-lowest") {
+    if (sort === 'price-lowest') {
       tempProducts = tempProducts.sort((a, b) => a.price - b.price)
     }
-    if (sort === "price-highest") {
+    if (sort === 'price-highest') {
       tempProducts = tempProducts.sort((a, b) => b.price - a.price)
     }
-    if (sort === "name-a") {
+    if (sort === 'name-a') {
       tempProducts = tempProducts.sort((a, b) => {
         return a.name.localeCompare(b.name)
       })
     }
-    if (sort === "name-z") {
+    if (sort === 'name-z') {
       tempProducts = tempProducts.sort((a, b) => {
         return b.name.localeCompare(a.name)
       })
@@ -60,12 +60,12 @@ const filter_reducer = (state, action) => {
     // text search
     if (text) {
       tempProducts = tempProducts.filter((product) => {
-        const volumeName = product.name + " vol " + product.volume
+        const volumeName = product.name + ' vol ' + product.volume
         return volumeName.toLowerCase().includes(text)
       })
     }
     //manga name
-    if (category !== "all") {
+    if (category !== 'all') {
       tempProducts = tempProducts.filter((product) => product.name === category)
     }
     // shipping
@@ -79,8 +79,8 @@ const filter_reducer = (state, action) => {
     return {
       ...state,
       filters: {
-        text: "",
-        category: "all",
+        text: '',
+        category: 'all',
         // shipping: false,
       },
     }
