@@ -17,7 +17,6 @@ const AboutPage = () => {
           title='localisation'
           width='600'
           height='450'
-          allowfullscreen=''
           loading='lazy'
           referrerpolicy='no-referrer-when-downgrade'
         ></iframe>

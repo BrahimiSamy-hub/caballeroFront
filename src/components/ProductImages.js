@@ -1,16 +1,35 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const ProductImages = ({ image1, image2 }) => {
+const ProductImages = ({ image1 }) => {
+  const [currentImage, setCurrentImage] = useState('')
+  const [product, setProduct] = useState(null)
+  console.log(image1)
+  // setProduct(image1)
+  // const handleImageClick = (imageUrl) => {
+  //   setCurrentImage(imageUrl)
+  // }
+
+  // if (!product) {
+  //   return <Loading />
+  // }
+
   return (
     <Wrapper>
-      <img src={image1} alt='MainImage' className='main' />
-      <div className='gallery'>
-        {/* <img
-          src={image}
-          alt='img'
-
-        /> */}
+      <div>
+        <img src={image1} alt='Main' className='main' crossOrigin='anonymous' />
+        {/* <div className='gallery'>
+          <img
+            src={product.image1.url}
+            alt={product.name}
+            onClick={() => handleImageClick(product.image1.url)}
+          />
+          <img
+            src={product.image2.url}
+            alt={product.name}
+            onClick={() => handleImageClick(product.image2.url)}
+          />
+        </div> */}
       </div>
     </Wrapper>
   )
@@ -18,7 +37,8 @@ const ProductImages = ({ image1, image2 }) => {
 
 const Wrapper = styled.section`
   .main {
-    height: 350px;
+    width: 250px;
+    height: 280px;
   }
   img {
     display: block;
@@ -50,7 +70,7 @@ const Wrapper = styled.section`
   }
   @media (min-width: 992px) {
     .main {
-      height: 500px;
+      height: 380px;
     }
     .gallery {
       img {

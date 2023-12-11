@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { formatPrice } from "../utils/helpers"
 import { Link } from 'react-router-dom'
 const ListView = ({ products }) => {
   return (
@@ -9,15 +8,12 @@ const ListView = ({ products }) => {
         const { _id, name, prices, description, image1, volume } = product
         return (
           <article key={_id}>
-            <img src={image1.url} alt={name} />
-            <div>{image1.url}</div>
+            <img src={image1.url} alt={name} crossOrigin='anonymous' />
             <div>
-              <h4>
-                {console.log(image1)}
-                {name} {prices[0].type}
-              </h4>
-              <h5 className='price'>{prices[0].type} DZD</h5>
-              {/* <p>{description.substring(0, 150)}</p> */}
+              <h4>{name}</h4>
+              <h5 className='price'>
+                {prices[0].type} {prices[0].price}DZD
+              </h5>
               <Link to={`/products/${_id}`} className='btn hero-btn'>
                 Details
               </Link>

@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-// import { FaCheck } from "react-icons/fa"
+
 import { useCartContext } from '../context/cart_context'
 import AmountButtons from './AmountButtons'
 
-const AddToCart = ({ product }) => {
-  const { addToCart } = useCartContext()
-  const { id } = product
-  const [amount, setAmount] = useState(1)
+const AddToCart = ({
+  product,
+  isInStock,
+  image1,
+  selectedPrice,
+  selectedVolumeType,
+}) => {
+  // const { addToCart } = useCartContext()
 
+  const { _id, name } = product
+  const [amount, setAmount] = useState(1)
   const increase = () => {
     setAmount((oldAmount) => {
       let tempAmount = oldAmount + 1
@@ -25,24 +31,47 @@ const AddToCart = ({ product }) => {
       return tempAmount
     })
   }
+  const addToLocalStorage = () => {
+    const type = selectedVolumeType
+
+    let cart = localStorage.getItem('cart')
+    cart = cart ? JSON.parse(cart) : []
+
+    let found = false
+
+    const newCart = cart.map((item) => {
+      if (item._id === _id && item.type === type) {
+        found = true
+        if (selectedPrice) {
+          return {
+            ...item,
+            amount: item.amount + amount,
+            price: selectedPrice.price,
+            image: image1,
+          }
+        }
+      }
+      return item
+    })
+
+    if (!found) {
+      if (selectedPrice) {
+        newCart.push({
+          _id,
+          name: name,
+          amount,
+          price: selectedPrice.price,
+          type,
+          image: image1,
+        })
+      }
+    }
+
+    localStorage.setItem('cart', JSON.stringify(newCart))
+  }
+
   return (
     <Wrapper>
-      {/* <div className='colors'>
-        <span>Cover :</span>
-        <div>
-          {color.map((color, index) => {
-            return (
-              <button
-                key={index}
-                style={{ background: color }}
-                className='color-btn'
-              >
-                {index}
-              </button>
-            )
-          })}
-        </div>
-      </div> */}
       <div className='btn-container'>
         <AmountButtons
           amount={amount}
@@ -52,7 +81,8 @@ const AddToCart = ({ product }) => {
         <Link
           to='/cart'
           className='btn hero-btn'
-          onClick={() => addToCart(id, amount, product)}
+          // onClick={() => addToCart(id, amount, product)}
+          onClick={addToLocalStorage}
         >
           add to cart
         </Link>
@@ -63,6 +93,10 @@ const AddToCart = ({ product }) => {
 
 const Wrapper = styled.section`
   margin-top: 2rem;
+  .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
   .colors {
     display: grid;
     grid-template-columns: 125px 1fr;

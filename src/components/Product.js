@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const Product = ({
   image1,
   image2,
   name,
   createdAt,
+  inStock,
   prices = [],
   _id,
   sexe,
@@ -14,6 +16,7 @@ const Product = ({
   season,
   descriptions = [],
 }) => {
+  const { t } = useTranslation()
   const [isHovered, setIsHovered] = useState(false)
   const isNewProduct = () => {
     const today = new Date()
@@ -51,11 +54,17 @@ const Product = ({
       <footer className='center margin'>
         <Link className='linkV' to={`/products/${_id}`}>
           <h5>{name}</h5>
+
+          {inStock ? (
+            <h5 style={{ color: 'green', fontSize: '0.75em' }}>
+              {t('inStock')}
+            </h5>
+          ) : (
+            <h5 style={{ color: 'red', fontSize: '0.75em' }}>
+              {t('!inStock')}
+            </h5>
+          )}
         </Link>
-        <p className='price'>
-          {prices[0].type} {prices[0].price}
-          <small>DZD</small>
-        </p>
       </footer>
     </Wrapper>
   )
@@ -190,7 +199,8 @@ const Wrapper = styled.article`
     align-items: center;
   }
   footer h5,
-  footer p {
+  footer p,
+  footer small {
     margin-bottom: 0;
     font-weight: 750;
     text-align: center;

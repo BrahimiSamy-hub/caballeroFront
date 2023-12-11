@@ -1,14 +1,17 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "react-router-dom"
+import React from 'react'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+
 const ErrorPage = () => {
+  const { t } = useTranslation()
   return (
     <Wrapper className='page-100'>
       <section>
         <h1>404</h1>
-        <h3>Sorry, the page you tried cannot be found</h3>
+        <h3> {t('404')}</h3>
         <Link to='/' className='btn'>
-          back home
+          {t('bHome')}
         </Link>
       </section>
     </Wrapper>

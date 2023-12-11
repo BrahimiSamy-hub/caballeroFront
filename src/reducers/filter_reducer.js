@@ -64,9 +64,11 @@ const filter_reducer = (state, action) => {
         return volumeName.toLowerCase().includes(text)
       })
     }
-    //manga name
+
     if (category !== 'all') {
-      tempProducts = tempProducts.filter((product) => product.name === category)
+      tempProducts = tempProducts.filter(
+        (product) => product.category.name === category
+      )
     }
     // shipping
     // if (shipping) {

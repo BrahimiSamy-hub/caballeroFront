@@ -1,10 +1,11 @@
-import React from "react"
-import styled from "styled-components"
-import { useCartContext } from "../context/cart_context"
-import { Link } from "react-router-dom"
-import CartColumns from "./CartColumns"
-import CartItem from "./CartItem"
-import CartTotals from "./CartTotals"
+import React, { useState, useEffect } from 'react'
+
+import styled from 'styled-components'
+import { useCartContext } from '../context/cart_context'
+import { Link } from 'react-router-dom'
+import CartColumns from './CartColumns'
+import CartItem from './CartItem'
+import CartTotals from './CartTotals'
 
 const CartContent = () => {
   const { cart, clearCart } = useCartContext()
@@ -12,7 +13,7 @@ const CartContent = () => {
     <Wrapper className='section section-center'>
       <CartColumns />
       {cart.map((item) => {
-        return <CartItem key={item.id} {...item} />
+        return <CartItem key={item._id} item={item} />
       })}
       <hr />
       <div className='link-container'>
@@ -24,6 +25,21 @@ const CartContent = () => {
         </button>
       </div>
       <CartTotals />
+      {/* <CartColumns />
+      {cart.map((item) => {
+        return <CartItem key={item._id} {...item} />
+      })}
+      
+      <hr />
+      <div className='link-container'>
+        <Link to='products' className='btn'>
+          continue shopping
+        </Link>
+        <button type='button ' className='btn clear-btn' onClick={clearCart}>
+          clear shopping cart
+        </button>
+      </div>
+      <CartTotals /> */}
     </Wrapper>
   )
 }

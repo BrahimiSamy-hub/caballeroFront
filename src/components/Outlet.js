@@ -12,6 +12,8 @@ import RadioGroup from '@mui/material/RadioGroup'
 import FormLabel from '@mui/material/FormLabel'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
+import Checkbox from '@mui/material/Checkbox'
+
 import {
   Modal,
   Box,
@@ -44,14 +46,14 @@ export default function DataGridDemo() {
       field: 'name',
       headerName: 'Name',
       width: 150,
-      editable: true,
+      editable: false,
     },
     {
       field: 'category',
       type: 'string',
       headerName: 'Category',
       width: 100,
-      editable: true,
+      editable: false,
       renderCell: (params) => <span>{params.row.category.name}</span>,
     },
     {
@@ -59,21 +61,21 @@ export default function DataGridDemo() {
       type: 'string',
       headerName: 'Gender',
       width: 100,
-      editable: true,
+      editable: false,
     },
     {
       field: 'season',
       type: 'string',
       headerName: 'Saison',
       width: 100,
-      editable: true,
+      editable: false,
     },
     {
       field: 'prices',
       headerName: 'Price',
       type: 'number',
-      width: 120,
-      editable: true,
+      width: 150,
+      editable: false,
       renderCell: (params) => {
         const priceList = params.row.prices
           .map((p) => `${p.type}: $${p.price}`)
@@ -90,7 +92,7 @@ export default function DataGridDemo() {
           >
             {params.row.prices.map((p, index) => (
               <div key={index}>
-                {p.type}: ${p.price}
+                {p.type}: {p.price}DZD
               </div>
             ))}
           </div>
@@ -102,7 +104,7 @@ export default function DataGridDemo() {
       headerName: 'Description',
       type: 'string',
       width: 300,
-      editable: true,
+      editable: false,
       renderCell: (params) => {
         const descriptions = params.row.descriptions
           .map((desc) => `${desc.language.toUpperCase()}: ${desc.text}`)
@@ -134,7 +136,9 @@ export default function DataGridDemo() {
         return params.row.image1 && params.row.image1.url ? (
           <div>
             <div>
-              <a href={params.row.image1.url}>Main </a>
+              <a href={params.row.image1.url} target='_blank'>
+                Main{' '}
+              </a>
             </div>
           </div>
         ) : (
@@ -151,7 +155,9 @@ export default function DataGridDemo() {
         return params.row.image2 && params.row.image2.url ? (
           <div>
             <div>
-              <a href={params.row.image2.url}>Secondary </a>
+              <a href={params.row.image2.url} target='_blank'>
+                Secondary{' '}
+              </a>
             </div>
           </div>
         ) : (
@@ -233,6 +239,8 @@ export default function DataGridDemo() {
   const [newProductDescriptionEN, setNewProductDescriptionEN] = useState('')
   const [newProductDescriptionAR, setNewProductDescriptionAR] = useState('')
   const [newProductDescriptionFR, setNewProductDescriptionFR] = useState('')
+  const [newProductImage1, setNewProductImage1] = useState(null)
+  const [newProductImage2, setNewProductImage2] = useState(null)
 
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
@@ -259,15 +267,69 @@ export default function DataGridDemo() {
     const newFields = dynamicFields.filter((_, i) => i !== index)
     setDynamicFields(newFields)
   }
+  const handleEditChangech = (e) => {
+    const { name, value, type, checked } = e.target
+    setEditingItem({
+      ...editingItem,
+      [name]: type === 'checkbox' ? checked : value,
+    })
+  }
+  // const handleEditSubmit = async (event) => {
+  //   event.preventDefault()
+
+  //   const token = localStorage.getItem('jwt')
+
+  //   try {
+  //     const response = await axios.put(
+  //       `http://localhost:3000/products/${editingItem._id}`,
+  //       editingItem,
+  //       { headers: { Authorization: `Bearer ${token}` } }
+  //     )
+  //     console.log('Item updated:', response.data)
+  //     handleCloseEdit()
+
+  //     setData((prevData) =>
+  //       prevData.map((item) =>
+  //         item._id === editingItem._id ? { ...response.data } : item
+  //       )
+  //     )
+  //   } catch (error) {
+  //     console.error('Error updating item:', error)
+  //   }
+  // }
   const handleEditSubmit = async (event) => {
     event.preventDefault()
 
     const token = localStorage.getItem('jwt')
 
+    // Check and upload new images if they are selected
+    let newImage1Url = editingItem.image1
+    let newImage2Url = editingItem.image2
+
+    if (editingItem.newImage1) {
+      const uploadedImage1 = await uploadFile(editingItem.newImage1)
+      newImage1Url = uploadedImage1
+        ? uploadedImage1.file._id
+        : editingItem.image1
+    }
+
+    if (editingItem.newImage2) {
+      const uploadedImage2 = await uploadFile(editingItem.newImage2)
+      newImage2Url = uploadedImage2
+        ? uploadedImage2.file._id
+        : editingItem.image2
+    }
+
+    const updatedItem = {
+      ...editingItem,
+      image1: newImage1Url,
+      image2: newImage2Url,
+    }
+
     try {
       const response = await axios.put(
         `http://localhost:3000/products/${editingItem._id}`,
-        editingItem,
+        updatedItem,
         { headers: { Authorization: `Bearer ${token}` } }
       )
       console.log('Item updated:', response.data)
@@ -319,9 +381,15 @@ export default function DataGridDemo() {
   const token = localStorage.getItem('jwt')
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/products/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
+      await axios.put(
+        `http://localhost:3000/products/${id}`,
+        {
+          isDrafted: true,
+        },
+        {
+          headers: { Authorization: `Bearer ${token}` },
+        }
+      )
       setData(data.filter((item) => item._id !== id))
     } catch (error) {
       console.error('Error deleting item:', error)
@@ -387,8 +455,43 @@ export default function DataGridDemo() {
       data2.find((cat) => cat._id === event.target.value) || {}
     setNewProductCategory(selectedCategory)
   }
+  const handleImage1Change = (event) => {
+    setNewProductImage1(event.target.files[0])
+  }
+
+  const handleImage2Change = (event) => {
+    setNewProductImage2(event.target.files[0])
+  }
+  const uploadFile = async (file) => {
+    const formData = new FormData()
+    formData.append('image', file)
+
+    try {
+      const response = await axios.post(
+        'http://localhost:3000/upload',
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      return response.data
+    } catch (error) {
+      console.error('Error uploading file:', error)
+      return null
+    }
+  }
+
   const handleSubmit = async (event) => {
     event.preventDefault()
+    const image1Url = newProductImage1
+      ? await uploadFile(newProductImage1)
+      : null
+    const image2Url = newProductImage2
+      ? await uploadFile(newProductImage2)
+      : null
+
     const formData = {
       name: newProductName,
       category: newProductCategory,
@@ -400,6 +503,8 @@ export default function DataGridDemo() {
         { language: 'AR', text: newProductDescriptionAR },
         { language: 'FR', text: newProductDescriptionFR },
       ],
+      image1: image1Url.file._id,
+      image2: image2Url.file._id,
     }
 
     try {
@@ -442,6 +547,33 @@ export default function DataGridDemo() {
                 fullWidth
                 margin='normal'
               />
+              <FormControl fullWidth margin='normal'>
+                <InputLabel htmlFor='image1-upload'>Main Image</InputLabel>
+                <input
+                  id='image1-upload'
+                  type='file'
+                  onChange={(e) =>
+                    setEditingItem({
+                      ...editingItem,
+                      newImage1: e.target.files[0],
+                    })
+                  }
+                  style={{ margin: '10px 0' }}
+                />
+              </FormControl>
+              <FormControl fullWidth margin='normal'>
+                <InputLabel htmlFor='image2-upload'>Secondary Image</InputLabel>
+                <input
+                  id='image2-upload'
+                  type='file'
+                  onChange={(e) =>
+                    setEditingItem({
+                      ...editingItem,
+                      newImage2: e.target.files[0],
+                    })
+                  }
+                />
+              </FormControl>
 
               {/* <FormControl fullWidth margin='normal'>
                 <InputLabel id='category-label'>Category</InputLabel>
@@ -499,6 +631,26 @@ export default function DataGridDemo() {
                     </Grid>
                   </Grid>
                 ))}
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={editingItem.isFeatured || false}
+                    onChange={handleEditChangech}
+                    name='isFeatured'
+                  />
+                }
+                label='Is Featured'
+              />
+              <FormControlLabel
+                control={
+                  <Checkbox
+                    checked={editingItem.inStock || false}
+                    onChange={handleEditChangech}
+                    name='inStock'
+                  />
+                }
+                label='In Stock'
+              />
               {/* <TextField
                 name='descriptionEN'
                 label='Description (EN)'
@@ -607,6 +759,8 @@ export default function DataGridDemo() {
                   value={newProductName}
                   onChange={handleNewProductNameChange}
                 />
+                <TextField type='file' onChange={handleImage1Change} />
+                <TextField type='file' onChange={handleImage2Change} />
                 <Box sx={{ minWidth: 120, mt: 2 }}>
                   <FormControl fullWidth>
                     <InputLabel id='demo-simple-select-label'>

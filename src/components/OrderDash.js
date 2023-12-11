@@ -1,114 +1,3 @@
-// import { useState, useEffect } from 'react'
-// import { DataGrid, GridToolbar } from '@mui/x-data-grid'
-// import { Link } from 'react-router-dom'
-// import '../Styling/Outlet.scss'
-// import axios from 'axios'
-// import { products_url as url } from '../utils/constants'
-// import AddCategory from './AddCategory'
-
-// export default function DataGridDemo() {
-//   const [data, setData] = useState([])
-
-//   const fetchData = async () => {
-//     try {
-//       const response = await axios.get('http://localhost:3000/categories/')
-//       setData(response.data)
-//     } catch (error) {
-//       console.error('Error fetching data:', error)
-//     }
-//   }
-//   useEffect(() => {
-//     fetchData()
-//   }, [])
-
-//   const handleClickdelete = async (event, id) => {
-//     event.preventDefault()
-//     const token = localStorage.getItem('jwt')
-//     try {
-//       const response = await axios.delete(
-//         `http://localhost:3000/categories/${id}`,
-//         {
-//           headers: {
-//             Authorization: `Bearer ${token}`,
-//           },
-//         }
-//       )
-//       console.log('Product deleted:', response.data)
-//       fetchData()
-//     } catch (error) {
-//       console.error('Error deleting product:', error)
-//     }
-//   }
-//   const columns = [
-//     {
-//       field: 'name',
-//       headerName: 'nom',
-//       width: 150,
-//       editable: true,
-//     },
-//     {
-//       field: '`createdAt.`',
-//       headerName: 'Created At',
-//       width: 150,
-//       type: 'string',
-//     },
-//     {
-//       field: 'acions',
-//       headerName: 'Actions',
-//       width: 80,
-//       renderCell: (params) => {
-//         const handleClickmodify = (event) => {
-//           event.preventDefault()
-//           console.log('Clicked row data deleted', params.row._id)
-//         }
-//         return (
-//           <div className='action'>
-//             <Link to='#' onClick={handleClickmodify}>
-//               <img src='/view.svg' alt='' />
-//             </Link>
-//             <Link
-//               to='#'
-//               onClick={(event) => handleClickdelete(event, params.row._id)}
-//             >
-//               <img src='/delete.svg' alt='' />
-//             </Link>
-//           </div>
-//         )
-//       },
-//     },
-//   ]
-
-//   return (
-//     <div className='dataTable'>
-//       <DataGrid
-//         className='dataGrid'
-//         getRowId={(row) => row._id}
-//         rows={data}
-//         columns={columns}
-//         initialState={{
-//           pagination: {
-//             paginationModel: {
-//               pageSize: 10,
-//             },
-//           },
-//         }}
-//         slots={{ toolbar: AddCategory }}
-//         slotProps={{
-//           toolbar: {
-//             showQuickFilter: true,
-//             quickFilterProps: { decounceMs: 500 },
-//           },
-//         }}
-//         pageSizeOptions={[10]}
-//         // checkboxSelection
-//         disableRowSelectionOnClick
-//         disableColumnFilter
-//         disableDensitySelector
-//         disableColumnSelector
-//       />
-//     </div>
-//   )
-// }
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { DataGrid, GridToolbar } from '@mui/x-data-grid'
@@ -116,7 +5,6 @@ import {
   Modal,
   Box,
   Fade,
-  Backdrop,
   Button,
   Typography,
   FormControl,
@@ -124,7 +12,6 @@ import {
 } from '@mui/material'
 import { Link } from 'react-router-dom'
 import '../Styling/Outlet.scss'
-import { products_url as url } from '../utils/constants'
 
 const style = {
   position: 'absolute',
@@ -140,26 +27,65 @@ const style = {
 
 function MyComponent() {
   const [open, setOpen] = useState(false)
-  const [category, setCategory] = useState('')
   const [data, setData] = useState([])
   const handleOpen = () => setOpen(true)
   const handleClose = () => setOpen(false)
-  const handleClickDelete = async (event, id) => {
-    event.preventDefault()
-    const token = localStorage.getItem('jwt')
-    try {
-      await axios.delete(`http://localhost:3000/categories/${id}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      setData((prevData) => prevData.filter((item) => item._id !== id))
-    } catch (error) {
-      console.error('Error deleting product:', error)
-    }
-  }
 
   const columns = [
-    { field: 'name', headerName: 'Name', width: 200, editable: true },
+    {
+      field: 'Name',
+      headerName: 'Name',
+      width: 300,
+      renderCell: (params) => {
+        return params.row.orderItems.map((item, index) => (
+          <React.Fragment key={item.id}>
+            {index > 0 && <br />}
+            {item.product.name}
+          </React.Fragment>
+        ))
+      },
+    },
+    {
+      field: 'Quantity',
+      headerName: 'Quantity',
+      width: 300,
+      renderCell: (params) => {
+        return params.row.orderItems.map((item, index) => (
+          <React.Fragment key={item.id}>
+            {index > 0 && <br />}
+            {item.quantity}
+          </React.Fragment>
+        ))
+      },
+    },
+    {
+      field: 'Type',
+      headerName: 'priceType',
+      width: 300,
+      renderCell: (params) => {
+        return params.row.orderItems.map((item, index) => (
+          <React.Fragment key={item.id}>
+            {index > 0 && <br />}
+            {item.priceType}
+          </React.Fragment>
+        ))
+      },
+    },
 
+    { field: 'wilaya', headerName: 'wilaya', width: 200, editable: false },
+    { field: 'total', headerName: 'total', width: 200, editable: false },
+    {
+      field: 'phoneNumber',
+      headerName: 'phoneNumber',
+      width: 100,
+      editable: false,
+    },
+    {
+      field: 'isConfirmed',
+      headerName: 'isConfirmed',
+      width: 80,
+      editable: false,
+    },
     {
       field: 'createdAt',
       headerName: 'Created At',
@@ -177,82 +103,66 @@ function MyComponent() {
       width: 80,
       renderCell: (params) => (
         <div className='action'>
-          <Link to='#'>
-            <img src='/view.svg' alt='' />
-          </Link>
-          <Link
-            to='#'
-            onClick={(event) => handleClickDelete(event, params.row._id)}
+          <Button
+            onClick={() =>
+              updateOrderConfirmation(params.row._id, !params.row.isConfirmed)
+            }
+            variant='contained'
+            color={params.row.isConfirmed ? 'secondary' : 'primary'}
           >
-            <img src='/delete.svg' alt='' />
-          </Link>
+            {params.row.isConfirmed ? 'Unconfirm' : 'Confirm'}
+          </Button>
         </div>
       ),
     },
   ]
-  const handleInputChange = (event) => {
-    setCategory(event.target.value)
-  }
   const fetchData = async () => {
+    const token = localStorage.getItem('jwt')
     try {
-      const response = await axios.get('http://localhost:3000/categories/')
+      const response = await axios.get('http://localhost:3000/orders', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       setData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
   }
-
   useEffect(() => {
     fetchData()
   }, [])
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-
-    const payload = { name: category }
+  const updateOrderConfirmation = async (orderId, newStatus) => {
     const token = localStorage.getItem('jwt')
-
-    axios
-      .post('http://localhost:3000/categories/', payload, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        console.log(response.data)
-        handleClose()
-        setCategory('')
-        setData((prevData) => [response.data, ...prevData])
-      })
-      .catch((error) => {
-        console.error('There was an error!', error)
-      })
+    try {
+      await axios.put(
+        `http://localhost:3000/orders/${orderId}`,
+        { isConfirmed: newStatus },
+        { headers: { Authorization: `Bearer ${token}` } }
+      )
+      fetchData() // Refresh data after update
+    } catch (error) {
+      console.error('Error updating order:', error)
+    }
   }
 
   return (
-    <div>
+    <div className='dataGridContainer'>
       <Button variant='disabled' onClick={handleOpen}>
         Orders
       </Button>
-      <Modal
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{ timeout: 500 }}
-      >
+      <Modal open={open} onClose={handleClose} closeAfterTransition>
         <Fade in={open}>
           <Box sx={style}>
             <Typography id='modal-title' variant='h6'>
               Add Category
             </Typography>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit=''>
               <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
                   id='name'
                   label='Name'
                   type='text'
-                  value={category}
-                  onChange={handleInputChange}
+                  value=''
                 />
                 <Button type='submit' sx={{ mt: 2 }} variant='contained'>
                   Submit

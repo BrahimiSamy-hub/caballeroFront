@@ -1,10 +1,13 @@
 .dataTable {
   height: calc(100vh - 47px);
+  max-width: 1120px;
+  margin: 0 auto;
+  overflow-x: auto;
 
   .dataGrid {
     background: white;
     padding: 20px 20px 0px 20px;
-
+    height: 100%;
     .MuiDataGrid-toolbarContainer {
       flex-direction: row-reverse;
     }

@@ -21,26 +21,29 @@ const CheckoutPage = () => {
       setCommunes(WilayasData.filter((data) => data.wilaya === selectedWilaya))
     }
   }, [selectedWilaya])
+  const wilayaName = selectedWilaya.includes('-')
+    ? selectedWilaya.split('-')[1].trim()
+    : selectedWilaya
   const orderItems = JSON.parse(localStorage.getItem('cart'))
   const orderData = {
     orderItems: orderItems.map((item) => ({
+      product: item._id,
       quantity: item.amount,
-      product: item.id,
+
+      priceType: item.type,
     })),
     wilaya: selectedWilaya,
-    commune: selectedCommune,
-    phone: phone,
-    name: name,
+    phoneNumber: phone,
   }
   const validateForm = () => {
     return (
       name !== '' &&
-      // email !== '' &&
       phone !== '' &&
       selectedCommune !== '' &&
       selectedWilaya !== ''
     )
   }
+  console.log('checkout', orderItems)
 
   const order = () => {
     if (!validateForm()) {
@@ -48,10 +51,10 @@ const CheckoutPage = () => {
     }
     setLoading(true)
     axios
-      .post('http://localhost:3000/api/v1/orders', orderData)
+      .post('http://localhost:3000/orders', orderData)
       .then((response) => {
-        console.log(response.data)
-        if (response.status === 200) {
+        console.log('order', orderData)
+        if (response.status === 201) {
           setOrderSuccess(true)
         }
       })
@@ -167,10 +170,23 @@ const CheckoutPage = () => {
             className='container'
             style={{ marginTop: 50, marginBottom: 50 }}
           >
-            <form id='form1' method='post'>
+            <form id='form2' method='post'>
               <div className='row'>
                 <h4>Your Cart</h4>
               </div>
+              {orderItems &&
+                orderItems.map((item, index) => (
+                  <div key={index} className='cart-item marginTop'>
+                    <h5 className=' marginTop'>
+                      Product {index + 1} : {item.name}
+                    </h5>{' '}
+                    <p>Quantity: {item.amount}</p>
+                    <span> Price : {item.price * item.amount} DA</span>
+                    <div>
+                      Price with delivery : {item.price * item.amount} DA
+                    </div>
+                  </div>
+                ))}
             </form>
           </div>
         </div>
@@ -184,6 +200,9 @@ const Wrapper = styled.div`
   *:before,
   *:after {
     box-sizing: border-box;
+  }
+  .marginTop {
+    margin-top: 20px;
   }
   .flex {
     display: grid;

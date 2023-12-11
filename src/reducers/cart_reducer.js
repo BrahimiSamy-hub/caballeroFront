@@ -9,61 +9,42 @@ import {
 const cart_reducer = (state, action) => {
   if (action.type === ADD_TO_CART) {
     const { id, amount, product } = action.payload
-    const tempItem = state.cart.find((i) => i.id === id)
+    const tempItem = state.cart.find((i) => i._id === id)
+
     if (tempItem) {
       const tempCart = state.cart.map((cartItem) => {
-        if (cartItem.id === id) {
+        if (cartItem._id === id) {
           let newAmount = cartItem.amount + amount
           return { ...cartItem, amount: newAmount }
         } else {
           return cartItem
         }
       })
-      return { state, cart: tempCart }
+      return { ...state, cart: tempCart }
+    } else {
+      const newItem = {
+        _id: id,
+        name: product.name,
+        volume: product.sexe,
+        seasons: product.season,
+        amount,
+        image: product.images,
+        price: product.price,
+      }
+      return { ...state, cart: [...state.cart, newItem] }
     }
-    // } else {
-    // const newItem = {
-    //   id,
-    //   name: product.name,
-    //   volume: product.sexe,
-    //   seasons: product.season,
-    //   amount,
-    //   image: product.images,
-    //   price: product.price,
-    // }
-    // const newItem = {
-    //     id: product._id,
-    //     name: product.name,
-    //     category: product.category.name,
-    //     season: product.season,
-    //     sex: product.sexe,
-    //     inStock: product.inStock,
-    //     isFeatured: product.isFeatured,
-    //     createdAt: product.createdAt,
-    //     updatedAt: product.updatedAt,
-    //     descriptions: (product.descriptions = []),
-    //     amount,
-    //     image2: product.image2,
-    //     price:
-    //       product.prices && product.prices.length > 0
-    //         ? product.prices[0].price
-    //         : null,
-    //   }
-
-    //   return { ...state, cart: [...state.cart, newItem] }
-    // }
   }
   if (action.type === REMOVE_CART_ITEM) {
-    const tempCart = state.cart.filter((item) => item.id !== action.payload)
+    const tempCart = state.cart.filter((item) => item._id !== action.payload)
     return { ...state, cart: tempCart }
   }
   if (action.type === CLEAR_CART) {
     return { ...state, cart: [] }
   }
   if (action.type === TOGGLE_CART_ITEM_AMOUNT) {
-    const { id, value } = action.payload
+    const { _id, value } = action.payload
     const tempCart = state.cart.map((item) => {
-      if (item.id === id) {
+      if (item._id === _id) {
         if (value === 'inc') {
           let newAmount = item.amount + 1
           return { ...item, amount: newAmount }

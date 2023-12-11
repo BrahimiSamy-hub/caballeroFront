@@ -159,6 +159,7 @@ p {
     width: 95vw;
   }
 }
+
 .text-center {
   text-align: center;
 }
@@ -180,6 +181,7 @@ p {
 }
 
 .btn {
+  border: solid #ccc;
   text-transform: uppercase;
   background: var(--clr-primary-9);
   color: var(--clr-primary-10);
@@ -196,8 +198,9 @@ p {
   text-align: center;
 }
 .btn:hover {
-  color: var(--clr-primary-10);
+  color: #1d4851;
   background: #eaded7;
+  border-color: #1d4851;
 }
 .title {
   text-align: center;

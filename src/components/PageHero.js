@@ -10,7 +10,7 @@ const PageHero = ({ title, product }) => {
       <div className='section-center'>
         <h3>
           <Link to='/'>{t('titleNav')}</Link>/
-          {product && <Link to='/products'>Products /</Link>}
+          {product && <Link to='/products'>{t('titleNav3')} /</Link>}
           {title}
         </h3>
       </div>
