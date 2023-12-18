@@ -504,6 +504,17 @@ export default function DataGridDemo() {
           headers: { Authorization: `Bearer ${token}` },
         }
       )
+      // Reset state variables after adding the product
+      setNewProductName('')
+      setNewProductCategory({})
+      setNewProductPrices([])
+      setNewProductGender('')
+      setNewProductSeason('')
+      setNewProductDescriptionEN('')
+      setNewProductDescriptionAR('')
+      setNewProductDescriptionFR('')
+      setNewProductImage1(null)
+      setNewProductImage2(null)
       handleClose()
       setData((prevData) => [...prevData, response.data])
     } catch (error) {
