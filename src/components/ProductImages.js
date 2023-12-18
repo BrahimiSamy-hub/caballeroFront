@@ -1,35 +1,38 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 
-const ProductImages = ({ image1 }) => {
-  const [currentImage, setCurrentImage] = useState('')
-  const [product, setProduct] = useState(null)
-  console.log(image1)
-  // setProduct(image1)
-  // const handleImageClick = (imageUrl) => {
-  //   setCurrentImage(imageUrl)
-  // }
+const ProductImages = ({ image1, image2 }) => {
+  const [currentImage, setCurrentImage] = useState(image1)
 
-  // if (!product) {
-  //   return <Loading />
-  // }
+  const handleImageClick = (imageUrl) => {
+    setCurrentImage(imageUrl)
+  }
 
   return (
     <Wrapper>
       <div>
-        <img src={image1} alt='Main' className='main' crossOrigin='anonymous' />
-        {/* <div className='gallery'>
+        <img
+          src={currentImage}
+          alt='Main'
+          className='main'
+          crossOrigin='anonymous'
+        />
+        <div className='gallery'>
           <img
-            src={product.image1.url}
-            alt={product.name}
-            onClick={() => handleImageClick(product.image1.url)}
+            src={image1}
+            alt='Main'
+            onClick={() => handleImageClick(image1)}
+            className={currentImage === image1 ? 'active' : ''}
+            crossOrigin='anonymous'
           />
           <img
-            src={product.image2.url}
-            alt={product.name}
-            onClick={() => handleImageClick(product.image2.url)}
+            src={image2}
+            alt='Secondary'
+            onClick={() => handleImageClick(image2)}
+            className={currentImage === image2 ? 'active' : ''}
+            crossOrigin='anonymous'
           />
-        </div> */}
+        </div>
       </div>
     </Wrapper>
   )

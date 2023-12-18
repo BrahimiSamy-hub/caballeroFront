@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-
-import { useCartContext } from '../context/cart_context'
+import { useTranslation } from 'react-i18next'
 import AmountButtons from './AmountButtons'
 
 const AddToCart = ({
@@ -12,8 +11,7 @@ const AddToCart = ({
   selectedPrice,
   selectedVolumeType,
 }) => {
-  // const { addToCart } = useCartContext()
-
+  const { t } = useTranslation()
   const { _id, name } = product
   const [amount, setAmount] = useState(1)
   const increase = () => {
@@ -26,19 +24,16 @@ const AddToCart = ({
     setAmount((oldAmount) => {
       let tempAmount = oldAmount - 1
       if (tempAmount < 1) {
-        tempAmount = 1
+        return tempAmount
       }
       return tempAmount
     })
   }
   const addToLocalStorage = () => {
     const type = selectedVolumeType
-
     let cart = localStorage.getItem('cart')
     cart = cart ? JSON.parse(cart) : []
-
     let found = false
-
     const newCart = cart.map((item) => {
       if (item._id === _id && item.type === type) {
         found = true
@@ -53,7 +48,6 @@ const AddToCart = ({
       }
       return item
     })
-
     if (!found) {
       if (selectedPrice) {
         newCart.push({
@@ -66,7 +60,6 @@ const AddToCart = ({
         })
       }
     }
-
     localStorage.setItem('cart', JSON.stringify(newCart))
   }
 
@@ -80,11 +73,10 @@ const AddToCart = ({
         />
         <Link
           to='/cart'
-          className='btn hero-btn'
-          // onClick={() => addToCart(id, amount, product)}
+          className={`btn hero-btn ${!isInStock ? 'disabled' : ''}`}
           onClick={addToLocalStorage}
         >
-          add to cart
+          {t('addTcart')}
         </Link>
       </div>
     </Wrapper>

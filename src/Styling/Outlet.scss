@@ -1,6 +1,7 @@
 .dataTable {
   height: calc(100vh - 47px);
-  max-width: 1120px;
+  // max-width: 1120px;
+  max-width: calc(100vw - 225px);
   margin: 0 auto;
   overflow-x: auto;
 
@@ -18,7 +19,14 @@
       border-radius: 50%;
       object-fit: cover;
     }
+    /* Add these styles to your Outlet.scss */
+    .not-shipped-row {
+      background-color: rgba(255, 166, 0, 0.401);
+    }
 
+    .shipped-row {
+      background-color: rgba(0, 255, 0, 0.259);
+    }
     .action {
       display: flex;
       gap: 15px;

@@ -92,7 +92,7 @@ export default function DataGridDemo() {
           >
             {params.row.prices.map((p, index) => (
               <div key={index}>
-                {p.type}: {p.price}DZD
+                {p.type}: {p.price}DA
               </div>
             ))}
           </div>
@@ -197,7 +197,6 @@ export default function DataGridDemo() {
       renderCell: (params) => {
         const handleClickmodify = (event) => {
           event.preventDefault()
-          console.log('Clicked row :', params.row.id)
         }
         return (
           <div className='action'>
@@ -279,13 +278,36 @@ export default function DataGridDemo() {
 
   //   const token = localStorage.getItem('jwt')
 
+  //   // Check and upload new images if they are selected
+  //   let newImage1Url = editingItem.image1
+  //   let newImage2Url = editingItem.image2
+
+  //   if (editingItem.newImage1) {
+  //     const uploadedImage1 = await uploadFile(editingItem.newImage1)
+  //     newImage1Url = uploadedImage1
+  //       ? uploadedImage1.file._id
+  //       : editingItem.image1
+  //   }
+
+  //   if (editingItem.newImage2) {
+  //     const uploadedImage2 = await uploadFile(editingItem.newImage2)
+  //     newImage2Url = uploadedImage2
+  //       ? uploadedImage2.file._id
+  //       : editingItem.image2
+  //   }
+
+  //   const updatedItem = {
+  //     ...editingItem,
+  //     image1: newImage1Url,
+  //     image2: newImage2Url,
+  //   }
+
   //   try {
   //     const response = await axios.put(
   //       `http://localhost:3000/products/${editingItem._id}`,
-  //       editingItem,
+  //       updatedItem,
   //       { headers: { Authorization: `Bearer ${token}` } }
   //     )
-  //     console.log('Item updated:', response.data)
   //     handleCloseEdit()
 
   //     setData((prevData) =>
@@ -302,7 +324,7 @@ export default function DataGridDemo() {
 
     const token = localStorage.getItem('jwt')
 
-    // Check and upload new images if they are selected
+    // Upload new images if they are selected and get their URLs
     let newImage1Url = editingItem.image1
     let newImage2Url = editingItem.image2
 
@@ -321,9 +343,16 @@ export default function DataGridDemo() {
     }
 
     const updatedItem = {
-      ...editingItem,
+      name: editingItem.name,
+      category: editingItem.category._id,
+      prices: editingItem.prices,
+      sexe: editingItem.sexe,
+      season: editingItem.season,
+      inStock: editingItem.inStock,
+      isFeatured: editingItem.isFeatured,
       image1: newImage1Url,
       image2: newImage2Url,
+      // descriptions: editingItem.descriptions,
     }
 
     try {
@@ -332,7 +361,6 @@ export default function DataGridDemo() {
         updatedItem,
         { headers: { Authorization: `Bearer ${token}` } }
       )
-      console.log('Item updated:', response.data)
       handleCloseEdit()
 
       setData((prevData) =>
@@ -347,8 +375,10 @@ export default function DataGridDemo() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/products/')
-      setData(response.data)
+      const response = await axios.get(
+        'http://localhost:3000/products?limit=20'
+      )
+      setData(response.data.products)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
@@ -369,7 +399,6 @@ export default function DataGridDemo() {
   useEffect(() => {
     fetchData2()
   }, [])
-  console.log(data2)
   const handleCategoryChange = (event) => {
     const selectedCategoryId = event.target.value
 
@@ -395,7 +424,28 @@ export default function DataGridDemo() {
       console.error('Error deleting item:', error)
     }
   }
+  // const handlePriceVolumeChange = (index, event, field) => {
+  //   const updatedPrices = [...newProductPrices]
+  //   updatedPrices[index] = {
+  //     ...updatedPrices[index],
+  //     [field]: event.target.value,
+  //   }
+  //   setNewProductPrices(updatedPrices)
+  // }
   const handlePriceVolumeChange = (index, event, field) => {
+    // Create a new array of prices
+    const newPrices = [...editingItem.prices]
+
+    // Update the specific field at the given index
+    newPrices[index] = {
+      ...newPrices[index],
+      [field]: event.target.value,
+    }
+
+    // Update the editingItem state
+    setEditingItem({ ...editingItem, prices: newPrices })
+  }
+  const handlePriceVolumeNew = (index, event, field) => {
     const updatedPrices = [...newProductPrices]
     updatedPrices[index] = {
       ...updatedPrices[index],
@@ -515,7 +565,6 @@ export default function DataGridDemo() {
           headers: { Authorization: `Bearer ${token}` },
         }
       )
-      console.log('Product added:', response.data)
       handleClose()
       setData((prevData) => [...prevData, response.data])
     } catch (error) {
@@ -548,7 +597,7 @@ export default function DataGridDemo() {
                 margin='normal'
               />
               <FormControl fullWidth margin='normal'>
-                <InputLabel htmlFor='image1-upload'>Main Image</InputLabel>
+                {/* <InputLabel htmlFor='image1-upload'>Main Image</InputLabel> */}
                 <input
                   id='image1-upload'
                   type='file'
@@ -558,11 +607,10 @@ export default function DataGridDemo() {
                       newImage1: e.target.files[0],
                     })
                   }
-                  style={{ margin: '10px 0' }}
                 />
               </FormControl>
               <FormControl fullWidth margin='normal'>
-                <InputLabel htmlFor='image2-upload'>Secondary Image</InputLabel>
+                {/* <InputLabel htmlFor='image2-upload'>Secondary Image</InputLabel> */}
                 <input
                   id='image2-upload'
                   type='file'
@@ -575,7 +623,7 @@ export default function DataGridDemo() {
                 />
               </FormControl>
 
-              {/* <FormControl fullWidth margin='normal'>
+              <FormControl fullWidth margin='normal'>
                 <InputLabel id='category-label'>Category</InputLabel>
                 <Select
                   labelId='category-label'
@@ -591,7 +639,7 @@ export default function DataGridDemo() {
                     </MenuItem>
                   ))}
                 </Select>
-              </FormControl> */}
+              </FormControl>
               {editingItem.prices &&
                 editingItem.prices.map((price, index) => (
                   <Grid container spacing={2} key={index}>
@@ -620,14 +668,6 @@ export default function DataGridDemo() {
                           handlePriceVolumeChange(index, e, 'price')
                         }
                       />
-                    </Grid>
-                    <Grid item xs={2}>
-                      <IconButton
-                        onClick={() => removeTextFieldPair(index)}
-                        sx={{ marginTop: '25px' }}
-                      >
-                        <DeleteIcon />
-                      </IconButton>
                     </Grid>
                   </Grid>
                 ))}
@@ -733,7 +773,6 @@ export default function DataGridDemo() {
                   />
                 </RadioGroup>
               </FormControl>
-
               <Button type='submit' variant='contained' sx={{ mt: 2 }}>
                 Update
               </Button>
@@ -794,9 +833,7 @@ export default function DataGridDemo() {
                         type='text'
                         fullWidth
                         margin='normal'
-                        onChange={(e) =>
-                          handlePriceVolumeChange(index, e, 'type')
-                        }
+                        onChange={(e) => handlePriceVolumeNew(index, e, 'type')}
                       />
                     </Grid>
                     <Grid item xs={5}>
@@ -808,7 +845,7 @@ export default function DataGridDemo() {
                         fullWidth
                         margin='normal'
                         onChange={(e) =>
-                          handlePriceVolumeChange(index, e, 'price')
+                          handlePriceVolumeNew(index, e, 'price')
                         }
                       />
                     </Grid>
@@ -829,8 +866,7 @@ export default function DataGridDemo() {
                 >
                   Add Price and Volume
                 </Button>
-
-                {/* Gender Radio Buttons */}
+                <FormLabel component='legend'>Gender</FormLabel>
                 <RadioGroup
                   row
                   aria-labelledby='gender-radio-buttons-group-label'
@@ -854,8 +890,7 @@ export default function DataGridDemo() {
                     label='Unisex'
                   />
                 </RadioGroup>
-
-                {/* Season Radio Buttons */}
+                <FormLabel component='legend'>Seasons</FormLabel>
                 <RadioGroup
                   row
                   aria-labelledby='season-radio-buttons-group-label'
@@ -971,7 +1006,8 @@ export default function DataGridDemo() {
               quickFilterProps: { decounceMs: 500 },
             },
           }}
-          pageSizeOptions={[10]}
+          pageSize={10}
+          disableSelectionOnClick
           disableRowSelectionOnClick
           disableColumnFilter
           disableDensitySelector

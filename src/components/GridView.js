@@ -1,8 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import Product from './Product'
 
-const GridView = ({ products }) => {
+const GridView = ({ products, handleLoadMore }) => {
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop ===
+        document.documentElement.offsetHeight
+      ) {
+        handleLoadMore()
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleLoadMore])
   return (
     <Wrapper>
       <div className='products-container'>

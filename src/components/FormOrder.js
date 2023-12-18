@@ -36,7 +36,6 @@
 //       )
 //       .then((response) => {
 //         // Handle successful login
-//         console.log(response.data)
 //         if (response.status === 200) {
 //           alert("succes")
 //         }

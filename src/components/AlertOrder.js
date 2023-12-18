@@ -1,14 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import { TiTick } from 'react-icons/ti'
+import { useTranslation } from 'react-i18next'
 
 const AlertOrder = () => {
+  const { t } = useTranslation()
   return (
     <Wrapper className='page'>
       <div className='center containerr'>
         <TiTick size={100} />
-        <h4>Order Submitted!</h4>
-        <p>Thanks for submitting your order.</p>
+        <h4>{t('OrderSub')}</h4>
+        <p>{t('Thanks')}</p>
       </div>
     </Wrapper>
   )

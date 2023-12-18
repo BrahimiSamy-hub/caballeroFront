@@ -9,23 +9,14 @@ import i18n from '../i18n'
 
 import { useTranslation } from 'react-i18next'
 
-const Nav = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem('selectedLanguage') || 'en'
-  )
-
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language)
-    localStorage.setItem('selectedLanguage', language) // Store the selected language in local storage
-    setSelectedLanguage(language)
-  }
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem('selectedLanguage')
-    if (storedLanguage) {
-      i18n.changeLanguage(storedLanguage)
-      setSelectedLanguage(storedLanguage)
-    }
-  }, [])
+const Nav = ({ selectedLanguage, changeLanguage }) => {
+  // useEffect(() => {
+  //   const storedLanguage = localStorage.getItem('selectedLanguage')
+  //   if (storedLanguage) {
+  //     i18n.changeLanguage(storedLanguage)
+  //     setSelectedLanguage(storedLanguage)
+  //   }
+  // }, [])
   const { t } = useTranslation()
   const { openSidebar } = useProductsContext()
 
@@ -68,7 +59,10 @@ const Nav = () => {
           </li>
         </ul>
 
-        <CartButtons />
+        <CartButtons
+          selectedLanguage={selectedLanguage}
+          changeLanguage={changeLanguage}
+        />
       </div>
     </NavContainer>
   )

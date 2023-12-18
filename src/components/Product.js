@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
 const Product = ({
   image1,
   image2,
@@ -12,7 +11,6 @@ const Product = ({
   prices = [],
   _id,
   sexe,
-  category,
   season,
   descriptions = [],
 }) => {
@@ -24,6 +22,7 @@ const Product = ({
     const oneMonthAgo = new Date(today.setMonth(today.getMonth() - 1))
     return created > oneMonthAgo
   }
+
   return (
     <Wrapper>
       <div
@@ -132,7 +131,7 @@ const Wrapper = styled.article`
     height: 100%;
     object-fit: cover;
     border-radius: var(--radius);
-    transition: opacity 1s ease;
+    transition: opacity 300ms ease;
     opacity: 0;
   }
   img.active {

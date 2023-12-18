@@ -4,6 +4,7 @@ import Menu from './Menu'
 import OrderDash from './OrderDash'
 import NavbarDash from './NavbarDash'
 import CartButtons from './CartButtons'
+import HeroDash from './HeroDash'
 import Footer from './Footer'
 import Sidebar from './Sidebar'
 import Hero from './Hero'
@@ -14,7 +15,6 @@ import Loading from './Loading'
 import Error from './Error'
 import ProductImages from './ProductImages'
 import AddToCart from './AddToCart'
-import AddCategory from './AddCategory'
 import Filters from './Filters'
 import ProductList from './ProductList'
 import Sort from './Sort'
@@ -24,16 +24,14 @@ import CartContent from './CarContent'
 import PageHero from './PageHero'
 import AlertOrder from './AlertOrder'
 import FormOrder from './FormOrder'
-import AddProduct from './AddProduct'
 import LoginPage from './LoginPage'
 import LivraisonDash from './LivraisonDash'
 export {
+  HeroDash,
   OrderDash,
   LivraisonDash,
-  AddCategory,
   CategoryDash,
   LoginPage,
-  AddProduct,
   FeaturedProducts,
   Outlet,
   Navbar,

@@ -56,7 +56,6 @@ function MyComponent() {
         editingCategory,
         { headers: { Authorization: `Bearer ${token}` } }
       )
-      console.log('Category updated:', response.data)
       handleCloseEdit()
       setData((prevData) =>
         prevData.map((item) =>
@@ -142,7 +141,6 @@ function MyComponent() {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {
-        console.log(response.data)
         handleClose()
         setCategory('')
         setData((prevData) => [response.data, ...prevData])

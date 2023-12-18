@@ -1,27 +1,31 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useCartContext } from '../context/cart_context'
-// import { formatPrice } from "../utils/helpers"
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const CartTotals = () => {
+  const { t } = useTranslation()
   const { total_amount } = useCartContext()
   return (
     <Wrapper>
       <div>
         <article>
-          <h5>
-            subtotal :<span>{total_amount} DZD</span>
-          </h5>
-          {/* <p>
-            shipping fee :<span>400 DZD</span>
-          </p> */}
+          {/* <h5>
+            {t('subtotal')} :
+            <span>
+              {total_amount} {t('Currency')}
+            </span>
+          </h5> */}
           <h4>
-            order total : <span>{total_amount} DZD</span>
+            {t('ordertotal')} :
+            <span>
+              {total_amount} {t('Currency')}
+            </span>
           </h4>
         </article>
         <Link to='/checkout' className='btn'>
-          proceed to checkout
+          {t('proceed')}
         </Link>
       </div>
     </Wrapper>

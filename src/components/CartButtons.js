@@ -8,24 +8,12 @@ import i18n from '../i18n'
 import { useTranslation } from 'react-i18next'
 import '../../node_modules/flag-icons/css/flag-icons.min.css'
 
-const CartButtons = () => {
+const CartButtons = ({ selectedLanguage, changeLanguage }) => {
   const { t } = useTranslation()
-  const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem('selectedLanguage') || 'en'
-  )
+  // const [selectedLanguage, setSelectedLanguage] = useState(
+  //   localStorage.getItem('selectedLanguage') || 'en'
+  // )
 
-  const changeLanguage = (language) => {
-    i18n.changeLanguage(language)
-    localStorage.setItem('selectedLanguage', language) // Store the selected language in local storage
-    setSelectedLanguage(language)
-  }
-  useEffect(() => {
-    const storedLanguage = localStorage.getItem('selectedLanguage')
-    if (storedLanguage) {
-      i18n.changeLanguage(storedLanguage)
-      setSelectedLanguage(storedLanguage)
-    }
-  }, [])
   const { closeSidebar } = useProductsContext()
   const { total_items } = useCartContext()
   return (
@@ -57,9 +45,6 @@ const CartButtons = () => {
           <option value='ar'>{t('language3')}</option>
         </select>
       </div>
-      {/* <button type='button' className='auth-btn'>
-        Login <FaUserPlus />
-      </button> */}
     </Wrapper>
   )
 }
@@ -70,9 +55,6 @@ const Wrapper = styled.div`
   align-items: center;
   width: 225px;
 
-  .languages {
-    /* margin-left: 25px; */
-  }
   .language {
     border-radius: var(--radius);
     border: none;

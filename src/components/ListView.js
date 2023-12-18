@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-const ListView = ({ products }) => {
+import { useTranslation } from 'react-i18next'
+
+const ListView = ({ products, handleLoadMore }) => {
+  const { t } = useTranslation()
+  useEffect(() => {
+    const handleScroll = () => {
+      if (
+        window.innerHeight + document.documentElement.scrollTop ===
+        document.documentElement.offsetHeight
+      ) {
+        handleLoadMore()
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [handleLoadMore])
   return (
     <Wrapper>
       {products.map((product) => {
@@ -11,11 +28,11 @@ const ListView = ({ products }) => {
             <img src={image1.url} alt={name} crossOrigin='anonymous' />
             <div>
               <h4>{name}</h4>
-              <h5 className='price'>
-                {prices[0].type} {prices[0].price}DZD
-              </h5>
+              {/* <h5 className='price'>
+                {prices[0].type} {prices[0].price}DA
+              </h5> */}
               <Link to={`/products/${_id}`} className='btn hero-btn'>
-                Details
+                {t('details')}
               </Link>
             </div>
           </article>

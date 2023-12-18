@@ -1,8 +1,12 @@
 import React from 'react'
 import { useFilterContext } from '../context/filter_context'
+import { useProductsContext } from '../context/products_context'
 import { BsFillGridFill, BsList } from 'react-icons/bs'
 import styled from 'styled-components'
+import { useTranslation } from 'react-i18next'
+
 const Sort = () => {
+  const { t } = useTranslation()
   const {
     filtered_products: products,
     grid_view,
@@ -11,6 +15,8 @@ const Sort = () => {
     updateSort,
     sort,
   } = useFilterContext()
+  const { totalProducts } = useProductsContext()
+
   return (
     <Wrapper>
       <div className='btn-container'>
@@ -29,10 +35,12 @@ const Sort = () => {
           <BsList />
         </button>
       </div>
-      <p>{products.length} products found</p>
+      <p>
+        {totalProducts} {t('found')}
+      </p>
       <hr />
       <form>
-        <label htmlFor='sort'>sort by</label>
+        <label htmlFor='sort'>{t('sortBy')}</label>
         <select
           name='sort'
           id='sort'
@@ -40,10 +48,10 @@ const Sort = () => {
           value={sort}
           onChange={updateSort}
         >
-          <option value='price-lowest'>price (lowest)</option>
-          <option value='price-highest'>price (highest)</option>
-          <option value='name-a'>name (a-z)</option>
-          <option value='name-z'>name (z-a)</option>
+          <option value='price-lowest'>{t('priceL')}</option>
+          <option value='price-highest'>{t('priceH')}</option>
+          <option value='name-a'>{t('name')} (a-z)</option>
+          <option value='name-z'>{t('name')} (z-a)</option>
         </select>
       </form>
     </Wrapper>

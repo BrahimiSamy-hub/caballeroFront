@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { useFilterContext } from '../context/filter_context'
-import { getUniqueValues /*formatPrice */ } from '../utils/helpers'
-// import { FaCheck } from "react-icons/fa"
+import { getUniqueValues } from '../utils/helpers'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 
 const Filters = () => {
+  const { t } = useTranslation()
   const genderCategories = ['All', 'Men', 'Women', 'Unisex']
   const seasonCategories = ['All', 'Autumn', 'Winter', 'Spring', 'Summer']
   const {
-    filters: { text, category, shipping },
+    filters: { text, category },
     updateFilters,
     clearFilters,
+    filtered_products,
     all_products,
   } = useFilterContext()
   const [data, setData] = useState([])
@@ -38,7 +40,7 @@ const Filters = () => {
             <input
               type='text'
               name='text'
-              placeholder='search'
+              placeholder={t('search')}
               className='search-input'
               value={text}
               onChange={updateFilters}
@@ -46,7 +48,7 @@ const Filters = () => {
           </div>
           {/* end search input */}
           <div className='form-control'>
-            <h5>Category</h5>
+            <h5>{t('cat')}</h5>
             <div>
               {uniqueCategories.map((categoryName, index) => {
                 return (
@@ -64,9 +66,9 @@ const Filters = () => {
             </div>
           </div>
 
-          {/* name */}
-          <div className='form-control'>
-            <h5>Gender</h5>
+          {/* gender */}
+          {/* <div className='form-control'>
+            <h5>{t('gender')}</h5>
             <div>
               {genderCategories.map((gender, index) => (
                 <button
@@ -80,11 +82,11 @@ const Filters = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Seasons */}
-          <div className='form-control'>
-            <h5>Seasons</h5>
+          {/* <div className='form-control'>
+            <h5>{t('seasons')}</h5>
             <div>
               {seasonCategories.map((season, index) => (
                 <button
@@ -98,24 +100,11 @@ const Filters = () => {
                 </button>
               ))}
             </div>
-          </div>
-
-          {/* end name */}
-          {/* shipping */}
-          {/* <div className='form-control shipping'>
-            <label htmlFor='shipping'>free shipping</label>
-            <input
-              type='checkbox'
-              name='shipping'
-              id='shipping'
-              onChange={updateFilters}
-              checked={shipping}
-            />
           </div> */}
-          {/* end shipping */}
+          {/* end name */}
         </form>
         <button type='button' className='clear-btn ' onClick={clearFilters}>
-          clear filters
+          {t('clearF')}
         </button>
       </div>
     </Wrapper>

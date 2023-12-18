@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from 'react'
-
+import React from 'react'
 import styled from 'styled-components'
 import { useCartContext } from '../context/cart_context'
 import { Link } from 'react-router-dom'
 import CartColumns from './CartColumns'
 import CartItem from './CartItem'
 import CartTotals from './CartTotals'
+import { useTranslation } from 'react-i18next'
 
 const CartContent = () => {
+  const { t } = useTranslation()
   const { cart, clearCart } = useCartContext()
   return (
     <Wrapper className='section section-center'>
@@ -18,28 +19,13 @@ const CartContent = () => {
       <hr />
       <div className='link-container'>
         <Link to='products' className='btn'>
-          continue shopping
+          {t('continue')}
         </Link>
         <button type='button ' className='btn clear-btn' onClick={clearCart}>
-          clear shopping cart
+          {t('clear')}
         </button>
       </div>
       <CartTotals />
-      {/* <CartColumns />
-      {cart.map((item) => {
-        return <CartItem key={item._id} {...item} />
-      })}
-      
-      <hr />
-      <div className='link-container'>
-        <Link to='products' className='btn'>
-          continue shopping
-        </Link>
-        <button type='button ' className='btn clear-btn' onClick={clearCart}>
-          clear shopping cart
-        </button>
-      </div>
-      <CartTotals /> */}
     </Wrapper>
   )
 }

@@ -27,6 +27,13 @@ export const menu = [
         url: '/livraison',
         icon: 'log.svg',
       },
+      {
+        id: 5,
+        title: 'Home Hero',
+        url: '/HeroDash',
+        icon: 'log.svg',
+      },
+      ,
     ],
   },
 ]

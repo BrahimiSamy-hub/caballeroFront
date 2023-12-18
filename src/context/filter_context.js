@@ -20,8 +20,6 @@ const initialState = {
   filters: {
     text: '',
     category: 'all',
-
-    shipping: false,
   },
 }
 

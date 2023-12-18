@@ -25,7 +25,7 @@ const style = {
   p: 4,
 }
 
-function MyComponent() {
+function HeroDash() {
   const [data, setData] = useState([])
   const [openEdit, setOpenEdit] = useState(false)
   const [editingCategory, setEditingCategory] = useState({})
@@ -63,21 +63,46 @@ function MyComponent() {
       console.error('Error updating category:', error)
     }
   }
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/wilayas/')
-      setData(response.data)
-    } catch (error) {
-      console.error('Error fetching data:', error)
-    }
-  }
-  useEffect(() => {
-    fetchData()
-  }, [])
-
   const columns = [
-    { field: 'name', headerName: 'Wilayas', width: 200, editable: true },
-    { field: 'price', headerName: 'Price', width: 80, editable: true },
+    { field: 'name', headerName: 'Hero Title', width: 200, editable: true },
+    { field: 'price', headerName: 'Description', width: 400, editable: true },
+    {
+      field: 'image1',
+      headerName: 'Main Image',
+      width: 100,
+      renderCell: (params) => {
+        return params.row.image1 && params.row.image1.url ? (
+          <div>
+            <div>
+              <a href={params.row.image1.url} target='_blank'>
+                Main{' '}
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div>No Image</div>
+        )
+      },
+    },
+
+    {
+      field: 'image2',
+      headerName: 'Main Image',
+      width: 100,
+      renderCell: (params) => {
+        return params.row.image2 && params.row.image1.url ? (
+          <div>
+            <div>
+              <a href={params.row.image1.url} target='_blank'>
+                Main{' '}
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div>No Image</div>
+        )
+      },
+    },
 
     {
       field: 'actions',
@@ -93,7 +118,7 @@ function MyComponent() {
 
   return (
     <div>
-      <Button variant='disabled'>Livraisons</Button>
+      <Button variant='disabled'>Hero</Button>
       <Modal open={openEdit} onClose={handleCloseEdit}>
         <Fade in={openEdit}>
           <Box sx={style}>
@@ -144,4 +169,4 @@ function MyComponent() {
   )
 }
 
-export default MyComponent
+export default HeroDash

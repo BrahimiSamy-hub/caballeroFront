@@ -6,8 +6,11 @@ import { BsFillPersonFill } from 'react-icons/bs'
 import { AiFillPhone } from 'react-icons/ai'
 import { FaCity } from 'react-icons/fa'
 import WilayasData from '../utils/wilayas.json'
+import { useTranslation } from 'react-i18next'
 
 const CheckoutPage = () => {
+  const { t } = useTranslation()
+  const [data, setData] = useState([])
   const [orderSuccess, setOrderSuccess] = useState(false)
   const [isButtonDisabled, setButtonDisabled] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -16,6 +19,17 @@ const CheckoutPage = () => {
   const [selectedCommune, setSelectedCommune] = useState('')
   const [communes, setCommunes] = useState([])
   const [phone, setPhone] = useState('')
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/wilayas/')
+      setData(response.data)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
+  useEffect(() => {
+    fetchData()
+  }, [])
   useEffect(() => {
     if (selectedWilaya) {
       setCommunes(WilayasData.filter((data) => data.wilaya === selectedWilaya))
@@ -29,10 +43,9 @@ const CheckoutPage = () => {
     orderItems: orderItems.map((item) => ({
       product: item._id,
       quantity: item.amount,
-
       priceType: item.type,
     })),
-    wilaya: selectedWilaya,
+    wilaya: wilayaName,
     phoneNumber: phone,
   }
   const validateForm = () => {
@@ -43,8 +56,10 @@ const CheckoutPage = () => {
       selectedWilaya !== ''
     )
   }
-  console.log('checkout', orderItems)
-
+  const calculateDeliveryPrice = () => {
+    const wilayaData = data.find((wilaya) => wilaya.name === wilayaName)
+    return wilayaData ? wilayaData.price : 0
+  }
   const order = () => {
     if (!validateForm()) {
       return
@@ -53,14 +68,11 @@ const CheckoutPage = () => {
     axios
       .post('http://localhost:3000/orders', orderData)
       .then((response) => {
-        console.log('order', orderData)
         if (response.status === 201) {
           setOrderSuccess(true)
         }
       })
-      .catch((error) => {
-        console.log('error')
-      })
+      .catch((error) => {})
       .finally(() => {
         setLoading(false)
       })
@@ -74,15 +86,25 @@ const CheckoutPage = () => {
   if (orderSuccess) {
     return (
       <main>
-        <PageHero title='checkout' />
+        <PageHero title={t('heroCheckout')} />
         <AlertOrder />
       </main>
     )
   }
+  const deliveryPrice = calculateDeliveryPrice()
+  const updatedOrderItems = orderItems.map((item) => ({
+    ...item,
+    total: item.price * item.amount + deliveryPrice,
+  }))
+  const totalPrice = orderItems.reduce(
+    (acc, item) => acc + item.price * item.amount,
+
+    0
+  )
 
   return (
     <main>
-      <PageHero title=' checkout' />
+      <PageHero title={t('heroCheckout')} />
       <Wrapper className='page'>
         <div className='flex'>
           <div
@@ -91,11 +113,11 @@ const CheckoutPage = () => {
           >
             <form id='form1' method='post'>
               <div className='row'>
-                <h4>Confirm order</h4>
+                <h4>{t('checkout')}</h4>
                 <div className='input-group input-group-icon'>
                   <input
                     type='text'
-                    placeholder='Full Name'
+                    placeholder={t('fullName')}
                     onChange={(e) => setName(e.target.value)}
                     value={name}
                     required
@@ -113,7 +135,7 @@ const CheckoutPage = () => {
                     required
                   >
                     <option value='' className='margin'>
-                      --Choose your Wilaya--
+                      {t('chWilaya')}
                     </option>
                     {[...new Set(WilayasData.map((data) => data.wilaya))].map(
                       (wilaya) => (
@@ -129,7 +151,7 @@ const CheckoutPage = () => {
                     required
                     disabled={!selectedWilaya}
                   >
-                    <option value=''>--Choose your Commune--</option>
+                    <option value=''>{t('chCommune')}</option>
                     {communes.map((data) => (
                       <option key={data.code} value={data.commune}>
                         {data.commune}
@@ -146,7 +168,7 @@ const CheckoutPage = () => {
               <div className='input-group input-group-icon'>
                 <input
                   type='tel'
-                  placeholder='Phone Number'
+                  placeholder={t('phone')}
                   onChange={(e) => setPhone(e.target.value)}
                   value={phone}
                   required
@@ -162,7 +184,7 @@ const CheckoutPage = () => {
                 disabled={(isButtonDisabled, loading)}
                 onClick={order}
               >
-                {loading ? 'Loading...' : 'Order'}
+                {loading ? t('loading') : t('order')}
               </button>
             </form>
           </div>
@@ -172,21 +194,56 @@ const CheckoutPage = () => {
           >
             <form id='form2' method='post'>
               <div className='row'>
-                <h4>Your Cart</h4>
+                <h4>{t('subtotal')}</h4>
               </div>
-              {orderItems &&
-                orderItems.map((item, index) => (
-                  <div key={index} className='cart-item marginTop'>
-                    <h5 className=' marginTop'>
-                      Product {index + 1} : {item.name}
-                    </h5>{' '}
-                    <p>Quantity: {item.amount}</p>
-                    <span> Price : {item.price * item.amount} DA</span>
-                    <div>
-                      Price with delivery : {item.price * item.amount} DA
-                    </div>
+
+              <div className='cart-item marginTop'>
+                <div
+                  style={{
+                    color: '#1d4851',
+                    fontWeight: 'bold',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <h3>
+                    {t('Price')} :{totalPrice} {t('Currency')}
+                  </h3>
+                </div>
+                <div
+                  className='cart-item'
+                  style={{
+                    color: '#1d4851',
+                    fontWeight: 'bold',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                  }}
+                >
+                  <h3>
+                    {t('PriceShip')} :{deliveryPrice} {t('Currency')}
+                  </h3>
+                </div>
+                <hr />
+                {selectedWilaya && (
+                  <div
+                    style={{
+                      color: '#1d4851',
+                      fontWeight: 'bold',
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                    }}
+                  >
+                    <h3>
+                      {t('priceDel')}
+                      {totalPrice + calculateDeliveryPrice()}
+                      {t('Currency')}
+                    </h3>
                   </div>
-                ))}
+                )}
+              </div>
             </form>
           </div>
         </div>
@@ -196,13 +253,14 @@ const CheckoutPage = () => {
 }
 
 const Wrapper = styled.div`
+  min-height: 650px;
   *,
   *:before,
   *:after {
     box-sizing: border-box;
   }
   .marginTop {
-    margin-top: 20px;
+    margin-top: 40px;
   }
   .flex {
     display: grid;
@@ -212,7 +270,7 @@ const Wrapper = styled.div`
     padding: 1em;
     /* font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; */
     font-size: 15px;
-    color: #b9b9b9;
+    color: #1d4851;
     background-color: #e3e3e3;
   }
   .margin {
@@ -241,10 +299,10 @@ const Wrapper = styled.div`
   }
   input:focus {
     outline: 0;
-    border-color: #bd8200;
+    border-color: #1d4851;
   }
   input:focus + .input-icon:after {
-    border-right-color: #f0a500;
+    border-right-color: #1d4851;
   }
   input[type='radio'] {
     display: none;

@@ -34,17 +34,25 @@ const cart_reducer = (state, action) => {
       return { ...state, cart: [...state.cart, newItem] }
     }
   }
+  // if (action.type === REMOVE_CART_ITEM) {
+  //   const tempCart = state.cart.filter((item) => item._id !== action.payload)
+  //   return { ...state, cart: tempCart }
+  // }
   if (action.type === REMOVE_CART_ITEM) {
-    const tempCart = state.cart.filter((item) => item._id !== action.payload)
+    const { _id, type } = action.payload // Assuming your payload has _id and type properties
+    const tempCart = state.cart.filter(
+      (item) => item._id !== _id || item.type !== type
+    )
     return { ...state, cart: tempCart }
   }
+
   if (action.type === CLEAR_CART) {
     return { ...state, cart: [] }
   }
   if (action.type === TOGGLE_CART_ITEM_AMOUNT) {
-    const { _id, value } = action.payload
+    const { _id, type, value } = action.payload
     const tempCart = state.cart.map((item) => {
-      if (item._id === _id) {
+      if (item._id === _id && item.type === type) {
         if (value === 'inc') {
           let newAmount = item.amount + 1
           return { ...item, amount: newAmount }

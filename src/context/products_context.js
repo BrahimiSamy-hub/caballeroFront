@@ -18,6 +18,8 @@ const initialState = {
   products_loading: false,
   products_error: false,
   products: [],
+  totalProducts: 0,
+  totalPages: 1,
   featured_products: [],
   single_product_loading: false,
   single_product_error: false,
@@ -39,9 +41,15 @@ export const ProductsProvider = ({ children }) => {
     dispatch({ type: GET_PRODUCTS_BEGIN })
     try {
       const response = await axios.get(url)
-      const products = response.data
-      console.log(products)
-      dispatch({ type: GET_PRODUCTS_SUCCESS, payload: products })
+      const products = response.data.products
+      const totalProducts = response.data.totalProducts
+      const totalPages = response.data.totalPages
+      dispatch({
+        type: GET_PRODUCTS_SUCCESS,
+        payload: products,
+        totalProducts,
+        totalPages,
+      })
     } catch (error) {
       dispatch({ type: GET_PRODUCTS_ERROR })
     }
@@ -51,7 +59,6 @@ export const ProductsProvider = ({ children }) => {
     try {
       const response = await axios.get(url)
       const signleProduct = response.data
-      console.log(signleProduct)
       dispatch({ type: GET_SINGLE_PRODUCT_SUCCESS, payload: signleProduct })
     } catch (error) {
       dispatch({ type: GET_SINGLE_PRODUCT_ERROR })

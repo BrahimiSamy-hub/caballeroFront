@@ -1,80 +1,21 @@
-// import React from 'react'
-// import styled from 'styled-components'
-// // import { formatPrice } from "../utils/helpers"
-// import AmountButtons from './AmountButtons'
-// import { FaTrash } from 'react-icons/fa'
-// import { useCartContext } from '../context/cart_context'
-// // const CartItem = ({ id, name, image, volume, prices, amount }) => {
-// const CartItem = ({ id, name, image, volume, prices, amount }) => {
-//   const { removeItem, toggleAmount } = useCartContext()
-//   const increase = () => {
-//     toggleAmount(id, 'inc')
-//   }
-//   const decrease = () => {
-//     toggleAmount(id, 'dec')
-//   }
-//   // return (
-//   //   <Wrapper>
-//   //     <div className='title'>
-//   //       <img src={image} alt={name} />
-//   //       <div>
-//   //         <h5 className='name'>
-//   //           {name} Vol.{volume}
-//   //         </h5>
-//   //         <h5 className='price-small'>{prices[1].price}DZD</h5>
-//   //       </div>
-//   //     </div>
-//   //     <h5 className='price'>{price}DZD</h5>
-//   //     <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-//   //     <h5 className='subtotal'> {price * amount}</h5>
-//   //     <button
-//   //       type='button '
-//   //       className='remove-btn'
-//   //       onClick={() => removeItem(id)}
-//   //     >
-//   //       <FaTrash />
-//   //     </button>
-//   //   </Wrapper>
-//   // )
-//   return (
-//     <Wrapper>
-//       <div className='title'>
-//         <img src='' alt='' />
-//         <div>
-//           <h5 className='name'></h5>
-//           <h5 className='price-small'>DZD</h5>
-//         </div>
-//       </div>
-//       <h5 className='price'>DZD</h5>
-//       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-//       <h5 className='subtotal'></h5>
-//       <button
-//         type='button '
-//         className='remove-btn'
-//         // onClick={() => removeItem(_id)}
-//       >
-//         <FaTrash />
-//       </button>
-//     </Wrapper>
-//   )
-// }
 import { React, useState, useEffect } from 'react'
 import styled from 'styled-components'
-// import { formatPrice } from "../utils/helpers"
 import AmountButtons from './AmountButtons'
 import { FaTrash } from 'react-icons/fa'
 import { useCartContext } from '../context/cart_context'
+import { useTranslation } from 'react-i18next'
+
 const CartItem = ({ item }) => {
+  const { t } = useTranslation()
   const { _id, price, name, type, amount, image } = item
   const [cartItems, setCartItems] = useState([])
   const { removeItem, toggleAmount } = useCartContext()
   const increase = () => {
-    toggleAmount(_id, 'inc')
+    toggleAmount(_id, type, 'inc')
   }
   const decrease = () => {
-    toggleAmount(_id, 'dec')
+    toggleAmount(_id, type, 'dec')
   }
-  console.log('Item details:', name, type, price, image) // Debugging line
 
   useEffect(() => {
     const storedItems = JSON.parse(localStorage.getItem('cart')) || []
@@ -87,16 +28,25 @@ const CartItem = ({ item }) => {
         <img src={image.url} alt='' crossOrigin='anonymous' />
         <div>
           <h5 className='name'>{name + ' ' + type}</h5>
-          <h5 className='price-small'>{item.type}DZD </h5>
+          <h5 className='price-small'>
+            {price}
+            {t('Currency')}
+          </h5>
         </div>
       </div>
-      <h5 className='price'>{price}DZD </h5>
+      <h5 className='price'>
+        {price}
+        {t('Currency')}
+      </h5>
       <AmountButtons amount={amount} increase={increase} decrease={decrease} />
-      <h5 className='subtotal'>{price * amount} DZD</h5>
+      <h5 className='subtotal'>
+        {price * amount}
+        {t('Currency')}
+      </h5>
       <button
         type='button'
         className='remove-btn'
-        onClick={() => removeItem(_id)} // You may need to implement removeItem function
+        onClick={() => removeItem(_id, type)}
       >
         <FaTrash />
       </button>
@@ -153,7 +103,8 @@ const Wrapper = styled.article`
     }
   }
   .price-small {
-    color: var(--clr-primary-5);
+    margin-top: 10px;
+    color: var(--clr-primary-9);
   }
   .amount-btns {
     width: 100px;

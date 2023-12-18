@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useParams, useHistory } from 'react-router-dom'
 import { useProductsContext } from '../context/products_context'
 import { single_product_url as url } from '../utils/constants'
-
+import { useTranslation } from 'react-i18next'
 import {
   Loading,
   Error,
@@ -14,9 +14,9 @@ import {
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const SingleProductPage = () => {
+const SingleProductPage = ({ selectedLanguage }) => {
+  const { t } = useTranslation()
   const [selectedVolumeType, setSelectedVolumeType] = useState('')
-  const [currentLanguage, setCurrentLanguage] = useState('')
 
   const { id } = useParams()
   const history = useHistory()
@@ -29,7 +29,6 @@ const SingleProductPage = () => {
 
   useEffect(() => {
     fetchSingleProduct(`${url}${id}`)
-    console.log()
   }, [id])
   useEffect(() => {
     if (error) {
@@ -43,16 +42,11 @@ const SingleProductPage = () => {
       setSelectedVolumeType(product.prices[0].type)
     }
   }, [product])
-  useEffect(() => {
-    const preferredLanguage = localStorage.getItem('selectedLanguage') || 'en' // Fallback to 'en' if not set
-    setCurrentLanguage(preferredLanguage)
-    console.log('Preferred Language from Local Storage:', preferredLanguage)
-  }, [currentLanguage])
-  const getDescription = (language) => {
-    console.log('Current Language:', language) // Check the current language
-    console.log('Descriptions:', descriptions) // Check the descriptions array
 
-    const desc = descriptions.find((desc) => desc.language === language)
+  const getDescription = (language) => {
+    const desc = descriptions.find(
+      (desc) => desc.language === language.toUpperCase()
+    )
     return desc ? desc.text : 'No description available'
   }
   if (loading) {
@@ -67,6 +61,7 @@ const SingleProductPage = () => {
     sexe,
     season,
     image1,
+    image2,
     descriptions = [],
     inStock,
     prices = [],
@@ -74,20 +69,21 @@ const SingleProductPage = () => {
   const selectedPrice = selectedVolumeType
     ? prices.find((p) => p.type === selectedVolumeType)
     : { price: 0 }
-  console.log('ds', image1)
+  const imageUrl = image1 ? image1.url : ''
+  const imageUrl2 = image2 ? image2.url : ''
   return (
     <Wrapper>
       <PageHero title={name} product />
       <div className='section section-center page'>
         <Link to='/products' className=' btn hero-btn'>
-          back to products
+          {t('bToProduct')}
         </Link>
         <div className=''>
           <section className='content'>
-            <h2 className=''>{name}</h2>
-
-            <ProductImages image1={image1.url} />
-            <div class='radio-inputs'>
+            <h2 className='marginTop'>{name}</h2>
+            {/* <h1>{selectedLanguage}</h1> */}
+            <ProductImages image1={imageUrl} image2={imageUrl2} />
+            <div className='radio-inputs'>
               {prices.map((item, index) => (
                 <label key={index} className='radio-label'>
                   <input
@@ -105,46 +101,43 @@ const SingleProductPage = () => {
                 </label>
               ))}
             </div>
-            {/* {prices.map((item, index) => (
-              <div class='radio-inputs'>
-                <label>
-                  <input class='radio-input' type='radio' name='engine' />
-                  <span class='radio-tile'>
-                    <span class='radio-icon'></span>
-                    <span class='radio-label'>Bicycle</span>
-                  </span>
-                </label>
-                <label>
-                  <input class='radio-input' type='radio' name='engine' />
-                  <span class='radio-tile'>
-                    <span class='radio-icon'></span>
-                    <span class='radio-label'>Car</span>
-                  </span>
-                </label>
-              </div>
-            ))} */}
             <div>
-              <div className=' '>
-                <span>Gender : {sexe}</span>
+              <div className='info'>
+                <ul>
+                  <li>
+                    <span>{t('Gender')} :</span>
+                    <span>{sexe}</span>
+                  </li>
+                  <li>
+                    <span>{t('Season')} :</span>
+                    <span>{season}</span>
+                  </li>
+                </ul>
               </div>
+
               <div className=' '>
-                <span>Season : {season}</span>
+                <p>{getDescription(selectedLanguage)}</p>
               </div>
-              <div className=' '>
-                <p>{getDescription(currentLanguage)}</p>
-              </div>
-              <div className=' '>
-                <p>
-                  Stock :
-                  <span style={{ color: inStock ? 'green' : 'red' }}>
-                    {inStock ? ' Disponible' : ' Rupture'}
+              <div className='fontW'>
+                <span>
+                  {t('Stock')} :
+                  <span
+                    className='singleLineInfo'
+                    style={{ color: inStock ? 'green' : 'red' }}
+                  >
+                    {inStock ? t('inStock') : t('!inStock')}
                   </span>
-                </p>
+                </span>
               </div>
             </div>
-            <div className=' price'>
-              {selectedPrice && <span>Price: {selectedPrice.price} DZD</span>}
+            <div className='price'>
+              {selectedPrice && (
+                <span className='price-item'>
+                  {t('Price')} :{selectedPrice.price} {t('Currency')}
+                </span>
+              )}
             </div>
+
             <AddToCart
               image1={image1}
               product={product}
@@ -160,11 +153,28 @@ const SingleProductPage = () => {
 }
 
 const Wrapper = styled.main`
+  .marginTop {
+    margin-top: 20px;
+  }
+  .fontW {
+    font-weight: bold;
+    margin-top: 15px;
+    font-weight: 700;
+  }
+  .singleLineInfo {
+    text-transform: capitalize;
+    width: 300px;
+    display: grid;
+    grid-template-columns: 125px 1fr;
+    display: inline-block;
+    margin-right: 0.5rem;
+    font-weight: 700;
+  }
   .radio-inputs {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
+    max-width: 255px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
