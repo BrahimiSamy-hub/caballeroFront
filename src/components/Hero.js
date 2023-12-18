@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import heroBcg from '../assets/single.webp'
@@ -6,53 +6,115 @@ import heroBcg2 from '../assets/multiple.webp'
 import smallheroBcg from '../assets/small-single.png'
 import smallheroBcg2 from '../assets/multiple-single.png'
 import { useTranslation } from 'react-i18next'
+import axios from 'axios'
 
-const Hero = () => {
+const Hero = ({ selectedLanguage }) => {
   const { t } = useTranslation()
+  const [data, setData] = useState([])
+  console.log(data)
   const [mainImageLoaded, setMainImageLoaded] = useState(false)
   const [accentImageLoaded, setAccentImageLoaded] = useState(false)
-
+  const token = localStorage.getItem('jwt')
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/heros', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      if (Array.isArray(response.data)) {
+        setData(response.data)
+      } else {
+        console.error('Invalid data format received:', response.data)
+      }
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
+  useEffect(() => {
+    fetchData()
+  }, [])
   return (
     <Wrapper className='section-center'>
       <article className='content'>
-        <h1>{t('title')}</h1>
-
-        <p>{t('description')}</p>
-
+        {data.length > 0 && (
+          <>
+            <h1>
+              {selectedLanguage === 'ar'
+                ? data[0].arTitle
+                : selectedLanguage === 'fr'
+                ? data[0].frTitle
+                : selectedLanguage === 'en'
+                ? data[0].enTitle
+                : ''}
+            </h1>
+            <p>
+              {selectedLanguage === 'ar'
+                ? data[0].arDesc
+                : selectedLanguage === 'fr'
+                ? data[0].frDesc
+                : selectedLanguage === 'en'
+                ? data[0].enDesc
+                : ''}
+            </p>
+          </>
+        )}
         <Link to='products' className='btn hero-btn'>
           {t('shopButton')}
         </Link>
       </article>
       <article className='img-container'>
+        {/* {data.map((hero) => (
+          <div key={hero._id}>
+            <img
+              src={hero.mainImage.url}
+              alt='Main'
+              className='main-img'
+              loading='lazy'
+              onLoad={() => setMainImageLoaded(true)}
+              onError={(e) => {
+                e.target.src = '../assets/single.png'
+              }}
+              crossOrigin='anonymous'
+            />
+          </div>
+        ))} */}
         <div
           className={`main-img blur-load ${mainImageLoaded ? 'loaded' : ''}`}
           style={{ backgroundImage: `url(${smallheroBcg})` }}
         >
-          <img
-            src={heroBcg}
-            alt='Main'
-            className='main-img'
-            loading='lazy'
-            onLoad={() => setMainImageLoaded(true)}
-            onError={(e) => {
-              e.target.src = '../assets/single.png'
-            }}
-          />
+          {data.map((hero) => (
+            <img
+              key={hero._id}
+              src={hero.mainImage.url}
+              alt='Main'
+              className='main-img'
+              loading='lazy'
+              onLoad={() => setMainImageLoaded(true)}
+              onError={(e) => {
+                e.target.src = '../assets/single.png'
+              }}
+              crossOrigin='anonymous'
+            />
+          ))}
         </div>
         <div
           className={`blur-load ${accentImageLoaded ? 'loaded' : ''}`}
           style={{ backgroundImage: `url(${smallheroBcg2})` }}
         >
-          <img
-            src={heroBcg2}
-            alt='Accent'
-            className='accent-img'
-            loading='lazy'
-            onLoad={() => setAccentImageLoaded(true)}
-            onError={(e) => {
-              e.target.src = '../assets/single.png '
-            }}
-          />
+          {data.map((hero) => (
+            <img
+              key={hero._id}
+              src={hero.secondaryImage.url}
+              alt='Accent'
+              className='accent-img'
+              loading='lazy'
+              onLoad={() => setAccentImageLoaded(true)}
+              onError={(e) => {
+                e.target.src = '../assets/single.png'
+                setAccentImageLoaded(true)
+              }}
+              crossOrigin='anonymous'
+            />
+          ))}
         </div>
       </article>
     </Wrapper>

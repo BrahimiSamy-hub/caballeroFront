@@ -147,7 +147,13 @@ function App() {
                 changeLanguage={changeLanguage}
               >
                 <Switch location={location}>
-                  <Route exact path='/' component={Home} />
+                  <Route
+                    exact
+                    path='/'
+                    render={(props) => (
+                      <Home {...props} selectedLanguage={selectedLanguage} />
+                    )}
+                  />
                   <Route exact path='/about' component={About} />
                   <Route exact path='/cart' component={Cart} />
                   <Route exact path='/products' component={Products} />

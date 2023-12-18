@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { DataGrid, GridToolbar } from '@mui/x-data-grid'
+import { DataGrid } from '@mui/x-data-grid'
 import {
   Modal,
   Box,
@@ -27,33 +27,124 @@ const style = {
 
 function HeroDash() {
   const [data, setData] = useState([])
-  const [openEdit, setOpenEdit] = useState(false)
-  const [editingCategory, setEditingCategory] = useState({})
 
+  const [openEdit, setOpenEdit] = useState(false)
+  const token = localStorage.getItem('jwt')
+  const [editingCategory, setEditingCategory] = useState({
+    arTitle: '',
+    frTitle: '',
+    enTitle: '',
+    arDesc: '',
+    frDesc: '',
+    enDesc: '',
+    newMainImage: null,
+    newSecondaryImage: null,
+  })
   const handleOpenEdit = (category) => {
     setEditingCategory(category)
     setOpenEdit(true)
   }
-
   const handleCloseEdit = () => {
     setOpenEdit(false)
-    setEditingCategory({})
+    setEditingCategory({
+      arTitle: '',
+      frTitle: '',
+      enTitle: '',
+      arDesc: '',
+      frDesc: '',
+      enDesc: '',
+      newMainImage: null,
+      newSecondaryImage: null,
+    })
   }
+  // console.log(data)
+  const uploadFile = async (file) => {
+    const formData = new FormData()
+    formData.append('image', file)
+
+    try {
+      const response = await axios.post(
+        'http://localhost:3000/upload',
+        formData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      )
+      return response.data
+    } catch (error) {
+      console.error('Error uploading file:', error)
+      return null
+    }
+  }
+
+  const fetchData = async () => {
+    try {
+      const response = await axios.get('http://localhost:3000/heros', {
+        headers: { Authorization: `Bearer ${token}` },
+      })
+      setData(response.data)
+      // console.log(data)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
+  useEffect(() => {
+    fetchData()
+    console.log('data', data)
+  }, [])
   const handleEditChange = (e) => {
     setEditingCategory({ ...editingCategory, [e.target.name]: e.target.value })
   }
 
+  const handleImageChange = (fieldName, file) => {
+    setEditingCategory({ ...editingCategory, [fieldName]: file })
+  }
   const handleEditSubmit = async (event) => {
     event.preventDefault()
-    const token = localStorage.getItem('jwt')
+
+    let newMainImageUrl =
+      editingCategory.mainImage && editingCategory.mainImage.url
+    let newSecondaryImageUrl =
+      editingCategory.secondaryImage && editingCategory.secondaryImage.url
+
+    if (editingCategory.newMainImage) {
+      const uploadedMainImage = await uploadFile(editingCategory.newMainImage)
+      newMainImageUrl = uploadedMainImage
+        ? uploadedMainImage.file._id
+        : editingCategory.mainImage
+    }
+
+    if (editingCategory.newSecondaryImage) {
+      const uploadedSecondaryImage = await uploadFile(
+        editingCategory.newSecondaryImage
+      )
+      newSecondaryImageUrl = uploadedSecondaryImage
+        ? uploadedSecondaryImage.file._id
+        : editingCategory.secondaryImage
+    }
+
+    const updatedItem = {
+      arTitle: editingCategory.arTitle,
+      frTitle: editingCategory.frTitle,
+      enTitle: editingCategory.enTitle,
+      arDesc: editingCategory.arDesc,
+      frDesc: editingCategory.frDesc,
+      enDesc: editingCategory.enDesc,
+      mainImage: newMainImageUrl,
+      secondaryImage: newSecondaryImageUrl,
+    }
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/wilayas/${editingCategory._id}`,
-        editingCategory,
+        `http://localhost:3000/heros/${editingCategory._id}`,
+        updatedItem,
         { headers: { Authorization: `Bearer ${token}` } }
       )
+
       handleCloseEdit()
+
       setData((prevData) =>
         prevData.map((item) =>
           item._id === editingCategory._id ? { ...response.data } : item
@@ -63,19 +154,55 @@ function HeroDash() {
       console.error('Error updating category:', error)
     }
   }
+
   const columns = [
-    { field: 'name', headerName: 'Hero Title', width: 200, editable: true },
-    { field: 'price', headerName: 'Description', width: 400, editable: true },
     {
-      field: 'image1',
+      field: 'arTitle',
+      headerName: 'Hero Title Arabe',
+      width: 200,
+      editable: false,
+      key: 'arTitle',
+    },
+    {
+      field: 'frTitle',
+      headerName: 'Hero Title French',
+      width: 200,
+      editable: false,
+    },
+    {
+      field: 'enTitle',
+      headerName: 'Hero Title English',
+      width: 200,
+      editable: false,
+    },
+    {
+      field: 'arDesc',
+      headerName: 'Description Arabe ',
+      width: 400,
+      editable: false,
+    },
+    {
+      field: 'frDesc',
+      headerName: 'Description French',
+      width: 400,
+      editable: false,
+    },
+    {
+      field: 'enDesc',
+      headerName: 'Description English',
+      width: 400,
+      editable: false,
+    },
+    {
+      field: 'mainImage',
       headerName: 'Main Image',
       width: 100,
       renderCell: (params) => {
-        return params.row.image1 && params.row.image1.url ? (
+        return params.row.mainImage && params.row.mainImage.url ? (
           <div>
             <div>
-              <a href={params.row.image1.url} target='_blank'>
-                Main{' '}
+              <a href={params.row.mainImage.url} target='_blank'>
+                Main
               </a>
             </div>
           </div>
@@ -86,15 +213,15 @@ function HeroDash() {
     },
 
     {
-      field: 'image2',
-      headerName: 'Main Image',
+      field: 'secondaryImage',
+      headerName: 'Secondary Image',
       width: 100,
       renderCell: (params) => {
-        return params.row.image2 && params.row.image1.url ? (
+        return params.row.secondaryImage && params.row.secondaryImage.url ? (
           <div>
             <div>
-              <a href={params.row.image1.url} target='_blank'>
-                Main{' '}
+              <a href={params.row.secondaryImage.url} target='_blank'>
+                Secondary
               </a>
             </div>
           </div>
@@ -126,14 +253,77 @@ function HeroDash() {
               Edit Category
             </Typography>
             <form onSubmit={handleEditSubmit}>
+              <FormControl fullWidth margin='normal'>
+                <input
+                  id='image1-upload'
+                  type='file'
+                  onChange={(e) =>
+                    handleImageChange('newMainImage', e.target.files[0])
+                  }
+                />
+              </FormControl>
+              <FormControl fullWidth margin='normal'>
+                <input
+                  id='image2-upload'
+                  type='file'
+                  onChange={(e) =>
+                    handleImageChange('newSecondaryImage', e.target.files[0])
+                  }
+                />
+              </FormControl>
               <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
-                  id='edit-price'
-                  name='price'
-                  label='Price'
-                  type='number'
-                  value={editingCategory.price || ''}
+                  id='edit-arTitle'
+                  name='arTitle'
+                  label='Arabic Title'
+                  type='text'
+                  value={editingCategory.arTitle || ''}
+                  onChange={handleEditChange}
+                />
+                <TextField
+                  required
+                  id='edit-frTitle'
+                  name='frTitle'
+                  label='French Title'
+                  type='text'
+                  value={editingCategory.frTitle || ''}
+                  onChange={handleEditChange}
+                />
+                <TextField
+                  required
+                  id='edit-enTitle'
+                  name='enTitle'
+                  label='English Title'
+                  type='text'
+                  value={editingCategory.enTitle || ''}
+                  onChange={handleEditChange}
+                />
+                <TextField
+                  required
+                  id='edit-arDesc'
+                  name='arDesc'
+                  label='Arabic Description'
+                  type='text'
+                  value={editingCategory.arDesc || ''}
+                  onChange={handleEditChange}
+                />
+                <TextField
+                  required
+                  id='edit-frDesc'
+                  name='frDesc'
+                  label='French Description'
+                  type='text'
+                  value={editingCategory.frDesc || ''}
+                  onChange={handleEditChange}
+                />
+                <TextField
+                  required
+                  id='edit-enDesc'
+                  name='enDesc'
+                  label='English Description'
+                  type='text'
+                  value={editingCategory.enDesc || ''}
                   onChange={handleEditChange}
                 />
                 <Button type='submit' sx={{ mt: 2 }} variant='contained'>
@@ -150,14 +340,6 @@ function HeroDash() {
           getRowId={(row) => row._id}
           rows={data}
           columns={columns}
-          slots={{ toolbar: GridToolbar }}
-          slotProps={{
-            toolbar: {
-              showQuickFilter: true,
-              quickFilterProps: { decounceMs: 500 },
-            },
-          }}
-          pageSize={10}
           disableSelectionOnClick
           disableRowSelectionOnClick
           disableColumnFilter

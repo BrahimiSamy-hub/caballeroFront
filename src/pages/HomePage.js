@@ -1,9 +1,9 @@
 import React from 'react'
 import { FeaturedProducts, Hero, Services, Contact } from '../components'
-const HomePage = () => {
+const HomePage = ({ selectedLanguage }) => {
   return (
     <main>
-      <Hero />
+      <Hero selectedLanguage={selectedLanguage} />
       <FeaturedProducts />
       <Services />
       <Contact />

@@ -215,7 +215,7 @@ function MyComponent() {
           slotProps={{
             toolbar: {
               showQuickFilter: true,
-              quickFilterProps: { decounceMs: 500 },
+              quickFilterProps: { decouncems: 500 },
             },
           }}
           pageSizeOptions={[10]}

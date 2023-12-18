@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import LogoBleu from '../assets/logo bleu.png'
 import { FaBars } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
-import i18n from '../i18n'
 
 import { useTranslation } from 'react-i18next'
 
 const Nav = ({ selectedLanguage, changeLanguage }) => {
-  // useEffect(() => {
-  //   const storedLanguage = localStorage.getItem('selectedLanguage')
-  //   if (storedLanguage) {
-  //     i18n.changeLanguage(storedLanguage)
-  //     setSelectedLanguage(storedLanguage)
-  //   }
-  // }, [])
   const { t } = useTranslation()
   const { openSidebar } = useProductsContext()
 
@@ -27,26 +19,6 @@ const Nav = ({ selectedLanguage, changeLanguage }) => {
           <Link to='/'>
             <img src={LogoBleu} alt='BookLanDZ' loading='lazy' />
           </Link>
-          {/* <div className='languages'>
-            <span
-              className={`fi ${
-                selectedLanguage === 'en'
-                  ? 'fi-gb'
-                  : selectedLanguage === 'ar'
-                  ? 'fi-dz'
-                  : 'fi-fr'
-              }`}
-            ></span>
-            <select
-              value={selectedLanguage}
-              onChange={(e) => changeLanguage(e.target.value)}
-              className='language'
-            >
-              <option value='en'>{t('language1')}</option>
-              <option value='fr'>{t('language2')}</option>
-              <option value='ar'>{t('language3')}</option>
-            </select>
-          </div> */}
           <button type='button' className='nav-toggle' onClick={openSidebar}>
             <FaBars />
           </button>

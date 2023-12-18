@@ -5,10 +5,17 @@ import { getUniqueValues } from '../utils/helpers'
 import axios from 'axios'
 import { useTranslation } from 'react-i18next'
 
-const Filters = () => {
+const Filters = ({
+  gender,
+  categoryF,
+  setGender,
+  setCategory,
+  FetchFilter,
+  data,
+  categoryId,
+}) => {
   const { t } = useTranslation()
-  const genderCategories = ['All', 'Men', 'Women', 'Unisex']
-  const seasonCategories = ['All', 'Autumn', 'Winter', 'Spring', 'Summer']
+  const genderCategories = ['Men', 'Women', 'Unisex']
   const {
     filters: { text, category },
     updateFilters,
@@ -16,21 +23,23 @@ const Filters = () => {
     filtered_products,
     all_products,
   } = useFilterContext()
-  const [data, setData] = useState([])
-  const categories = getUniqueValues(all_products, 'name')
-  const fetchData = async () => {
-    try {
-      const response = await axios.get('http://localhost:3000/categories/')
-      setData(response.data)
-    } catch (error) {
-      console.error('Error fetching data:', error)
-    }
+  const clearFilter = () => {
+    setCategory()
+    setGender()
   }
+  const setCategoryF = (categoryName) => () => {
+    setCategory(categoryName)
+  }
+  const setGenderF = (genderName) => () => {
+    setGender(genderName)
+  }
+  // const [data, setData] = useState([])
+
+  const categories = getUniqueValues(all_products, 'name')
+  console.log(categoryF)
+  console.log(gender)
   const uniqueCategories = getUniqueValues(data, 'name')
 
-  useEffect(() => {
-    fetchData()
-  }, [])
   return (
     <Wrapper>
       <div className='content '>
@@ -54,10 +63,10 @@ const Filters = () => {
                 return (
                   <button
                     key={index}
-                    onClick={updateFilters}
+                    onClick={setCategoryF(categoryName)}
                     name='category'
                     button='button'
-                    className={`${category === categoryName ? 'active' : null}`}
+                    className={`${categoryF === categoryName ? 'active' : ''}`}
                   >
                     {categoryName}
                   </button>
@@ -67,51 +76,45 @@ const Filters = () => {
           </div>
 
           {/* gender */}
-          {/* <div className='form-control'>
+          <div className='form-control'>
             <h5>{t('gender')}</h5>
             <div>
-              {genderCategories.map((gender, index) => (
+              {genderCategories.map((genderF, index) => (
                 <button
                   key={index}
-                  onClick={updateFilters}
+                  onClick={setGenderF(genderF)}
                   name='category'
                   type='button'
-                  className={`${category === gender ? 'active' : ''}`}
+                  className={`${gender === genderF ? 'active' : ''}`}
                 >
-                  {gender}
+                  {genderF}
                 </button>
               ))}
             </div>
-          </div> */}
-
-          {/* Seasons */}
-          {/* <div className='form-control'>
-            <h5>{t('seasons')}</h5>
-            <div>
-              {seasonCategories.map((season, index) => (
-                <button
-                  key={index}
-                  onClick={updateFilters}
-                  name='category'
-                  type='button'
-                  className={`${category === season ? 'active' : ''}`}
-                >
-                  {season}
-                </button>
-              ))}
-            </div>
-          </div> */}
-          {/* end name */}
+          </div>
         </form>
-        <button type='button' className='clear-btn ' onClick={clearFilters}>
-          {t('clearF')}
-        </button>
+        <div className='flex'>
+          <button type='button' className='clear-btn ' onClick={clearFilter}>
+            {t('clearF')}
+          </button>
+          <button
+            type='button'
+            className='submit-btn   '
+            onClick={() => FetchFilter(gender, categoryId)}
+          >
+            {t('applyF')}
+          </button>
+        </div>
       </div>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.section`
+  .flex {
+    display: flex;
+    gap: 10px;
+  }
   .form-control {
     margin-bottom: 1.25rem;
     h5 {
@@ -198,6 +201,12 @@ const Wrapper = styled.section`
   }
   .clear-btn {
     background: var(--clr-red-dark);
+    color: var(--clr-white);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--radius);
+  }
+  .submit-btn {
+    background: var(--clr-primary-9);
     color: var(--clr-white);
     padding: 0.25rem 0.5rem;
     border-radius: var(--radius);

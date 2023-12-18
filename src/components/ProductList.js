@@ -4,20 +4,20 @@ import { useFilterContext } from '../context/filter_context'
 import { useProductsContext } from '../context/products_context'
 import GridView from './GridView'
 import ListView from './ListView'
+import { useTranslation } from 'react-i18next'
 
-const ProductList = () => {
+const ProductList = ({ productFiltred, filter }) => {
+  const { t } = useTranslation()
   const { filtered_products: products, grid_view } = useFilterContext()
   const [page, setPage] = useState(2)
   const [product, setProduct] = useState(products)
   const { totalPages } = useProductsContext()
-
   useEffect(() => {
     setProduct(products)
   }, [products])
 
   const handleLoadMore = async () => {
     try {
-      console.log('total', totalPages)
       if (page > totalPages) {
         return
       }
@@ -28,18 +28,13 @@ const ProductList = () => {
       const newProducts = response.data.products
       setProduct((prevProducts) => [...prevProducts, ...newProducts])
       setPage(page + 1)
-      console.log(page)
     } catch (error) {
       console.error('Error loading more products:', error)
     }
   }
 
   if (products.length < 1) {
-    return (
-      <h5 style={{ textTransform: 'none' }}>
-        Sorry, no products matched your search...
-      </h5>
-    )
+    return <h5 style={{ textTransform: 'none' }}>{t('noProduct')}</h5>
   }
 
   if (grid_view === false) {

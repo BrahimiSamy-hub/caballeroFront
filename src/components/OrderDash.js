@@ -206,7 +206,7 @@ function MyComponent() {
       setData(response.data)
       const allConfirmed = response.data.every((order) => order.isConfirmed)
       setShowActionsColumn(!allConfirmed)
-      setIsConfirmed(allConfirmed) // Update the isConfirmed state
+      setIsConfirmed(allConfirmed)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
@@ -214,7 +214,6 @@ function MyComponent() {
   useEffect(() => {
     fetchData()
   }, [])
-  // Dynamically update columns based on isConfirmed
   const updatedColumns = [...columns]
   if (!isConfirmed) {
     const shippedColumnIndex = updatedColumns.findIndex(
@@ -265,7 +264,7 @@ function MyComponent() {
           slotProps={{
             toolbar: {
               showQuickFilter: true,
-              quickFilterProps: { decounceMs: 500 },
+              quickFilterProps: { decouncems: 500 },
             },
           }}
           pageSize={10}

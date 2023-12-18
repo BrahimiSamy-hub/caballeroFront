@@ -137,7 +137,7 @@ export default function DataGridDemo() {
           <div>
             <div>
               <a href={params.row.image1.url} target='_blank'>
-                Main{' '}
+                Main
               </a>
             </div>
           </div>
@@ -213,6 +213,9 @@ export default function DataGridDemo() {
   ]
 
   const [open, setOpen] = useState(false)
+  const [totalPages, setTotalPages] = useState(1) // New state for total pages
+  const [totalProducts, setTotalProducts] = useState(0) // New state for total pages
+  const [currentPage, setCurrentPage] = useState(1) // New state for current page
   const [data, setData] = useState([])
   const [data2, setData2] = useState([])
   const [category, setCategory] = useState('')
@@ -246,6 +249,10 @@ export default function DataGridDemo() {
   const handleInputChange = (event) => {
     setCategory(event.target.value)
   }
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage)
+    // fetchData(newPage)
+  }
 
   const handleOpenEdit = (item) => {
     setEditingItem(item)
@@ -258,14 +265,6 @@ export default function DataGridDemo() {
   const handleEditChange = (e) => {
     setEditingItem({ ...editingItem, [e.target.name]: e.target.value })
   }
-
-  const addTextFieldPair = () => {
-    setDynamicFields([...dynamicFields, { type: '', price: '' }])
-  }
-  const removeTextFieldPair = (index) => {
-    const newFields = dynamicFields.filter((_, i) => i !== index)
-    setDynamicFields(newFields)
-  }
   const handleEditChangech = (e) => {
     const { name, value, type, checked } = e.target
     setEditingItem({
@@ -273,58 +272,11 @@ export default function DataGridDemo() {
       [name]: type === 'checkbox' ? checked : value,
     })
   }
-  // const handleEditSubmit = async (event) => {
-  //   event.preventDefault()
 
-  //   const token = localStorage.getItem('jwt')
-
-  //   // Check and upload new images if they are selected
-  //   let newImage1Url = editingItem.image1
-  //   let newImage2Url = editingItem.image2
-
-  //   if (editingItem.newImage1) {
-  //     const uploadedImage1 = await uploadFile(editingItem.newImage1)
-  //     newImage1Url = uploadedImage1
-  //       ? uploadedImage1.file._id
-  //       : editingItem.image1
-  //   }
-
-  //   if (editingItem.newImage2) {
-  //     const uploadedImage2 = await uploadFile(editingItem.newImage2)
-  //     newImage2Url = uploadedImage2
-  //       ? uploadedImage2.file._id
-  //       : editingItem.image2
-  //   }
-
-  //   const updatedItem = {
-  //     ...editingItem,
-  //     image1: newImage1Url,
-  //     image2: newImage2Url,
-  //   }
-
-  //   try {
-  //     const response = await axios.put(
-  //       `http://localhost:3000/products/${editingItem._id}`,
-  //       updatedItem,
-  //       { headers: { Authorization: `Bearer ${token}` } }
-  //     )
-  //     handleCloseEdit()
-
-  //     setData((prevData) =>
-  //       prevData.map((item) =>
-  //         item._id === editingItem._id ? { ...response.data } : item
-  //       )
-  //     )
-  //   } catch (error) {
-  //     console.error('Error updating item:', error)
-  //   }
-  // }
   const handleEditSubmit = async (event) => {
     event.preventDefault()
 
     const token = localStorage.getItem('jwt')
-
-    // Upload new images if they are selected and get their URLs
     let newImage1Url = editingItem.image1
     let newImage2Url = editingItem.image2
 
@@ -352,7 +304,6 @@ export default function DataGridDemo() {
       isFeatured: editingItem.isFeatured,
       image1: newImage1Url,
       image2: newImage2Url,
-      // descriptions: editingItem.descriptions,
     }
 
     try {
@@ -376,9 +327,10 @@ export default function DataGridDemo() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:3000/products?limit=20'
+        `http://localhost:3000/products?limit=200`
       )
       setData(response.data.products)
+      setTotalProducts(response.data.totalProducts)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
@@ -424,25 +376,12 @@ export default function DataGridDemo() {
       console.error('Error deleting item:', error)
     }
   }
-  // const handlePriceVolumeChange = (index, event, field) => {
-  //   const updatedPrices = [...newProductPrices]
-  //   updatedPrices[index] = {
-  //     ...updatedPrices[index],
-  //     [field]: event.target.value,
-  //   }
-  //   setNewProductPrices(updatedPrices)
-  // }
   const handlePriceVolumeChange = (index, event, field) => {
-    // Create a new array of prices
     const newPrices = [...editingItem.prices]
-
-    // Update the specific field at the given index
     newPrices[index] = {
       ...newPrices[index],
       [field]: event.target.value,
     }
-
-    // Update the editingItem state
     setEditingItem({ ...editingItem, prices: newPrices })
   }
   const handlePriceVolumeNew = (index, event, field) => {
@@ -992,10 +931,16 @@ export default function DataGridDemo() {
           rowHeight={100}
           getRowId={(row) => row._id}
           columns={columns}
+          // pageSize={10}
+          // pagination
+          rowCount={totalProducts}
+          // page={currentPage}
+          // onPageChange={(params) => handlePageChange(params.page)}
+          // paginationMode='server'
           initialState={{
             pagination: {
               paginationModel: {
-                pageSize: 10,
+                pageSize: 25,
               },
             },
           }}
@@ -1003,10 +948,9 @@ export default function DataGridDemo() {
           slotProps={{
             toolbar: {
               showQuickFilter: true,
-              quickFilterProps: { decounceMs: 500 },
+              quickFilterProps: { decouncems: 500 },
             },
           }}
-          pageSize={10}
           disableSelectionOnClick
           disableRowSelectionOnClick
           disableColumnFilter
