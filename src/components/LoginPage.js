@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import axios from 'axios'
 import { useHistory } from 'react-router-dom'
-
+import { API_ENDPOINT } from '../config'
 const LoginPage = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
@@ -11,7 +11,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      const response = await axios.post('http://localhost:3000/users/login', {
+      const response = await axios.post(`${API_ENDPOINT}/users/login`, {
         username,
         password,
       })

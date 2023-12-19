@@ -12,7 +12,7 @@ import {
 import { Link } from 'react-router-dom'
 import TextField from '@mui/material/TextField'
 import '../Styling/Outlet.scss'
-
+import { API_ENDPOINT } from '../config'
 const style = {
   position: 'absolute',
   top: '50%',
@@ -49,7 +49,7 @@ function MyComponent() {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/wilayas/${editingCategory._id}`,
+        `${API_ENDPOINT}/wilayas/${editingCategory._id}`,
         editingCategory,
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -65,7 +65,7 @@ function MyComponent() {
   }
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/wilayas/')
+      const response = await axios.get(`${API_ENDPOINT}/wilayas/`)
       setData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)

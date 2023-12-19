@@ -1,0 +1,54 @@
+# Query: localhost:3000
+
+29 results - 11 files
+
+src\components\CategoryDash.js:
+   55:         `{API_ENDPOINT}/categories/${editingCategory._id}`,
+   75:       await axios.delete(`{API_ENDPOINT}/categories/${id}`, {
+  122:       const response = await axios.get('{API_ENDPOINT}/categories/')
+  140:       .post('{API_ENDPOINT}/categories/', payload, {
+
+src\components\Hero.js:
+  20:       const response = await axios.get('{API_ENDPOINT}/heros', {
+
+src\components\HeroDash.js:
+   67:         '{API_ENDPOINT}/upload',
+   84:       const response = await axios.get('{API_ENDPOINT}/heros', {
+  141:         `{API_ENDPOINT}/heros/${editingCategory._id}`,
+
+src\components\LivraisonDash.js:
+  52:         `{API_ENDPOINT}/wilayas/${editingCategory._id}`,
+  68:       const response = await axios.get('{API_ENDPOINT}/wilayas/')
+
+src\components\LoginPage.js:
+  14:       const response = await axios.post('{API_ENDPOINT}/users/login', {
+
+src\components\OrderDash.js:
+   42:         `{API_ENDPOINT}/orders/${orderId}`,
+  173:         `{API_ENDPOINT}/orders/${orderId}`,
+  193:       await axios.delete(`{API_ENDPOINT}/orders/${orderId}`, {
+  203:       const response = await axios.get('{API_ENDPOINT}/orders', {
+
+src\components\Outlet.js:
+  311:         `{API_ENDPOINT}/products/${editingItem._id}`,
+  330:         `{API_ENDPOINT}/products?limit=200`
+  345:       const response = await axios.get('{API_ENDPOINT}/categories/')
+  366:         `{API_ENDPOINT}/products/${id}`,
+  460:         '{API_ENDPOINT}/upload',
+  501:         '{API_ENDPOINT}/products/',
+
+src\components\ProductList.js:
+  26:         `{API_ENDPOINT}/products?page=${page}&limit=12`
+
+src\pages\CheckoutPage.js:
+  24:       const response = await axios.get('{API_ENDPOINT}/wilayas/')
+  69:       .post('{API_ENDPOINT}/orders', orderData)
+
+src\pages\ProductsPage.js:
+  16:       //   '{API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}'
+  24:         `{API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
+  46:       const response = await axios.get('{API_ENDPOINT}/categories/')
+
+src\utils\constants.js:
+  42: export const products_url = '{API_ENDPOINT}/products/'
+  44: export const single_product_url = '{API_ENDPOINT}/products/'

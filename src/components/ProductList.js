@@ -5,8 +5,8 @@ import { useProductsContext } from '../context/products_context'
 import GridView from './GridView'
 import ListView from './ListView'
 import { useTranslation } from 'react-i18next'
-
-const ProductList = ({ productFiltred, filter }) => {
+import { API_ENDPOINT } from '../config'
+const ProductList = ({ productFiltred }) => {
   const { t } = useTranslation()
   const { filtered_products: products, grid_view } = useFilterContext()
   const [page, setPage] = useState(2)
@@ -23,7 +23,7 @@ const ProductList = ({ productFiltred, filter }) => {
       }
 
       const response = await axios.get(
-        `http://localhost:3000/products?page=${page}&limit=12`
+        `${API_ENDPOINT}/products?page=${page}&limit=12`
       )
       const newProducts = response.data.products
       setProduct((prevProducts) => [...prevProducts, ...newProducts])

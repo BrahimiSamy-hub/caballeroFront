@@ -7,7 +7,7 @@ import { AiFillPhone } from 'react-icons/ai'
 import { FaCity } from 'react-icons/fa'
 import WilayasData from '../utils/wilayas.json'
 import { useTranslation } from 'react-i18next'
-
+import { API_ENDPOINT } from '../config'
 const CheckoutPage = () => {
   const { t } = useTranslation()
   const [data, setData] = useState([])
@@ -21,7 +21,7 @@ const CheckoutPage = () => {
   const [phone, setPhone] = useState('')
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/wilayas/')
+      const response = await axios.get(`${API_ENDPOINT}/wilayas/`)
       setData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
@@ -66,7 +66,7 @@ const CheckoutPage = () => {
     }
     setLoading(true)
     axios
-      .post('http://localhost:3000/orders', orderData)
+      .post(`${API_ENDPOINT}/orders`, orderData)
       .then((response) => {
         if (response.status === 201) {
           setOrderSuccess(true)

@@ -39,6 +39,6 @@ export const services = [
   },
 ]
 
-export const products_url = 'http://localhost:3000/products/'
+export const products_url = `${API_ENDPOINT}/products/`
 
-export const single_product_url = 'http://localhost:3000/products/'
+export const single_product_url = `${API_ENDPOINT}/products/`

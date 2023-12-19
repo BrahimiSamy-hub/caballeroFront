@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { DataGrid, GridToolbar } from '@mui/x-data-grid'
 import { Link } from 'react-router-dom'
-
+import { API_ENDPOINT } from '../config'
 import {
   Modal,
   Switch,
@@ -39,7 +39,7 @@ function MyComponent() {
   const handleConfirmOrder = async (orderId) => {
     try {
       await axios.put(
-        `http://localhost:3000/orders/${orderId}`,
+        `${API_ENDPOINT}/orders/${orderId}`,
         {
           isConfirmed: true,
         },
@@ -170,7 +170,7 @@ function MyComponent() {
   const handleConfirmOrderSwitch = async (orderId, currentIsShipped) => {
     try {
       await axios.put(
-        `http://localhost:3000/orders/${orderId}`,
+        `${API_ENDPOINT}/orders/${orderId}`,
         {
           isShipped: !currentIsShipped,
         },
@@ -190,7 +190,7 @@ function MyComponent() {
     event.preventDefault()
     const token = localStorage.getItem('jwt')
     try {
-      await axios.delete(`http://localhost:3000/orders/${orderId}`, {
+      await axios.delete(`${API_ENDPOINT}/orders/${orderId}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       setData((prevData) => prevData.filter((item) => item._id !== orderId))
@@ -200,7 +200,7 @@ function MyComponent() {
   }
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/orders', {
+      const response = await axios.get(`${API_ENDPOINT}/orders`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       setData(response.data)

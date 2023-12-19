@@ -13,7 +13,7 @@ import FormLabel from '@mui/material/FormLabel'
 import InputLabel from '@mui/material/InputLabel'
 import MenuItem from '@mui/material/MenuItem'
 import Checkbox from '@mui/material/Checkbox'
-
+import { API_ENDPOINT } from '../config'
 import {
   Modal,
   Box,
@@ -308,7 +308,7 @@ export default function DataGridDemo() {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/products/${editingItem._id}`,
+        `${API_ENDPOINT}/products/${editingItem._id}`,
         updatedItem,
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -326,9 +326,7 @@ export default function DataGridDemo() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        `http://localhost:3000/products?limit=200`
-      )
+      const response = await axios.get(`${API_ENDPOINT}/products?limit=200`)
       setData(response.data.products)
       setTotalProducts(response.data.totalProducts)
     } catch (error) {
@@ -342,7 +340,7 @@ export default function DataGridDemo() {
 
   const fetchData2 = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/categories/')
+      const response = await axios.get(`${API_ENDPOINT}/categories/`)
       setData2(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
@@ -363,7 +361,7 @@ export default function DataGridDemo() {
   const handleDelete = async (id) => {
     try {
       await axios.put(
-        `http://localhost:3000/products/${id}`,
+        `${API_ENDPOINT}/products/${id}`,
         {
           isDrafted: true,
         },
@@ -456,15 +454,11 @@ export default function DataGridDemo() {
     formData.append('image', file)
 
     try {
-      const response = await axios.post(
-        'http://localhost:3000/upload',
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      const response = await axios.post(`${API_ENDPOINT}/upload`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       return response.data
     } catch (error) {
       console.error('Error uploading file:', error)
@@ -497,13 +491,9 @@ export default function DataGridDemo() {
     }
 
     try {
-      const response = await axios.post(
-        'http://localhost:3000/products/',
-        formData,
-        {
-          headers: { Authorization: `Bearer ${token}` },
-        }
-      )
+      const response = await axios.post(`${API_ENDPOINT}/products/`, formData, {
+        headers: { Authorization: `Bearer ${token}` },
+      })
       // Reset state variables after adding the product
       setNewProductName('')
       setNewProductCategory({})

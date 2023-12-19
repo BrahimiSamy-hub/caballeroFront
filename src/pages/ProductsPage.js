@@ -3,11 +3,9 @@ import styled from 'styled-components'
 import { Filters, ProductList, Sort, PageHero } from '../components'
 import { useTranslation } from 'react-i18next'
 import axios from 'axios'
-import { sassFalse } from 'sass'
-
+import { API_ENDPOINT } from '../config'
 const ProductsPage = () => {
   const { t } = useTranslation()
-  const [filter, setFilter] = useState(false)
   const [categoryF, setCategory] = useState('')
   const [gender, setGender] = useState('')
   const [productFiltred, setProduct] = useState([])
@@ -15,7 +13,7 @@ const ProductsPage = () => {
   const FetchFilter = async (gender, categoryId) => {
     try {
       // let url =
-      //   'http://localhost:3000/products?sexe=${gender}&category=${categoryId}'
+      //   `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
       // if (gender) {
       //   url += `?sexe=${gender}`
       // }
@@ -23,10 +21,9 @@ const ProductsPage = () => {
       //   url += `${gender ? '&' : '?'}category=${categoryId}`
       // }
       const response = await axios.get(
-        `http://localhost:3000/products?sexe=${gender}&category=${categoryId}`
+        `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
       )
       setProduct(response.data.products)
-      setFilter(true)
       console.log('filtred', productFiltred)
     } catch (error) {
       console.error('Error loading more products:', error)
@@ -46,7 +43,7 @@ const ProductsPage = () => {
   }
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/categories/')
+      const response = await axios.get(`${API_ENDPOINT}/categories/`)
       setData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
@@ -72,7 +69,7 @@ const ProductsPage = () => {
           />
           <div>
             <Sort />
-            <ProductList filter={filter} productFilterd={productFiltred} />
+            <ProductList productFilterd={productFiltred} />
           </div>
         </div>
       </Wrapper>

@@ -13,6 +13,7 @@ import {
 } from '@mui/material'
 import { Link } from 'react-router-dom'
 import '../Styling/Outlet.scss'
+import { API_ENDPOINT } from '../config'
 
 const style = {
   position: 'absolute',
@@ -52,7 +53,7 @@ function MyComponent() {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/categories/${editingCategory._id}`,
+        `${API_ENDPOINT}/categories/${editingCategory._id}`,
         editingCategory,
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -72,7 +73,7 @@ function MyComponent() {
     event.preventDefault()
     const token = localStorage.getItem('jwt')
     try {
-      await axios.delete(`http://localhost:3000/categories/${id}`, {
+      await axios.delete(`${API_ENDPOINT}/categories/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       setData((prevData) => prevData.filter((item) => item._id !== id))
@@ -119,7 +120,7 @@ function MyComponent() {
   }
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/categories/')
+      const response = await axios.get(`${API_ENDPOINT}/categories/`)
       setData(response.data)
     } catch (error) {
       console.error('Error fetching data:', error)
@@ -137,7 +138,7 @@ function MyComponent() {
     const token = localStorage.getItem('jwt')
 
     axios
-      .post('http://localhost:3000/categories/', payload, {
+      .post(`${API_ENDPOINT}/categories/`, payload, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((response) => {

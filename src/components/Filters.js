@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useFilterContext } from '../context/filter_context'
 import { getUniqueValues } from '../utils/helpers'
-import axios from 'axios'
 import { useTranslation } from 'react-i18next'
 
 const Filters = ({

@@ -12,7 +12,7 @@ import {
 import { Link } from 'react-router-dom'
 import TextField from '@mui/material/TextField'
 import '../Styling/Outlet.scss'
-
+import { API_ENDPOINT } from '../config'
 const style = {
   position: 'absolute',
   top: '50%',
@@ -63,15 +63,11 @@ function HeroDash() {
     formData.append('image', file)
 
     try {
-      const response = await axios.post(
-        'http://localhost:3000/upload',
-        formData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      )
+      const response = await axios.post(`${API_ENDPOINT}/upload`, formData, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
       return response.data
     } catch (error) {
       console.error('Error uploading file:', error)
@@ -81,7 +77,7 @@ function HeroDash() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/heros', {
+      const response = await axios.get(`${API_ENDPOINT}/heros`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       setData(response.data)
@@ -138,7 +134,7 @@ function HeroDash() {
 
     try {
       const response = await axios.put(
-        `http://localhost:3000/heros/${editingCategory._id}`,
+        `${API_ENDPOINT}/heros/${editingCategory._id}`,
         updatedItem,
         { headers: { Authorization: `Bearer ${token}` } }
       )

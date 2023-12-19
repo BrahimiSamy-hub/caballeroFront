@@ -7,6 +7,7 @@ import smallheroBcg from '../assets/small-single.png'
 import smallheroBcg2 from '../assets/multiple-single.png'
 import { useTranslation } from 'react-i18next'
 import axios from 'axios'
+import { API_ENDPOINT } from '../config'
 
 const Hero = ({ selectedLanguage }) => {
   const { t } = useTranslation()
@@ -17,7 +18,7 @@ const Hero = ({ selectedLanguage }) => {
   const token = localStorage.getItem('jwt')
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:3000/heros', {
+      const response = await axios.get(`${API_ENDPOINT}/heros`, {
         headers: { Authorization: `Bearer ${token}` },
       })
       if (Array.isArray(response.data)) {
