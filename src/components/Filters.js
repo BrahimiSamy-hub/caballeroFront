@@ -35,8 +35,7 @@ const Filters = ({
   // const [data, setData] = useState([])
 
   const categories = getUniqueValues(all_products, 'name')
-  console.log(categoryF)
-  console.log(gender)
+
   const uniqueCategories = getUniqueValues(data, 'name')
 
   return (

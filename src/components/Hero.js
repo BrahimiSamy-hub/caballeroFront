@@ -12,7 +12,7 @@ import { API_ENDPOINT } from '../config'
 const Hero = ({ selectedLanguage }) => {
   const { t } = useTranslation()
   const [data, setData] = useState([])
-  console.log(data)
+
   const [mainImageLoaded, setMainImageLoaded] = useState(false)
   const [accentImageLoaded, setAccentImageLoaded] = useState(false)
   const token = localStorage.getItem('jwt')

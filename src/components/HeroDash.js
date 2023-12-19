@@ -57,7 +57,7 @@ function HeroDash() {
       newSecondaryImage: null,
     })
   }
-  // console.log(data)
+
   const uploadFile = async (file) => {
     const formData = new FormData()
     formData.append('image', file)
@@ -81,14 +81,12 @@ function HeroDash() {
         headers: { Authorization: `Bearer ${token}` },
       })
       setData(response.data)
-      // console.log(data)
     } catch (error) {
       console.error('Error fetching data:', error)
     }
   }
   useEffect(() => {
     fetchData()
-    console.log('data', data)
   }, [])
   const handleEditChange = (e) => {
     setEditingCategory({ ...editingCategory, [e.target.name]: e.target.value })

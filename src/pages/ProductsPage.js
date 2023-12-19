@@ -24,7 +24,6 @@ const ProductsPage = () => {
         `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
       )
       setProduct(response.data.products)
-      console.log('filtred', productFiltred)
     } catch (error) {
       console.error('Error loading more products:', error)
     }
@@ -36,11 +35,7 @@ const ProductsPage = () => {
     return foundCategory ? foundCategory._id : null
   }
   const categoryId = findCategoryIdByName(categoryF)
-  if (categoryId) {
-    console.log(`The ID of ${categoryF} is ${categoryId}`)
-  } else {
-    console.log(`Category ${categoryF} not found`)
-  }
+
   const fetchData = async () => {
     try {
       const response = await axios.get(`${API_ENDPOINT}/categories/`)
