@@ -33,7 +33,10 @@ function Layout({ children, selectedLanguage, changeLanguage }) {
         selectedLanguage={selectedLanguage}
         changeLanguage={changeLanguage}
       />
-      <Sidebar />
+      <Sidebar
+        selectedLanguage={selectedLanguage}
+        changeLanguage={changeLanguage}
+      />
       {children}
       <Footer />
     </>

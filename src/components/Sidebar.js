@@ -9,7 +9,7 @@ import CartButtons from './CartButtons'
 import { useProductsContext } from '../context/products_context'
 import { useTranslation } from 'react-i18next'
 
-const Sidebar = () => {
+const Sidebar = ({ selectedLanguage, changeLanguage }) => {
   const { isSidebarOpen, closeSidebar } = useProductsContext()
   const { t } = useTranslation()
 
@@ -41,7 +41,10 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
-        <CartButtons />
+        <CartButtons
+          selectedLanguage={selectedLanguage}
+          changeLanguage={changeLanguage}
+        />
       </aside>
     </SidebarContainer>
   )
