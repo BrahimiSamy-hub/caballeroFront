@@ -1,5 +1,6 @@
 import React from 'react'
 import { GiCompass, GiDiamondHard, GiStabbedNote } from 'react-icons/gi'
+import { API_ENDPOINT } from '../config'
 export const links = [
   {
     id: 1,
