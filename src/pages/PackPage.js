@@ -25,7 +25,7 @@ const ProductsPage = () => {
   const fetchDataGet = async () => {
     try {
       const response = await axios.get(
-        `${API_ENDPOINT}/products?category=6583797bc65f9d3e30de5e89`
+        `${API_ENDPOINT}/products?category=65860ec17676c31e18097e0d`
       )
       setProduct(response.data.products)
       setTotalProducts(response.data.totalProducts)

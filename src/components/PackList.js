@@ -18,7 +18,7 @@ const PackList = () => {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `${API_ENDPOINT}/products?category=6583797bc65f9d3e30de5e89`
+        `${API_ENDPOINT}/products?category=65860ec17676c31e18097e0d`
       )
       setProduct(response.data.products)
     } catch (error) {
@@ -32,7 +32,7 @@ const PackList = () => {
       }
 
       const response = await axios.get(
-        `${API_ENDPOINT}/products?page=${page}&category=6583797bc65f9d3e30de5e89`
+        `${API_ENDPOINT}/products?page=${page}&category=65860ec17676c31e18097e0d`
       )
       const newProducts = response.data.products
       setProduct((prevProducts) => [...prevProducts, ...newProducts])
