@@ -105,12 +105,12 @@ function MyComponent() {
           <Link to='#' onClick={() => handleOpenEdit(params.row)}>
             <img src='/view.svg' alt='' />
           </Link>
-          <Link
+          {/* <Link
             to='#'
             onClick={(event) => handleClickDelete(event, params.row._id)}
           >
             <img src='/delete.svg' alt='' />
-          </Link>
+          </Link> */}
         </div>
       ),
     },

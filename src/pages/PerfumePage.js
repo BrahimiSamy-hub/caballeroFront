@@ -23,7 +23,7 @@ const PerfumePage = () => {
   const fetchDataGet = async () => {
     try {
       const response = await axios.get(
-        `${API_ENDPOINT}/products?category=656a4d3b9bb2dc63e0325825`
+        `${API_ENDPOINT}/products?category=6585f226147eb67e6877fc26`
       )
       setProduct(response.data.products)
       setTotalProducts(response.data.totalProducts)

@@ -1,1 +1,1 @@
-export const API_ENDPOINT = 'https://api.caballeroparfumerie.com'
+export const API_ENDPOINT = 'http://localhost:3000'
