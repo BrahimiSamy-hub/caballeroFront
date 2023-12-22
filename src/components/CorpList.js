@@ -6,7 +6,7 @@ import GridView from './GridView'
 import ListView from './ListView'
 import { useTranslation } from 'react-i18next'
 import { API_ENDPOINT } from '../config'
-const CorpList = ({ productFiltred, categoryId }) => {
+const CorpList = ({ productFiltred }) => {
   const { t } = useTranslation()
   const { grid_view } = useFilterContext()
   const [page, setPage] = useState(2)
