@@ -32,7 +32,7 @@ const Product = ({
       >
         <Link to={`/products/${_id}`}>
           {isNewProduct() && (
-            <span className='blinking-text new-badge  '>{t('new')}</span>
+            <span className='blinking-text  '>{t('new')}</span>
           )}
           <div className='image-container'>
             <img

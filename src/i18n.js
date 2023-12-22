@@ -8,7 +8,7 @@ i18n
   .use(LanguageDetector) // Detect language
   .use(initReactI18next) // Initialize React binding
   .init({
-    fallbackLng: 'en',
+    fallbackLng: 'ar',
     debug: true,
     detection: {
       order: ['queryString', 'cookie', 'localStorage', 'path', 'subdomain'],

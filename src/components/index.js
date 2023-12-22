@@ -17,17 +17,26 @@ import ProductImages from './ProductImages'
 import AddToCart from './AddToCart'
 import Filters from './Filters'
 import ProductList from './ProductList'
+import PackList from './PackList'
 import Sort from './Sort'
 import CategoryDash from './CategoryDash'
-import Stars from './Stars'
 import CartContent from './CarContent'
 import PageHero from './PageHero'
 import AlertOrder from './AlertOrder'
 import FormOrder from './FormOrder'
 import LoginPage from './LoginPage'
 import LivraisonDash from './LivraisonDash'
+import PerfumeList from './PerfumeList'
+import Baume from './BaumeList'
+import Corp from './CorpList'
+import BuyNow from './BuyNow'
 export {
+  BuyNow,
+  Baume,
+  Corp,
+  PerfumeList,
   HeroDash,
+  PackList,
   OrderDash,
   LivraisonDash,
   CategoryDash,
@@ -49,7 +58,6 @@ export {
   Filters,
   ProductList,
   Sort,
-  Stars,
   CartContent,
   PageHero,
   AlertOrder,

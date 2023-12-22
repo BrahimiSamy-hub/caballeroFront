@@ -49,6 +49,12 @@ export default function DataGridDemo() {
       editable: false,
     },
     {
+      field: 'marque',
+      headerName: 'Marque',
+      width: 150,
+      editable: false,
+    },
+    {
       field: 'category',
       type: 'string',
       headerName: 'Category',
@@ -234,6 +240,7 @@ export default function DataGridDemo() {
     image2: '',
   })
   const [newProductName, setNewProductName] = useState('')
+  const [newMarqueName, setNewMarqueName] = useState('')
   const [newProductCategory, setNewProductCategory] = useState({})
   const [newProductPrices, setNewProductPrices] = useState([])
   const [newProductGender, setNewProductGender] = useState('')
@@ -296,6 +303,7 @@ export default function DataGridDemo() {
 
     const updatedItem = {
       name: editingItem.name,
+      marque: editingItem.marque,
       category: editingItem.category._id,
       prices: editingItem.prices,
       sexe: editingItem.sexe,
@@ -437,6 +445,8 @@ export default function DataGridDemo() {
 
   const handleNewProductNameChange = (event) =>
     setNewProductName(event.target.value)
+  const handleNewMarqueNameChange = (event) =>
+    setNewMarqueName(event.target.value)
   const handleNewProductCategoryChange = (event) => {
     const selectedCategory =
       data2.find((cat) => cat._id === event.target.value) || {}
@@ -477,6 +487,7 @@ export default function DataGridDemo() {
 
     const formData = {
       name: newProductName,
+      marque: newMarqueName,
       category: newProductCategory,
       prices: newProductPrices,
       sexe: newProductGender,
@@ -496,6 +507,8 @@ export default function DataGridDemo() {
       })
       // Reset state variables after adding the product
       setNewProductName('')
+      setNewMarqueName('')
+
       setNewProductCategory({})
       setNewProductPrices([])
       setNewProductGender('')
@@ -532,6 +545,16 @@ export default function DataGridDemo() {
                 label='Name'
                 type='text'
                 value={editingItem.name || ''}
+                onChange={handleEditChange}
+                fullWidth
+                margin='normal'
+              />
+              <TextField
+                id='marque'
+                name='marque'
+                label='Marque'
+                type='text'
+                value={editingItem.marque || ''}
                 onChange={handleEditChange}
                 fullWidth
                 margin='normal'
@@ -631,33 +654,6 @@ export default function DataGridDemo() {
                 }
                 label='In Stock'
               />
-              {/* <TextField
-                name='descriptionEN'
-                label='Description (EN)'
-                value={getDescriptionByLanguage('EN')}
-                onChange={(e) => handleDescriptionChange(e, 'EN')}
-                margin='normal'
-                fullWidth
-                multiline
-              />
-              <TextField
-                name='descriptionAR'
-                label='Description (AR)'
-                value={getDescriptionByLanguage('AR')}
-                onChange={(e) => handleDescriptionChange(e, 'AR')}
-                margin='normal'
-                fullWidth
-                multiline
-              />
-              <TextField
-                name='descriptionFR'
-                label='Description (FR)'
-                value={getDescriptionByLanguage('FR')}
-                onChange={(e) => handleDescriptionChange(e, 'FR')}
-                margin='normal'
-                fullWidth
-                multiline
-              /> */}
               <FormControl component='fieldset' margin='normal'>
                 <FormLabel component='legend'>Gender</FormLabel>
                 <RadioGroup
@@ -737,9 +733,23 @@ export default function DataGridDemo() {
                   type='text'
                   value={newProductName}
                   onChange={handleNewProductNameChange}
-                />
-                <TextField type='file' onChange={handleImage1Change} />
-                <TextField type='file' onChange={handleImage2Change} />
+                />{' '}
+                <FormControl fullWidth sx={{ mt: 2 }}>
+                  <TextField
+                    id='marque'
+                    name='marque'
+                    label='Marque'
+                    type='text'
+                    value={newMarqueName}
+                    onChange={handleNewMarqueNameChange}
+                  />
+                </FormControl>
+                <FormControl fullWidth sx={{ mt: 2 }}>
+                  <TextField type='file' onChange={handleImage1Change} />{' '}
+                </FormControl>{' '}
+                <FormControl fullWidth sx={{ mt: 2 }}>
+                  <TextField type='file' onChange={handleImage2Change} />{' '}
+                </FormControl>
                 <Box sx={{ minWidth: 120, mt: 2 }}>
                   <FormControl fullWidth>
                     <InputLabel id='demo-simple-select-label'>
@@ -806,30 +816,32 @@ export default function DataGridDemo() {
                 >
                   Add Price and Volume
                 </Button>
-                <FormLabel component='legend'>Gender</FormLabel>
-                <RadioGroup
-                  row
-                  aria-labelledby='gender-radio-buttons-group-label'
-                  name='gender-radio-buttons-group'
-                  value={newProductGender}
-                  onChange={handleGenderChange}
-                >
-                  <FormControlLabel
-                    value='Women'
-                    control={<Radio />}
-                    label='Women'
-                  />
-                  <FormControlLabel
-                    value='Men'
-                    control={<Radio />}
-                    label='Men'
-                  />
-                  <FormControlLabel
-                    value='Unisex'
-                    control={<Radio />}
-                    label='Unisex'
-                  />
-                </RadioGroup>
+                <FormControl fullWidth sx={{ mt: 2 }}>
+                  <FormLabel component='legend'>Gender</FormLabel>
+                  <RadioGroup
+                    row
+                    aria-labelledby='gender-radio-buttons-group-label'
+                    name='gender-radio-buttons-group'
+                    value={newProductGender}
+                    onChange={handleGenderChange}
+                  >
+                    <FormControlLabel
+                      value='Women'
+                      control={<Radio />}
+                      label='Women'
+                    />
+                    <FormControlLabel
+                      value='Men'
+                      control={<Radio />}
+                      label='Men'
+                    />
+                    <FormControlLabel
+                      value='Unisex'
+                      control={<Radio />}
+                      label='Unisex'
+                    />
+                  </RadioGroup>
+                </FormControl>
                 <FormLabel component='legend'>Seasons</FormLabel>
                 <RadioGroup
                   row
@@ -859,7 +871,6 @@ export default function DataGridDemo() {
                     label='Autumn'
                   />
                 </RadioGroup>
-
                 {/* Description Fields */}
                 <BaseTextareaAutosize
                   minRows={1}
@@ -915,7 +926,6 @@ export default function DataGridDemo() {
                     },
                   }}
                 />
-
                 <Button type='submit' sx={{ mt: 2 }} variant='contained'>
                   Submit
                 </Button>

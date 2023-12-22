@@ -21,9 +21,9 @@ const CartContent = () => {
         <Link to='products' className='btn'>
           {t('continue')}
         </Link>
-        <button type='button ' className='btn clear-btn' onClick={clearCart}>
+        {/* <button type='button ' className='btn clear-btn' onClick={clearCart}>
           {t('clear')}
-        </button>
+        </button> */}
       </div>
       <CartTotals />
     </Wrapper>
@@ -34,6 +34,9 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+  }
+  .btn {
+    font-size: 1.2rem;
   }
   .link-btn {
     background: transparent;
@@ -47,8 +50,8 @@ const Wrapper = styled.section`
     font-weight: 400;
     cursor: pointer;
   }
-  .clear-btn {
+  /* .clear-btn {
     background: var(--clr-black);
-  }
+  } */
 `
 export default CartContent

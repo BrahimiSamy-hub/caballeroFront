@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import heroBcg from '../assets/single.webp'
-import heroBcg2 from '../assets/multiple.webp'
+
 import smallheroBcg from '../assets/small-single.png'
 import smallheroBcg2 from '../assets/multiple-single.png'
 import { useTranslation } from 'react-i18next'
@@ -63,24 +62,9 @@ const Hero = ({ selectedLanguage }) => {
         </Link>
       </article>
       <article className='img-container'>
-        {/* {data.map((hero) => (
-          <div key={hero._id}>
-            <img
-              src={hero.mainImage.url}
-              alt='Main'
-              className='main-img'
-              loading='lazy'
-              onLoad={() => setMainImageLoaded(true)}
-              onError={(e) => {
-                e.target.src = '../assets/single.png'
-              }}
-              crossOrigin='anonymous'
-            />
-          </div>
-        ))} */}
         <div
           className={`main-img blur-load ${mainImageLoaded ? 'loaded' : ''}`}
-          style={{ backgroundImage: `url(${smallheroBcg})` }}
+          // style={{ backgroundImage: `url(${smallheroBcg})` }}
         >
           {data.map((hero) => (
             <img
@@ -99,7 +83,7 @@ const Hero = ({ selectedLanguage }) => {
         </div>
         <div
           className={`blur-load ${accentImageLoaded ? 'loaded' : ''}`}
-          style={{ backgroundImage: `url(${smallheroBcg2})` }}
+          // style={{ backgroundImage: `url(${smallheroBcg2})` }}
         >
           {data.map((hero) => (
             <img

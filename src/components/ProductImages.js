@@ -14,7 +14,7 @@ const ProductImages = ({ image1, image2 }) => {
         <img
           src={currentImage}
           alt='Main'
-          className='main'
+          className='mainn'
           crossOrigin='anonymous'
         />
         <div className='gallery'>
@@ -39,9 +39,11 @@ const ProductImages = ({ image1, image2 }) => {
 }
 
 const Wrapper = styled.section`
-  .main {
-    width: 250px;
-    height: 280px;
+  .mainn {
+    width: 350px;
+    height: 350px;
+    /* max-width: 250px;
+    max-height: 280px; */
   }
   img {
     display: block;
@@ -50,9 +52,8 @@ const Wrapper = styled.section`
   }
   .gallery {
     margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 55px);
-    column-gap: 30px;
+    display: flex;
+    justify-content: space-between; // Align images at the start and end
     img {
       height: 100px;
       cursor: pointer;
@@ -63,17 +64,17 @@ const Wrapper = styled.section`
   }
   @media (max-width: 576px) {
     .main {
-      height: 300px;
+      height: 350;
     }
     .gallery {
       img {
-        height: 50px;
+        height: 65px;
       }
     }
   }
   @media (min-width: 992px) {
     .main {
-      height: 380px;
+      height: 350;
     }
     .gallery {
       img {

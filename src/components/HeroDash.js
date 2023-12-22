@@ -15,6 +15,7 @@ import '../Styling/Outlet.scss'
 import { API_ENDPOINT } from '../config'
 const style = {
   position: 'absolute',
+  overflow: 'scroll',
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
@@ -23,6 +24,8 @@ const style = {
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
+  maxHeight: '90vh',
+  overflowY: 'auto',
 }
 
 function HeroDash() {
@@ -240,7 +243,7 @@ function HeroDash() {
   return (
     <div>
       <Button variant='disabled'>Hero</Button>
-      <Modal open={openEdit} onClose={handleCloseEdit}>
+      <Modal open={openEdit} onClose={handleCloseEdit} closeAfterTransition>
         <Fade in={openEdit}>
           <Box sx={style}>
             <Typography id='modal-edit-title' variant='h6'>
@@ -268,6 +271,7 @@ function HeroDash() {
               <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
+                  multiline
                   id='edit-arTitle'
                   name='arTitle'
                   label='Arabic Title'
@@ -275,8 +279,11 @@ function HeroDash() {
                   value={editingCategory.arTitle || ''}
                   onChange={handleEditChange}
                 />
+              </FormControl>
+              <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
+                  multiline
                   id='edit-frTitle'
                   name='frTitle'
                   label='French Title'
@@ -284,6 +291,8 @@ function HeroDash() {
                   value={editingCategory.frTitle || ''}
                   onChange={handleEditChange}
                 />
+              </FormControl>
+              <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
                   id='edit-enTitle'
@@ -293,8 +302,11 @@ function HeroDash() {
                   value={editingCategory.enTitle || ''}
                   onChange={handleEditChange}
                 />
+              </FormControl>
+              <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
+                  multiline
                   id='edit-arDesc'
                   name='arDesc'
                   label='Arabic Description'
@@ -302,8 +314,11 @@ function HeroDash() {
                   value={editingCategory.arDesc || ''}
                   onChange={handleEditChange}
                 />
+              </FormControl>
+              <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
+                  multiline
                   id='edit-frDesc'
                   name='frDesc'
                   label='French Description'
@@ -311,8 +326,11 @@ function HeroDash() {
                   value={editingCategory.frDesc || ''}
                   onChange={handleEditChange}
                 />
+              </FormControl>
+              <FormControl fullWidth sx={{ mt: 2 }}>
                 <TextField
                   required
+                  multiline
                   id='edit-enDesc'
                   name='enDesc'
                   label='English Description'

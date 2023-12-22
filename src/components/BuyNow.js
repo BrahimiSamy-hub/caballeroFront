@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import AmountButtons from './AmountButtons'
-import { MdAddShoppingCart } from 'react-icons/md'
 
 const AddToCart = ({
   product,
@@ -15,21 +13,7 @@ const AddToCart = ({
   const { t } = useTranslation()
   const { _id, name } = product
   const [amount, setAmount] = useState(1)
-  const increase = () => {
-    setAmount((oldAmount) => {
-      let tempAmount = oldAmount + 1
-      return tempAmount
-    })
-  }
-  const decrease = () => {
-    setAmount((oldAmount) => {
-      let tempAmount = oldAmount - 1
-      if (tempAmount < 1) {
-        return tempAmount
-      }
-      return tempAmount
-    })
-  }
+
   const addToLocalStorage = () => {
     const type = selectedVolumeType
     let cart = localStorage.getItem('cart')
@@ -67,19 +51,15 @@ const AddToCart = ({
   return (
     <Wrapper>
       <div className='btn-container'>
-        {/* <AmountButtons
-          amount={amount}
-          increase={increase}
-          decrease={decrease}
-        /> */}
         <Link
-          to='/cart'
-          className={`btn hero-btn ${!isInStock ? 'disabled' : ''}`}
+          to='/checkout'
+          className={`btn btn2 hero-btn ${!isInStock ? 'disabled' : ''}`}
           onClick={addToLocalStorage}
         >
-          {/* <MdAddShoppingCart size={30} /> */}
-          {t('addTcart')}
-          {/* <MdAddShoppingCart size={30} /> */}
+          {t('BuyNow')}
+          <div>
+            <small className='blinking-text'> {t('CashOnDelivery')}</small>
+          </div>
         </Link>
       </div>
     </Wrapper>
@@ -120,23 +100,27 @@ const Wrapper = styled.section`
     font-size: 2rem;
   }
   .btn-container {
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  /* @keyframes pulse {
+  @keyframes pulse {
     0% {
       transform: scale(1);
     }
     50% {
-      transform: scale(1.1);
+      transform: scale(1.15);
     }
     100% {
       transform: scale(1);
     }
-  } */
-
+  }
+  .btn2 {
+    margin-top: 1.5rem;
+    background-color: red;
+    animation: pulse 1.5s infinite;
+  }
   .color-btn {
     display: inline-block;
     width: 1.5rem;
@@ -159,11 +143,11 @@ const Wrapper = styled.section`
     opacity: 1;
   }
   .btn-container {
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
   }
 
   .btn {
-    /* margin-top: 1rem; */
+    margin-top: 1rem;
     min-width: 140px;
   }
 `

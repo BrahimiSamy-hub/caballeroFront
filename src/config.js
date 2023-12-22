@@ -1,1 +1,1 @@
-export const API_ENDPOINT = 'http://178.32.240.77:3000'
+export const API_ENDPOINT = 'http://localhost:3000'

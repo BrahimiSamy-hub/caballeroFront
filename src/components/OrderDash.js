@@ -65,6 +65,13 @@ function MyComponent() {
       },
     },
     {
+      field: 'fullName',
+      headerName: 'Client Name',
+      width: 200,
+      editable: false,
+    },
+
+    {
       field: 'Quantity',
       headerName: 'Quantity',
       width: 40,

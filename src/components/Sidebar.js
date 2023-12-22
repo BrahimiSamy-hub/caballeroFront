@@ -12,7 +12,15 @@ import { useTranslation } from 'react-i18next'
 const Sidebar = ({ selectedLanguage, changeLanguage }) => {
   const { isSidebarOpen, closeSidebar } = useProductsContext()
   const { t } = useTranslation()
+  const toggleDropdown = (event) => {
+    event.preventDefault()
+    const dropdownContent = event.currentTarget.nextElementSibling
 
+    if (dropdownContent) {
+      dropdownContent.style.display =
+        dropdownContent.style.display === 'block' ? 'none' : 'block'
+    }
+  }
   return (
     <SidebarContainer>
       <aside
@@ -37,7 +45,18 @@ const Sidebar = ({ selectedLanguage, changeLanguage }) => {
             <Link onClick={closeSidebar} to='/'>
               <Link to='/'>{t('titleNav')}</Link>
               <Link to='/about'>{t('titleNav2')}</Link>
-              <Link to='/products'>{t('titleNav3')}</Link>
+              {/* <Link to='/products'>{t('titleNav3')}</Link>
+               */}
+              <div className='dropdown' onClick={toggleDropdown}>
+                <span className='dropdown-main'>{t('titleNav3')}</span>
+                <div className='dropdown-content'>
+                  <Link to='/products'>{t('AllProducts')}</Link>
+                  <Link to='/perfumes'>{t('Perfumes')}</Link>
+                  <Link to='/body_balms'>{t('Baumes_Corporel')}</Link>
+                  <Link to='/body_perfumes'>{t('Parfums_De_Corps')}</Link>
+                  <Link to='/packs'>{t('Packs')}</Link>
+                </div>
+              </div>
             </Link>
           </li>
         </ul>
@@ -52,6 +71,59 @@ const Sidebar = ({ selectedLanguage, changeLanguage }) => {
 
 const SidebarContainer = styled.div`
   text-align: center;
+  .links .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .links .dropdown .dropdown-main {
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding: 1rem 1.5rem;
+    color: var(--clr-grey-3);
+    transition: var(--transition);
+    letter-spacing: var(--spacing);
+    cursor: pointer;
+  }
+  .links .dropdown .dropdown-main::after {
+    content: '▼'; /* Use your preferred dropdown icon or character */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 0.7rem;
+    color: var(--clr-grey-3);
+  }
+  .links .dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--clr-white);
+    min-width: 220px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: var(--radius);
+    text-align: left;
+  }
+
+  .links .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .links .dropdown .dropdown-content a {
+    display: block;
+    text-align: left;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    color: var(--clr-grey-3);
+    transition: var(--transition);
+  }
+
+  .links .dropdown .dropdown-content a:hover {
+    color: var(--clr-grey-2);
+  }
   .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -115,6 +187,7 @@ const SidebarContainer = styled.div`
   }
   .cart-btn-wrapper {
     margin: 2rem auto;
+    gap: 30px;
   }
   @media screen and (min-width: 992px) {
     .sidebar {

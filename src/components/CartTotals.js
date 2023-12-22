@@ -26,6 +26,9 @@ const CartTotals = () => {
         </article>
         <Link to='/checkout' className='btn'>
           {t('proceed')}
+          <div>
+            <small>{t('CashOnDelivery')}</small>
+          </div>
         </Link>
       </div>
     </Wrapper>
@@ -40,6 +43,23 @@ const Wrapper = styled.section`
     border: 1px solid var(--clr-grey-8);
     border-radius: var(--radius);
     padding: 1.5rem 3rem;
+  }
+  .btn {
+    margin-top: 1.5rem;
+    background-color: red;
+    animation: pulse 1.5s infinite;
+    font-size: 1.2rem;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   h4,
   h5,

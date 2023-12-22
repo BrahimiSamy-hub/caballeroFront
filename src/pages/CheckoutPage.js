@@ -45,6 +45,7 @@ const CheckoutPage = () => {
       quantity: item.amount,
       priceType: item.type,
     })),
+    fullName: name,
     wilaya: wilayaName,
     phoneNumber: phone,
   }
@@ -70,6 +71,7 @@ const CheckoutPage = () => {
       .then((response) => {
         if (response.status === 201) {
           setOrderSuccess(true)
+          localStorage.setItem('cart', JSON.stringify([]))
         }
       })
       .catch((error) => {})
@@ -92,13 +94,9 @@ const CheckoutPage = () => {
     )
   }
   const deliveryPrice = calculateDeliveryPrice()
-  const updatedOrderItems = orderItems.map((item) => ({
-    ...item,
-    total: item.price * item.amount + deliveryPrice,
-  }))
+
   const totalPrice = orderItems.reduce(
     (acc, item) => acc + item.price * item.amount,
-
     0
   )
 
@@ -177,15 +175,15 @@ const CheckoutPage = () => {
                   <AiFillPhone />
                 </div>
               </div>
-              <button
+              {/* <button
                 form='form1'
                 type='submit'
-                className='btn'
+                className=' placement '
                 disabled={(isButtonDisabled, loading)}
                 onClick={order}
               >
                 {loading ? t('loading') : t('order')}
-              </button>
+              </button> */}
             </form>
           </div>
           <div
@@ -236,13 +234,22 @@ const CheckoutPage = () => {
                       alignItems: 'center',
                     }}
                   >
-                    <h3>
+                    <h3 style={{ marginTop: 25 }}>
                       {t('priceDel')}
                       {totalPrice + calculateDeliveryPrice()}
                       {t('Currency')}
                     </h3>
                   </div>
                 )}
+                <button
+                  form='form1'
+                  type='submit'
+                  className='btn'
+                  disabled={(isButtonDisabled, loading)}
+                  onClick={order}
+                >
+                  {loading ? t('loading') : t('checkout')}
+                </button>
               </div>
             </form>
           </div>
@@ -259,12 +266,32 @@ const Wrapper = styled.div`
   *:after {
     box-sizing: border-box;
   }
+  select {
+    font-size: 14px;
+  }
+
+  select option {
+    font-size: 14px;
+  }
+
+  .input-group input::placeholder,
+  .input-group select::placeholder {
+    font-family: 'beIN Black', sans-serif; /* Replace 'Your Desired Font' with the actual font you want to use */
+  }
+  .input-group input,
+  .input-group select {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
   .marginTop {
     margin-top: 40px;
   }
   .flex {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .btn {
+    font-size: 1.5rem;
+    margin-top: 2em;
   }
   body {
     padding: 1em;
@@ -395,12 +422,17 @@ const Wrapper = styled.div`
     transition: all 0.35s ease-in-out;
   }
   .container {
-    max-width: 38em;
+    min-width: 28em;
     padding: 1em 3em 2em 3em;
     margin: 0em auto;
     background-color: #fff;
     border-radius: 4.2px;
     box-shadow: 0px 3px 10px -2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    text-align: center; /* Center text within the container */
   }
   .row {
     zoom: 1;

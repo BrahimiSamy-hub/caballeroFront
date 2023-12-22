@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 const AlertOrder = () => {
   const { t } = useTranslation()
   return (
-    <Wrapper className='page'>
+    <Wrapper className=''>
       <div className='center containerr'>
         <TiTick size={100} />
         <h4>{t('OrderSub')}</h4>

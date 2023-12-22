@@ -59,19 +59,13 @@ Global Styles
 }
 
 body {
-  font-family: Post Grotesk, sans-serif;
-  /* font-family: 'beIN Black', sans-serif; */
-  background: var(--clr-white);
+  /* font-family: Post Grotesk, sans-serif; */
+  font-family: 'beIN Black', sans-serif;
+
+  background: var(--clr-primary-10);
   color: var(--clr-grey-1);
   line-height: 1.5;
   font-size: 0.875rem;
-  background-color: #eaded7;
-  /* background: rgb(29, 72, 81);
-  background: linear-gradient(
-    0deg,
-    rgba(29, 72, 81, 1) 0%,
-    rgba(234, 222, 215, 1) 100%
-  ); */
 }
 
 ul {
@@ -89,9 +83,10 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: BauerBodoni-roman, serif;
+  /* font-family: BauerBodoni-roman, serif; */
   /* font-family: 'Caveat', cursive; */
-  /* font-family: 'beIN Black', sans-serif; */
+  font-family: 'beIN Black', sans-serif;
+
   letter-spacing: var(--spacing);
   text-transform: capitalize;
   line-height: 1.25;
@@ -225,5 +220,5 @@ p {
   padding: 5rem 0;
 }
 .page {
-  min-height: calc(100vh - (20vh + 10rem));
+  min-height: 100vh;
 }

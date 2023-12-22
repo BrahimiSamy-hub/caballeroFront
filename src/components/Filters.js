@@ -3,16 +3,8 @@ import styled from 'styled-components'
 import { useFilterContext } from '../context/filter_context'
 import { getUniqueValues } from '../utils/helpers'
 import { useTranslation } from 'react-i18next'
-
-const Filters = ({
-  gender,
-  categoryF,
-  setGender,
-  setCategory,
-  FetchFilter,
-  data,
-  categoryId,
-}) => {
+import { Link, useLocation } from 'react-router-dom'
+const Filters = ({ setGender, setCategory, data, categoryF }) => {
   const { t } = useTranslation()
   const genderCategories = ['Men', 'Women', 'Unisex']
   const {
@@ -35,14 +27,14 @@ const Filters = ({
   // const [data, setData] = useState([])
 
   const categories = getUniqueValues(all_products, 'name')
-
+  const location = useLocation()
+  const currentPath = location.pathname
   const uniqueCategories = getUniqueValues(data, 'name')
 
   return (
     <Wrapper>
       <div className='content '>
         <form onSubmit={(e) => e.preventDefault()}>
-          {/* search input */}
           <div className='form-control'>
             <input
               type='text'
@@ -53,28 +45,72 @@ const Filters = ({
               onChange={updateFilters}
             />
           </div>
-          {/* end search input */}
-          <div className='form-control'>
-            <h5>{t('cat')}</h5>
+
+          <div className='form-control '>
+            <h4>{t('cat')}</h4>
             <div>
-              {uniqueCategories.map((categoryName, index) => {
+              {/* {uniqueCategories.map((categoryName, index) => {
                 return (
                   <button
                     key={index}
-                    onClick={setCategoryF(categoryName)}
                     name='category'
-                    button='button'
-                    className={`${categoryF === categoryName ? 'active' : ''}`}
+                    type='button'
+                    className={`${category === categoryName ? 'active' : ''}`}
                   >
-                    {categoryName}
+                    <Link to='/packs'>{categoryName}</Link>
                   </button>
                 )
-              })}
+              })} */}
+
+              <button
+                name='category'
+                type='button'
+                className={`${
+                  currentPath === '/products' ? 'active taille' : 'taille'
+                }`}
+              >
+                <Link to='/products'>{t('AllProducts')}</Link>
+              </button>
+              <button
+                name='category'
+                type='button'
+                className={`${
+                  currentPath === '/perfumes' ? 'active taille' : 'taille'
+                }`}
+              >
+                <Link to='/perfumes'>{t('Perfumes')}</Link>
+              </button>
+              <button
+                name='category'
+                type='button'
+                className={`${
+                  currentPath === '/body_balms' ? 'active taille' : 'taille'
+                }`}
+              >
+                <Link to='/body_balms'>{t('Baumes_Corporel')}</Link>
+              </button>
+              <button
+                name='category'
+                type='button'
+                className={`${
+                  currentPath === '/body_perfumes' ? 'active taille' : 'taille'
+                }`}
+              >
+                <Link to='/body_perfumes'>{t('Parfums_De_Corps')}</Link>
+              </button>
+              <button
+                name='category'
+                type='button'
+                className={`${
+                  currentPath === '/packs' ? 'active taille' : 'taille'
+                }`}
+              >
+                <Link to='/packs'>{t('Packs')}</Link>
+              </button>
             </div>
           </div>
 
-          {/* gender */}
-          <div className='form-control'>
+          {/* <div className='form-control'>
             <h5>{t('gender')}</h5>
             <div>
               {genderCategories.map((genderF, index) => (
@@ -89,9 +125,9 @@ const Filters = ({
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
         </form>
-        <div className='flex'>
+        {/* <div className='flex'>
           <button type='button' className='clear-btn ' onClick={clearFilter}>
             {t('clearF')}
           </button>
@@ -102,7 +138,7 @@ const Filters = ({
           >
             {t('applyF')}
           </button>
-        </div>
+        </div> */}
       </div>
     </Wrapper>
   )
@@ -119,6 +155,10 @@ const Wrapper = styled.section`
       margin-bottom: 0.5rem;
     }
   }
+  .taille {
+    font-size: 1rem;
+    font-family: 'beIN Black', sans-serif;
+  }
   .search-input {
     border-color: var (--clr-primary-9);
     padding: 0.5rem;
@@ -131,8 +171,8 @@ const Wrapper = styled.section`
 
   button {
     display: block;
-    margin: 0.25em 0;
-    padding: 0.25rem 0;
+    /* margin: 0.25em 0; */
+    /* padding: 0.25rem 0; */
     text-transform: capitalize;
     background: transparent;
     border: none;
@@ -171,6 +211,10 @@ const Wrapper = styled.section`
       font-size: 0.5rem;
       color: var(--clr-white);
     }
+  }
+  .search-input::placeholder {
+    font-family: 'beIN Black', sans-serif;
+    font-size: 16px;
   }
   .all-btn {
     display: flex;

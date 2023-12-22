@@ -6,18 +6,14 @@ const Footer = () => {
   const { t } = useTranslation()
   return (
     <Wrapper>
-      <h5>
-        &copy;{new Date().getFullYear()}
-        {/* <a href='#'>
-          <span> # </span>
-        </a> */}
-      </h5>
+      <h5>&copy;{new Date().getFullYear()}</h5>
       <h5>{t('footer')}</h5>
     </Wrapper>
   )
 }
 
 const Wrapper = styled.footer`
+  margin-top: 2.2rem;
   height: 5rem;
   display: flex;
   flex-direction: column;
@@ -31,7 +27,6 @@ const Wrapper = styled.footer`
   h5 {
     color: var(--clr-white);
     margin: 0.1rem;
-
     font-weight: 400;
     text-transform: none;
     line-height: 1.25;

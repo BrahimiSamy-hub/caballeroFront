@@ -5,7 +5,7 @@ const NavbarDash = () => {
   return (
     <div className='navbar'>
       <div className=''>
-        <Link>{/* <img src={logo} alt='' className='logo' /> */}</Link>
+        <Link to='/'>{/* <img src={logo} alt='' className='logo' /> */}</Link>
       </div>
     </div>
   )

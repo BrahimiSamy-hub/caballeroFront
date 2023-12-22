@@ -37,7 +37,10 @@ const CartButtons = ({ selectedLanguage, changeLanguage }) => {
         ></span>
         <select
           value={selectedLanguage}
-          onChange={(e) => changeLanguage(e.target.value)}
+          onChange={(e) => {
+            changeLanguage(e.target.value)
+            closeSidebar()
+          }}
           className='language'
         >
           <option value='en'>{t('language1')}</option>
@@ -51,13 +54,14 @@ const CartButtons = ({ selectedLanguage, changeLanguage }) => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 100px;
   align-items: center;
   width: 225px;
 
   .language {
     border-radius: var(--radius);
     border: none;
+    margin-left: 5px;
   }
   .cart-btn {
     color: var(--clr-grey-1);

@@ -5,7 +5,7 @@ import { BsFillGridFill, BsList } from 'react-icons/bs'
 import styled from 'styled-components'
 import { useTranslation } from 'react-i18next'
 
-const Sort = () => {
+const Sort = ({ totalProducts }) => {
   const { t } = useTranslation()
   const {
     filtered_products: products,
@@ -15,7 +15,7 @@ const Sort = () => {
     updateSort,
     sort,
   } = useFilterContext()
-  const { totalProducts } = useProductsContext()
+  // const { totalProducts } = useProductsContext()
 
   return (
     <Wrapper>
@@ -76,6 +76,18 @@ const Wrapper = styled.section`
       display: inline-block;
       margin-right: 0.5rem;
     }
+  }
+  .sort-input {
+    font-family: 'beIN Black', sans-serif;
+    font-size: 16px;
+    color: #333;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  .sort-input option {
+    font-family: 'beIN Black', sans-serif;
+    font-size: 14px;
   }
   @media (min-width: 768px) {
     column-gap: 2rem;

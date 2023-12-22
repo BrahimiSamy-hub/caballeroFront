@@ -1,36 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
-import { Filters, ProductList, Sort, PageHero } from '../components'
+import { Filters, Corp, Sort, PageHero } from '../components'
 import { useTranslation } from 'react-i18next'
-import { useProductsContext } from '../context/products_context'
 import axios from 'axios'
 import { API_ENDPOINT } from '../config'
-const ProductsPage = () => {
+const CorpPage = () => {
   const { t } = useTranslation()
-  const { totalProducts } = useProductsContext()
-
   const [categoryF, setCategory] = useState('')
   const [gender, setGender] = useState('')
-  const [productFiltred, setProduct] = useState([])
+  const [product, setProduct] = useState([])
+  const [totalProducts, setTotalProducts] = useState()
   const [data, setData] = useState([])
-  const FetchFilter = async (gender, categoryId) => {
-    try {
-      // let url =
-      //   `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
-      // if (gender) {
-      //   url += `?sexe=${gender}`
-      // }
-      // if (categoryId) {
-      //   url += `${gender ? '&' : '?'}category=${categoryId}`
-      // }
-      const response = await axios.get(
-        `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
-      )
-      setProduct(response.data.products)
-    } catch (error) {
-      console.error('Error loading more products:', error)
-    }
-  }
+
   const findCategoryIdByName = (categoryName) => {
     const foundCategory = data.find(
       (category) => category.name === categoryName
@@ -39,6 +20,20 @@ const ProductsPage = () => {
   }
   const categoryId = findCategoryIdByName(categoryF)
 
+  const fetchDataGet = async () => {
+    try {
+      const response = await axios.get(
+        `${API_ENDPOINT}/products?category=656a442c08476652e1cc4108`
+      )
+      setProduct(response.data.products)
+      setTotalProducts(response.data.totalProducts)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
+  useEffect(() => {
+    fetchDataGet()
+  }, [])
   const fetchData = async () => {
     try {
       const response = await axios.get(`${API_ENDPOINT}/categories/`)
@@ -56,18 +51,10 @@ const ProductsPage = () => {
       <PageHero title={t('heroProducts')} />
       <Wrapper className='page'>
         <div className='section-center products'>
-          <Filters
-            categoryF={categoryF}
-            gender={gender}
-            setCategory={setCategory}
-            categoryId={categoryId}
-            setGender={setGender}
-            FetchFilter={FetchFilter}
-            data={data}
-          />
+          <Filters data={data} />
           <div>
             <Sort totalProducts={totalProducts} />
-            <ProductList productFilterd={productFiltred} />
+            <Corp products={product} />
           </div>
         </div>
       </Wrapper>
@@ -89,4 +76,4 @@ const Wrapper = styled.div`
   }
 `
 
-export default ProductsPage
+export default CorpPage

@@ -8,16 +8,43 @@ import {
   Error,
   ProductImages,
   AddToCart,
-  Stars,
+  BuyNow,
   PageHero,
 } from '../components'
+import { TbPerfume } from 'react-icons/tb'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 const SingleProductPage = ({ selectedLanguage }) => {
   const { t } = useTranslation()
   const [selectedVolumeType, setSelectedVolumeType] = useState('')
+  const translateSexe = (sexe) => {
+    switch (sexe) {
+      case 'Men':
+        return t('men')
+      case 'Women':
+        return t('woman')
+      case 'Unisex':
+        return t('unisex')
 
+      default:
+        return sexe
+    }
+  }
+  const translateSeason = (season) => {
+    switch (season) {
+      case 'Winter':
+        return t('winter')
+      case 'Spring':
+        return t('spring')
+      case 'Summer':
+        return t('summer')
+      case 'Autumn':
+        return t('autumn')
+      default:
+        return season
+    }
+  }
   const { id } = useParams()
   const history = useHistory()
   const {
@@ -65,6 +92,7 @@ const SingleProductPage = ({ selectedLanguage }) => {
     descriptions = [],
     inStock,
     prices = [],
+    marque,
   } = product
   const selectedPrice = selectedVolumeType
     ? prices.find((p) => p.type === selectedVolumeType)
@@ -75,15 +103,25 @@ const SingleProductPage = ({ selectedLanguage }) => {
     <Wrapper>
       <PageHero title={name} product />
       <div className='section section-center page'>
-        <Link to='/products' className=' btn hero-btn'>
-          {t('bToProduct')}
-        </Link>
-        <div className=''>
+        <div className='centered-section'>
           <section className='content'>
-            <h2 className='marginTop'>{name}</h2>
-            {/* <h1>{selectedLanguage}</h1> */}
-            <ProductImages image1={imageUrl} image2={imageUrl2} />
-            <div className='radio-inputs'>
+            <Link to={`/products`} className='centered-btn btn hero-btn'>
+              {t('bToProduct')}
+            </Link>
+            <h1 className='marginTop'>{name}</h1>
+            <h2 className=''>{marque}</h2>
+            <div className='fontW'>
+              <span
+                className='singleLineInfo'
+                style={{ color: inStock ? 'green' : 'red' }}
+              >
+                {inStock ? t('inStock') : t('!inStock')}
+              </span>
+            </div>
+            <div className='product-images-container'>
+              <ProductImages image1={imageUrl} image2={imageUrl2} />
+            </div>
+            <div className='radio-inputs-container radio-inputs'>
               {prices.map((item, index) => (
                 <label key={index} className='radio-label'>
                   <input
@@ -95,49 +133,44 @@ const SingleProductPage = ({ selectedLanguage }) => {
                     onChange={() => setSelectedVolumeType(item.type)}
                   />
                   <span className='radio-tile'>
-                    <span className='radio-icon'></span>
+                    <span className='radio-icon'>
+                      <TbPerfume size={25} color='#1d4851' />
+                    </span>
                     <span className='radio-text'>{item.type}</span>
                   </span>
                 </label>
               ))}
             </div>
-            <div>
+            <div className='info-container'>
               <div className='info'>
                 <ul>
                   <li>
-                    <span>{t('Gender')} :</span>
-                    <span>{sexe}</span>
+                    <span>{translateSexe(sexe)}</span>
                   </li>
                   <li>
-                    <span>{t('Season')} :</span>
-                    <span>{season}</span>
+                    <span>{translateSeason(season)}</span>
                   </li>
                 </ul>
               </div>
-
-              <div className=' '>
+              <div className='description'>
                 <p>{getDescription(selectedLanguage)}</p>
-              </div>
-              <div className='fontW'>
-                <span>
-                  {t('Stock')} :
-                  <span
-                    className='singleLineInfo'
-                    style={{ color: inStock ? 'green' : 'red' }}
-                  >
-                    {inStock ? t('inStock') : t('!inStock')}
-                  </span>
-                </span>
               </div>
             </div>
             <div className='price'>
               {selectedPrice && (
                 <span className='price-item'>
-                  {t('Price')} :{selectedPrice.price} {t('Currency')}
+                  {/* {t('Price')} :{selectedPrice.price} {t('Currency')} */}
+                  {selectedPrice.price} {t('Currency')}
                 </span>
               )}
             </div>
-
+            <BuyNow
+              image1={image1}
+              product={product}
+              isInStock={inStock}
+              selectedPrice={selectedPrice}
+              selectedVolumeType={selectedVolumeType}
+            />
             <AddToCart
               image1={image1}
               product={product}
@@ -153,32 +186,61 @@ const SingleProductPage = ({ selectedLanguage }) => {
 }
 
 const Wrapper = styled.main`
-  .marginTop {
+  .info-container {
     margin-top: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .radio-inputs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .radio-inputs {
+    display: flex;
+  }
+  .product-images-container {
+    background-color: var(--clr-primary-10);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 12px;
+  }
+  .marginTop {
+    margin-top: 50px;
   }
   .fontW {
     font-weight: bold;
-    margin-top: 15px;
-    font-weight: 700;
+    margin-top: 12px;
+    font-size: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .description {
+    font-size: 2rem;
   }
   .singleLineInfo {
     text-transform: capitalize;
     width: 300px;
-    display: grid;
-    grid-template-columns: 125px 1fr;
-    display: inline-block;
-    margin-right: 0.5rem;
-    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--clr-primary-9);
+    span {
+      font-weight: 700;
+    }
   }
-  .radio-inputs {
+  .centered-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 255px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    text-align: center;
   }
 
   .radio-inputs > * {
@@ -186,29 +248,24 @@ const Wrapper = styled.main`
   }
 
   .radio-input:checked + .radio-tile {
-    border-color: #2260ff;
+    border-color: var(--clr-primary-9);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    color: #2260ff;
+    color: var(--clr-primary-9);
   }
 
   .radio-input:checked + .radio-tile:before {
     transform: scale(1);
     opacity: 1;
-    background-color: #2260ff;
-    border-color: #2260ff;
-  }
-
-  .radio-input:checked + .radio-tile .radio-icon svg {
-    fill: #1d4851;
+    background-color: var(--clr-primary-9);
+    border-color: var(--clr-primary-9);
   }
 
   .radio-input:checked + .radio-tile .radio-label {
-    color: #1d4851;
+    color: var(--clr-primary-9);
   }
 
   .radio-input:focus + .radio-tile {
-    border-color: #1d4851;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+    border-color: var(--clr-primary-9);
   }
 
   .radio-input:focus + .radio-tile:before {
@@ -224,7 +281,7 @@ const Wrapper = styled.main`
     width: 80px;
     min-height: 80px;
     border-radius: 0.5rem;
-    border: 2px solid #eaded7;
+    border: 2px solid white;
     background-color: #fff;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     transition: 0.15s ease;
@@ -247,6 +304,14 @@ const Wrapper = styled.main`
     transform: scale(0);
     transition: 0.25s ease;
   }
+  h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    max-width: 100%;
+    font-size: 4rem;
+    min-height: 5rem;
+  }
 
   .radio-tile:hover {
     border-color: #1d4851;
@@ -257,17 +322,12 @@ const Wrapper = styled.main`
     opacity: 1;
   }
 
-  .radio-icon svg {
-    width: 2rem;
-    height: 2rem;
-    fill: #494949;
-  }
-
   .radio-label {
     color: #707070;
     transition: 0.375s ease;
     text-align: center;
-    font-size: 13px;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 
   .radio-input {
@@ -283,27 +343,35 @@ const Wrapper = styled.main`
   .price-item {
     display: block;
     margin-bottom: 5px;
+    font-size: 3rem;
   }
 
   input[type='radio'] {
     margin-right: 10px;
   }
-
+  .centered-btn {
+    display: inline-block;
+  }
   .parent {
     display: flex;
-    justify-content: center; /* Aligns horizontally */
-    align-items: center; /* Aligns vertically */
-    height: 100vh; /* Example height, can be adjusted */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
   .product-center {
     display: grid;
     gap: 4rem;
     margin-top: 2rem;
   }
+
   .price {
     font-weight: bold;
     margin-top: 15px;
     color: var(--clr-primary-9);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .desc {
     line-height: 2;
@@ -312,15 +380,25 @@ const Wrapper = styled.main`
   .info {
     text-transform: capitalize;
     width: 300px;
-    display: grid;
-    grid-template-columns: 125px 1fr;
+    font-size: 2.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     span {
       font-weight: 700;
+    }
+    ul {
+      padding: 0;
+      list-style: none;
+      text-align: center;
+    }
+    li {
+      margin-bottom: 10px; /* Adjust as needed */
     }
   }
   .hero-btn {
     padding: 0.75rem 1.5rem;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   @media (min-width: 992px) {

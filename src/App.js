@@ -16,10 +16,14 @@ import {
   HeroDash,
 } from './components'
 import {
+  Corp,
+  Baume,
+  Perfume,
   Home,
   Products,
   SingleProduct,
   About,
+  Pack,
   Cart,
   Error,
   Checkout,
@@ -160,6 +164,10 @@ function App() {
                   <Route exact path='/about' component={About} />
                   <Route exact path='/cart' component={Cart} />
                   <Route exact path='/products' component={Products} />
+                  <Route exact path='/packs' component={Pack} />
+                  <Route exact path='/perfumes' component={Perfume} />
+                  <Route exact path='/body_balms' component={Baume} />
+                  <Route exact path='/body_perfumes' component={Corp} />
                   <Route
                     exact
                     path='/products/:id'
