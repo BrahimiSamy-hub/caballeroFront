@@ -13,24 +13,7 @@ const ProductsPage = () => {
   const [gender, setGender] = useState('')
   const [productFiltred, setProduct] = useState([])
   const [data, setData] = useState([])
-  const FetchFilter = async (gender, categoryId) => {
-    try {
-      // let url =
-      //   `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
-      // if (gender) {
-      //   url += `?sexe=${gender}`
-      // }
-      // if (categoryId) {
-      //   url += `${gender ? '&' : '?'}category=${categoryId}`
-      // }
-      const response = await axios.get(
-        `${API_ENDPOINT}/products?sexe=${gender}&category=${categoryId}`
-      )
-      setProduct(response.data.products)
-    } catch (error) {
-      console.error('Error loading more products:', error)
-    }
-  }
+
   const findCategoryIdByName = (categoryName) => {
     const foundCategory = data.find(
       (category) => category.name === categoryName
@@ -62,7 +45,6 @@ const ProductsPage = () => {
             setCategory={setCategory}
             categoryId={categoryId}
             setGender={setGender}
-            FetchFilter={FetchFilter}
             data={data}
           />
           <div>

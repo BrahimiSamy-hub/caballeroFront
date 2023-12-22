@@ -9,7 +9,17 @@ const PerfumePage = () => {
   const [product, setProduct] = useState([])
   const [totalProducts, setTotalProducts] = useState()
   const [data, setData] = useState([])
-
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`${API_ENDPOINT}/categories/`)
+      setData(response.data)
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
+  }
+  useEffect(() => {
+    fetchData()
+  }, [])
   const fetchDataGet = async () => {
     try {
       const response = await axios.get(
@@ -23,17 +33,6 @@ const PerfumePage = () => {
   }
   useEffect(() => {
     fetchDataGet()
-  }, [])
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(`${API_ENDPOINT}/categories/`)
-      setData(response.data)
-    } catch (error) {
-      console.error('Error fetching data:', error)
-    }
-  }
-  useEffect(() => {
-    fetchData()
   }, [])
 
   return (

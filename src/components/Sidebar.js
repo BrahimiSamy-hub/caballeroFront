@@ -145,8 +145,8 @@ const SidebarContainer = styled.div`
   }
   .logo {
     justify-self: center;
-    height: 120px;
-    width: 150px;
+    height: 110px;
+    width: 170px;
   }
   .links {
     font-family: BauerBodoni-roman, serif;

@@ -11,19 +11,32 @@ const CorpPage = () => {
   const [product, setProduct] = useState([])
   const [totalProducts, setTotalProducts] = useState()
   const [data, setData] = useState([])
+  const [categoryId, setCategoryId] = useState(null)
+  const [parfumsCategoryId, setParfumsCategoryId] = useState('')
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`${API_ENDPOINT}/categories/`)
 
-  const findCategoryIdByName = (categoryName) => {
-    const foundCategory = data.find(
-      (category) => category.name === categoryName
-    )
-    return foundCategory ? foundCategory._id : null
+      const parfumsCategory = response.data.find(
+        (category) => category.name === 'Parfums De Corps'
+      )
+      console.log(categoryId)
+      console.log(parfumsCategoryId)
+      setCategoryId(parfumsCategory?._id || null)
+      setParfumsCategoryId(parfumsCategory?._id || '')
+    } catch (error) {
+      console.error('Error fetching data:', error)
+    }
   }
-  const categoryId = findCategoryIdByName(categoryF)
+
+  useEffect(() => {
+    fetchData()
+  }, [])
 
   const fetchDataGet = async () => {
     try {
       const response = await axios.get(
-        `${API_ENDPOINT}/products?category=656a442c08476652e1cc4108`
+        `${API_ENDPOINT}/products?category=${parfumsCategoryId}`
       )
       setProduct(response.data.products)
       setTotalProducts(response.data.totalProducts)
@@ -31,20 +44,10 @@ const CorpPage = () => {
       console.error('Error fetching data:', error)
     }
   }
+
   useEffect(() => {
     fetchDataGet()
-  }, [])
-  const fetchData = async () => {
-    try {
-      const response = await axios.get(`${API_ENDPOINT}/categories/`)
-      setData(response.data)
-    } catch (error) {
-      console.error('Error fetching data:', error)
-    }
-  }
-  useEffect(() => {
-    fetchData()
-  }, [])
+  }, [parfumsCategoryId])
 
   return (
     <main>
