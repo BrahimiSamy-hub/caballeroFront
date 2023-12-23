@@ -20,20 +20,20 @@ const Sort = ({ totalProducts }) => {
   return (
     <Wrapper>
       <div className='btn-container'>
-        <button
+        {/* <button
           type='button'
           onClick={setGridView}
           className={`${grid_view ? 'active' : null}`}
         >
           <BsFillGridFill />
-        </button>
-        <button
+        </button> */}
+        {/* <button
           type='button'
           onClick={setListView}
           className={`${!grid_view ? 'active' : null}`}
         >
           <BsList />
-        </button>
+        </button> */}
       </div>
       <p>
         {totalProducts} {t('found')}
@@ -48,8 +48,8 @@ const Sort = ({ totalProducts }) => {
           value={sort}
           onChange={updateSort}
         >
-          <option value='price-lowest'>{t('priceL')}</option>
-          <option value='price-highest'>{t('priceH')}</option>
+          {/* <option value='price-lowest'>{t('priceL')}</option>
+          <option value='price-highest'>{t('priceH')}</option> */}
           <option value='name-a'>{t('name')} (a-z)</option>
           <option value='name-z'>{t('name')} (z-a)</option>
         </select>
@@ -70,7 +70,7 @@ const Wrapper = styled.section`
     grid-template-columns: 1fr;
     row-gap: 0.75rem;
     .btn-container {
-      width: 50px;
+      width: 25px;
     }
     label {
       display: inline-block;
@@ -99,7 +99,7 @@ const Wrapper = styled.section`
 
   .btn-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     column-gap: 0.5rem;
     button {
       background: transparent;

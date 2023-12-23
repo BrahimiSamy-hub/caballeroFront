@@ -53,6 +53,7 @@ Global Styles
 *,
 ::after,
 ::before {
+  font-family: 'beIN Black', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

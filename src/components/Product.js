@@ -103,33 +103,21 @@ const Wrapper = styled.article`
   .container {
     position: relative;
     border-radius: var(--radius);
+    overflow: hidden;
   }
   .image-container {
     position: relative;
     width: 250px;
-    height: 380px;
+    height: 250px;
   }
-  /* @media (min-width: 1170px) {
-    img {
-      width: 100%;
-    }
-  } */
-  /* img {
-    width: 250px;
-    height: 380px;
-    width: 100%; 
-    display: block;
-    object-fit: cover;
-    border-radius: var(--radius);
-    transition: var(--transition);
-  } */
+
   img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: var(--radius);
     transition: opacity 300ms ease;
     opacity: 0;
@@ -137,16 +125,11 @@ const Wrapper = styled.article`
   img.active {
     opacity: 1;
   }
-  .container {
-    position: relative;
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
 
   .image-container {
     position: relative;
     width: 250px;
-    height: 380px;
+    height: 250px;
     border-radius: var(--radius);
   }
 
@@ -154,7 +137,7 @@ const Wrapper = styled.article`
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: var(--radius);
     transition: opacity 1s ease;
     opacity: 0;
@@ -184,7 +167,6 @@ const Wrapper = styled.article`
     }
   }
   .container:hover img {
-    /* opacity: 0.5; */
     transition: opacity 1s ease, visibility 1s ease;
   }
   .container:hover .link {
@@ -193,7 +175,6 @@ const Wrapper = styled.article`
   footer {
     margin-top: 1rem;
     display: block;
-    //hna kant flex
     justify-content: space-between;
     align-items: center;
   }
@@ -209,13 +190,54 @@ const Wrapper = styled.article`
     color: var(--clr-primary-9);
     letter-spacing: var(--spacing);
   }
-  @media screen and (max-width: 844px) {
+  /* @media screen and (max-width: 844px) {
+    .image-container {
+      position: relative;
+      object-fit: fill;
+      width: 200px;
+      height: 200px;
+      border-radius: var(--radius);
+    }
     .center {
       margin: auto;
       width: 50%;
     }
     footer h5 {
       margin-top: 1rem;
+    }
+  } */
+  @media screen and (max-width: 844px) {
+    .container {
+      width: 200px;
+      height: 200px;
+      margin: auto;
+    }
+    .image-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      padding-bottom: 100%; // Maintain a 1:1 aspect ratio
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      transition: opacity 300ms ease;
+      opacity: 0;
+    }
+
+    img.active {
+      opacity: 1;
     }
   }
 `

@@ -1,5 +1,4 @@
-import React from 'react'
-// import logoBlanc from '../assets/LogoBlanc.png'
+import React, { useState } from 'react'
 import logobleu from '../assets/logo bleu.png'
 import { Link } from 'react-router-dom'
 import { FaTimes } from 'react-icons/fa'
@@ -12,15 +11,22 @@ import { useTranslation } from 'react-i18next'
 const Sidebar = ({ selectedLanguage, changeLanguage }) => {
   const { isSidebarOpen, closeSidebar } = useProductsContext()
   const { t } = useTranslation()
-  const toggleDropdown = (event) => {
+
+  const handleDropdownToggle = (event) => {
     event.preventDefault()
-    const dropdownContent = event.currentTarget.nextElementSibling
+    const dropdownContent =
+      event.currentTarget.querySelector('.dropdown-content')
 
     if (dropdownContent) {
       dropdownContent.style.display =
         dropdownContent.style.display === 'block' ? 'none' : 'block'
     }
   }
+  const stopPropagation = (event) => {
+    event.stopPropagation()
+    closeSidebar()
+  }
+
   return (
     <SidebarContainer>
       <aside
@@ -45,19 +51,29 @@ const Sidebar = ({ selectedLanguage, changeLanguage }) => {
             <Link onClick={closeSidebar} to='/'>
               <Link to='/'>{t('titleNav')}</Link>
               <Link to='/about'>{t('titleNav2')}</Link>
-              {/* <Link to='/products'>{t('titleNav3')}</Link>
-               */}
-              <div className='dropdown' onClick={toggleDropdown}>
-                <span className='dropdown-main'>{t('titleNav3')}</span>
-                <div className='dropdown-content'>
-                  <Link to='/products'>{t('AllProducts')}</Link>
-                  <Link to='/perfumes'>{t('Perfumes')}</Link>
-                  <Link to='/body_balms'>{t('Baumes_Corporel')}</Link>
-                  <Link to='/body_perfumes'>{t('Parfums_De_Corps')}</Link>
-                  <Link to='/packs'>{t('Packs')}</Link>
-                </div>
-              </div>
             </Link>
+            {/* <Link to='/products'>{t('titleNav3')}</Link>
+             */}
+            <div className='dropdown' onClick={handleDropdownToggle}>
+              <span className='dropdown-main'>{t('titleNav3')}</span>
+              <div className='dropdown-content'>
+                <Link to='/products' onClick={stopPropagation}>
+                  {t('AllProducts')}{' '}
+                </Link>
+                <Link to='/perfumes' onClick={stopPropagation}>
+                  {t('Perfumes')}
+                </Link>
+                <Link to='/body_balms' onClick={stopPropagation}>
+                  {t('Baumes_Corporel')}
+                </Link>
+                <Link to='/body_perfumes' onClick={stopPropagation}>
+                  {t('Parfums_De_Corps')}
+                </Link>
+                <Link to='/packs' onClick={stopPropagation}>
+                  {t('Packs')}
+                </Link>
+              </div>
+            </div>
           </li>
         </ul>
         <CartButtons
@@ -70,16 +86,16 @@ const Sidebar = ({ selectedLanguage, changeLanguage }) => {
 }
 
 const SidebarContainer = styled.div`
-  text-align: center;
+  /* text-align: center; */
   .links .dropdown {
     position: relative;
     display: inline-block;
   }
 
   .links .dropdown .dropdown-main {
-    display: block;
-    text-align: left;
-    font-size: 1rem;
+    /* display: block; */
+    /* text-align: left; */
+    margin-left: 22px;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
     color: var(--clr-grey-3);
@@ -90,6 +106,8 @@ const SidebarContainer = styled.div`
   .links .dropdown .dropdown-main::after {
     content: '▼'; /* Use your preferred dropdown icon or character */
     position: absolute;
+    margin-left: 22px;
+
     top: 50%;
     left: 0;
     transform: translateY(-50%);
@@ -108,22 +126,22 @@ const SidebarContainer = styled.div`
     text-align: left;
   }
 
-  .links .dropdown:hover .dropdown-content {
+  /* .links .dropdown:hover .dropdown-content {
     display: block;
-  }
+  } */
 
   .links .dropdown .dropdown-content a {
     display: block;
-    text-align: left;
+    text-align: center; /* Center the text horizontally */
     padding: 0.5rem 0;
     text-decoration: none;
     color: var(--clr-grey-3);
     transition: var(--transition);
   }
-
+  /* 
   .links .dropdown .dropdown-content a:hover {
     color: var(--clr-grey-2);
-  }
+  } */
   .sidebar-header {
     display: flex;
     justify-content: space-between;
@@ -140,9 +158,9 @@ const SidebarContainer = styled.div`
     color: var(--clr-red-dark);
     margin-top: 0.2rem;
   }
-  .close-btn:hover {
+  /* .close-btn:hover {
     color: var(--clr-red-light);
-  }
+  } */
   .logo {
     justify-self: center;
     height: 110px;
@@ -162,13 +180,13 @@ const SidebarContainer = styled.div`
     transition: var(--transition);
     letter-spacing: var(--spacing);
   }
-
+  /* 
   .links a:hover {
     padding: 1rem 1.5rem;
     padding-left: 2rem;
     background: var(--clr-grey-10);
     color: var(--clr-grey-2);
-  }
+  } */
 
   .sidebar {
     position: fixed;

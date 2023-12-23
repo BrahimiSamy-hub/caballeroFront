@@ -11,11 +11,11 @@ i18n
     fallbackLng: 'ar',
     debug: true,
     detection: {
-      order: ['queryString', 'cookie', 'localStorage', 'path', 'subdomain'],
+      order: ['localStorage', 'queryString', 'cookie', 'path', 'subdomain'],
       caches: ['cookie'],
     },
     interpolation: {
-      escapeValue: false, // Not needed for React
+      escapeValue: false,
     },
   })
 

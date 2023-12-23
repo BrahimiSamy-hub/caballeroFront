@@ -41,7 +41,7 @@ const Wrapper = styled.section`
     display: grid;
     gap: 2.5rem;
     img {
-      height: 380px;
+      /* height: 250px; */
     }
   }
   .btn {

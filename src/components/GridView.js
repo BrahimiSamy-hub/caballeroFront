@@ -30,7 +30,7 @@ const GridView = ({ products, handleLoadMore }) => {
 
 const Wrapper = styled.section`
   img {
-    height: 380px;
+    height: 250px;
   }
 
   .products-container {

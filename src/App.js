@@ -76,7 +76,7 @@ function App() {
     }
   }, [])
   const [selectedLanguage, setSelectedLanguage] = useState(
-    localStorage.getItem('selectedLanguage') || 'en'
+    localStorage.getItem('selectedLanguage') || 'ar'
   )
   return (
     <div>

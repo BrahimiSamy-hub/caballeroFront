@@ -42,6 +42,7 @@ const CartButtons = ({ selectedLanguage, changeLanguage }) => {
             closeSidebar()
           }}
           className='language'
+          defaultValue='ar' // Set the default value to 'ar'
         >
           <option value='en'>{t('language1')}</option>
           <option value='fr'>{t('language2')}</option>
@@ -54,14 +55,14 @@ const CartButtons = ({ selectedLanguage, changeLanguage }) => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 100px;
+  grid-template-columns: 1fr 150px;
   align-items: center;
   width: 225px;
 
   .language {
     border-radius: var(--radius);
     border: none;
-    margin-left: 5px;
+    margin-left: 7px;
   }
   .cart-btn {
     color: var(--clr-grey-1);

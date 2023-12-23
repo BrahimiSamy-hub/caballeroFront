@@ -403,7 +403,7 @@ const Wrapper = styled.main`
 
   @media (min-width: 992px) {
     .product-center {
-      grid-template-columns: 380px 1fr;
+      grid-template-columns: 250px 1fr;
       align-items: center;
     }
     .price {
